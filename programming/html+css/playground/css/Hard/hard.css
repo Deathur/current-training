@@ -1,7 +1,8 @@
 html {
-    background-color: grey;
     background-image: url("https://www.shutterstock.com/shutterstock/photos/1099332059/display_1500/stock-photo-tempozan-ferris-wheel-at-osaka-japan-minimal-vintage-tone-picture-1099332059.jpg");
-    background-size: 100%;
-    margin: auto;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: gray;
 }
