@@ -6,3 +6,20 @@ html {
     background-position: center center;
     background-color: gray;
 }
+aside {
+    width: 60%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #515151};
+  }
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+p {
+    font-weight: bold;
+    font-style: italic;
+}
