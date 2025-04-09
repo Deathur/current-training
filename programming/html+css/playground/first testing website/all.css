@@ -1,0 +1,29 @@
+header {
+    background-color:grey;
+    font-size:30px
+}
+.button {
+    border: double;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    width: 100px;
+    cursor: pointer;
+}
+.button1 {
+    background-color:red;
+    color: black;
+}
+.button2 {
+    background-color:white;
+    color: black;
+}
+.button3 {
+    background-color:black;
+}
+.button4 {
+    background-color:yellow;
+    color: black;
+}

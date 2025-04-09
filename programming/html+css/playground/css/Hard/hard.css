@@ -23,3 +23,7 @@ p {
     font-weight: bold;
     font-style: italic;
 }
+aside{
+    position:sticky;
+    top:20%
+}
