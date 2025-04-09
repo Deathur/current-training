@@ -1,3 +1,12 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    margin: auto;
+}
 header {
     background-color:grey;
     font-size:30px
@@ -6,7 +15,7 @@ header {
     border: double;
     color: white;
     text-align: center;
-    display: inline-block;
+    display: block;
     font-size: 20px;
     margin: 4px 2px;
     width: 100px;
@@ -26,4 +35,7 @@ header {
 .button4 {
     background-color:yellow;
     color: black;
+}
+.button5 {
+    background-color: grey;
 }
