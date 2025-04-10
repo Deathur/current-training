@@ -1,0 +1,19 @@
+#special {
+    color:green;
+    text-decoration: underline;   
+}
+p:hover {
+    color:yellow;
+}
+.important {
+    color:red;
+    font-weight:bold;
+}
+div {
+    font-style:italic;
+    margin:20px;
+    background-color:rgb(221, 221, 221);
+}
+p {
+    color:blue;
+}
