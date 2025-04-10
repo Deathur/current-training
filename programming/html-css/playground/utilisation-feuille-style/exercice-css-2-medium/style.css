@@ -1,0 +1,46 @@
+#transform {
+    text-transform: uppercase;
+}
+#spacing {
+    letter-spacing:2px;
+}
+#height {
+    line-height: 70px;
+}
+#align {
+    text-align: center;
+}
+#decoration {
+    text-decoration: underline wavy rgb(0, 217, 255);
+}
+#titreprin {
+    color: rgb(0, 4, 255);
+}
+#citation {
+    font-style:italic;
+    background-color: rgb(231, 231, 231);
+    line-height: 1;
+}
+#auteur {
+    color:grey;
+}
+#importance {
+    color: rgb(0, 110, 255);
+}
+h2 {
+    color: black;
+}
+footer {
+    text-align: center;
+    color:grey;
+}
+h4 {
+    color:rgb(99, 99, 99);
+}
+header {
+    text-align: center;
+}
+html {
+    font-family: Roboto;
+    line-height: 30px;
+}
