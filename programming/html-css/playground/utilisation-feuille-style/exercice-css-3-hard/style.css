@@ -52,6 +52,7 @@
 }
 .responsive {
     width: 100%;
+    border: none;
 }
 .soustitre {
     color: grey;
@@ -66,8 +67,8 @@
     text-transform: capitalize;
 }
 .normal {
-    display:flow;
     width: 100%;
+    border: none;
 }
 body {
     background-color: white;
@@ -83,10 +84,11 @@ header {
     text-align:center;
 }
 div {
-    width: 40%;
-    margin:auto;
-    display:inline-block;
-    text-align:left;
+    width: 300px;
+    margin: 10px;
+    display: inline-block;
+    text-align: left;
+    border: solid;
 }
 h2 {
     color:blue;
