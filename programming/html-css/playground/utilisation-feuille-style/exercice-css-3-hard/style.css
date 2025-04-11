@@ -1,15 +1,15 @@
 @font-face {
     font-family: "Open Sans";
     src:
-        url("fonts/OpenSans-Regular.ttf") format("truetype"); 
+    url("fonts/OpenSans-Regular.ttf") format("truetype"); 
 }
 @font-face {
     font-family: "Open Sans Bold";
     src:
         url("fonts/OpenSans-Bold.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Montserrat";
+    }
+    @font-face {
+        font-family: "Montserrat";
     src:
         url("fonts/Montserrat-Regular.ttf") format("truetype");
   }
@@ -53,19 +53,53 @@
 .responsive {
     width: 100%;
 }
+.soustitre {
+    color: grey;
+    width: 100%;
+}
+.spacing {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align:center;
+}
+.hauteur {
+
+}
+.colonnes {
+
+}
+.lettres {
+    text-transform: capitalize;
+}
+.effet {
+    text-decoration: ;
+}
+.normal {
+    display:flow;
+    width: 100%;
+}
 body {
-    background-color: white;    
+    background-color: white;
+}
+main {
+    margin: 0 30%;
+}
+section {
+    
 }
 header {
-    background-color: yellow;
+    background: linear-gradient(0.12turn, yellow, orange);
     text-align:center;
 }
 div {
     width: 30%;
-    border-style: solid;
-    margin: 10px;
+    margin-right: 5%;
     display:inline-block;
 }
 h2 {
     color:blue;
+    border-bottom: 1px solid #555;
+}
+footer {
+    text-align:center;
 }
