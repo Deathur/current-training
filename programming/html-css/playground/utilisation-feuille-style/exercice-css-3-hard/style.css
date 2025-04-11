@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Open Sans";
+    src:
+        url("fonts/OpenSans-Regular.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "Open Sans Bold";
+    src:
+        url("fonts/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("fonts/Montserrat-Regular.ttf") format("truetype");
+  }
+@font-face {
+    font-family: "Montserrat Bold";
+    src:
+        url("fonts/Montserrat-Bold.ttf") format("truetype");
+ }
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.osregular {
+    font-family: 'Open Sans';
+}
+.osbold {
+    font-family: 'Open Sans Bold';
+}
+.montregular {
+    font-family: 'Montserrat';
+}
+.montbold{
+    font-family: 'Montserrat Bold';
+}
+.responsive {
+    width: 100%;
+}
+body {
+    background-color: white;    
+}
+header {
+    background-color: yellow;
+    text-align:center;
+}
+div {
+    width: 30%;
+    border-style: solid;
+    margin: 10px;
+    display:inline-block;
+}
+h2 {
+    color:blue;
+}
