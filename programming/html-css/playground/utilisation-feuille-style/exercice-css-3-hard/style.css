@@ -58,6 +58,7 @@
 .soustitre {
     color: grey;
     width: 100%;
+    text-align: left;
 }
 .spacing {
     text-transform: uppercase;
@@ -83,6 +84,7 @@ body {
 }
 section {
     text-align:center;
+    margin-bottom: 100px;
 }
 main {
     margin: 0 20%;
@@ -102,6 +104,7 @@ div {
 h2 {
     color:blue;
     border-bottom: 1px solid #555;
+    text-align: left;
 }
 footer {
     text-align:center;
