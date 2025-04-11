@@ -22,6 +22,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
+    
 }
 .poppins-regular {
     font-family: "Poppins", sans-serif;
@@ -52,11 +53,11 @@
 }
 .responsive {
     width: 100%;
+    border: none;
 }
 .soustitre {
     color: grey;
     width: 100%;
-    text-align: justify;
 }
 .spacing {
     text-transform: uppercase;
@@ -66,8 +67,12 @@
     text-transform: capitalize;
 }
 .normal {
-    display:flow;
     width: 100%;
+    border: none;
+    text-align: left;
+}
+.nompolice {
+    font-weight: bold;
 }
 body {
     background-color: white;
@@ -84,9 +89,10 @@ header {
 }
 div {
     width: 40%;
-    margin:auto;
-    display:inline-block;
-    text-align:left;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+    border: double;
 }
 h2 {
     color:blue;
