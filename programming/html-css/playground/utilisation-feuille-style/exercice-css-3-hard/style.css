@@ -73,6 +73,10 @@
 }
 .nompolice {
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(78, 78, 78);
+}
+.ombre {
+    text-shadow: 1px 1px 2px rgb(78, 78, 78);
 }
 body {
     background-color: white;
