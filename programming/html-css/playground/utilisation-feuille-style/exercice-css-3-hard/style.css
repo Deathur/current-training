@@ -22,6 +22,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
+    
 }
 .poppins-regular {
     font-family: "Poppins", sans-serif;
@@ -57,7 +58,6 @@
 .soustitre {
     color: grey;
     width: 100%;
-    text-align: justify;
 }
 .spacing {
     text-transform: uppercase;
@@ -69,6 +69,10 @@
 .normal {
     width: 100%;
     border: none;
+    text-align: left;
+}
+.nompolice {
+    font-weight: bold;
 }
 body {
     background-color: white;
@@ -84,11 +88,11 @@ header {
     text-align:center;
 }
 div {
-    width: 300px;
-    margin: 10px;
+    width: 40%;
+    margin: 30px;
     display: inline-block;
-    text-align: left;
-    border: solid;
+    vertical-align: top;
+    border: double;
 }
 h2 {
     color:blue;
