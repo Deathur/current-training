@@ -7,17 +7,17 @@
     font-family: "Open Sans Bold";
     src:
         url("fonts/OpenSans-Bold.ttf") format("truetype");
-    }
-    @font-face {
+}
+@font-face {
         font-family: "Montserrat";
     src:
         url("fonts/Montserrat-Regular.ttf") format("truetype");
-  }
+}
 @font-face {
     font-family: "Montserrat Bold";
     src:
         url("fonts/Montserrat-Bold.ttf") format("truetype");
- }
+}
 .poppins-light {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -56,23 +56,14 @@
 .soustitre {
     color: grey;
     width: 100%;
+    text-align: justify;
 }
 .spacing {
     text-transform: uppercase;
     letter-spacing: 5px;
-    text-align:center;
-}
-.hauteur {
-
-}
-.colonnes {
-
 }
 .lettres {
     text-transform: capitalize;
-}
-.effet {
-    text-decoration: ;
 }
 .normal {
     display:flow;
@@ -81,20 +72,21 @@
 body {
     background-color: white;
 }
-main {
-    margin: 0 30%;
-}
 section {
-    
+    text-align:center;
+}
+main {
+    margin: 0 20%;
 }
 header {
     background: linear-gradient(0.12turn, yellow, orange);
     text-align:center;
 }
 div {
-    width: 30%;
-    margin-right: 5%;
+    width: 40%;
+    margin:auto;
     display:inline-block;
+    text-align:left;
 }
 h2 {
     color:blue;
