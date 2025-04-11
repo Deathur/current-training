@@ -85,7 +85,8 @@ main {
 }
 header {
     background: linear-gradient(0.12turn, yellow, orange);
-    text-align:center;
+    text-align: center;
+    align-items:center;
 }
 div {
     width: 40%;
