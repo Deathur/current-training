@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Open Sans";
     src:
-        url("fonts/OpenSans-Regular.ttf") format("truetype"); 
+    url("fonts/OpenSans-Regular.ttf") format("truetype"); 
 }
 @font-face {
     font-family: "Open Sans Bold";
@@ -9,15 +9,15 @@
         url("fonts/OpenSans-Bold.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Montserrat";
+        font-family: "Montserrat";
     src:
         url("fonts/Montserrat-Regular.ttf") format("truetype");
-  }
+}
 @font-face {
     font-family: "Montserrat Bold";
     src:
         url("fonts/Montserrat-Bold.ttf") format("truetype");
- }
+}
 .poppins-light {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -53,19 +53,45 @@
 .responsive {
     width: 100%;
 }
+.soustitre {
+    color: grey;
+    width: 100%;
+    text-align: justify;
+}
+.spacing {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.lettres {
+    text-transform: capitalize;
+}
+.normal {
+    display:flow;
+    width: 100%;
+}
 body {
-    background-color: white;    
+    background-color: white;
+}
+section {
+    text-align:center;
+}
+main {
+    margin: 0 20%;
 }
 header {
-    background-color: yellow;
+    background: linear-gradient(0.12turn, yellow, orange);
     text-align:center;
 }
 div {
-    width: 30%;
-    border-style: solid;
-    margin: 10px;
+    width: 40%;
+    margin:auto;
     display:inline-block;
+    text-align:left;
 }
 h2 {
     color:blue;
+    border-bottom: 1px solid #555;
+}
+footer {
+    text-align:center;
 }
