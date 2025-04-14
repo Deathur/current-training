@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+            <caption>Rapport des ventes par région</caption>
+            <thead>
+                <tr>
+                    <th>Région</th>
+                    <th>Produit</th>
+                    <th>Chiffre d'affaires</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td rowspan="2" class="region"><strong>Europe</strong></td>
+                   <td>Ordinateurs</td>
+                   <td>85 000 €</td>
+                </tr>
+                <tr>
+                    <td>Smartphones</td>
+                    <td>92 500 €</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="region"><strong>Amérique</strong></td>
+                    <td>Ordinateurs</td>
+                    <td>112 000 €</td>
+                 </tr>
+                 <tr>
+                     <td>Smartphones</td>
+                     <td>143 800 €</td>
+                 </tr>
+                 <tfoot>
+                    <tr>
+                        <td colspan="2" class="total"><strong><em>Total</em></strong></td>
+                        <td><strong><em>433 300€</em></strong></td>
+                     </tr>
+                 </tfoot>
+            </tbody>
+        </table>
+    </body>
+</html>

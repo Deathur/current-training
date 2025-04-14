@@ -69,7 +69,8 @@
 .normal {
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: auto;
+    display: contents;
 }
 .nompolice {
     font-weight: bold;
@@ -82,23 +83,26 @@ body {
     background-color: white;
 }
 section {
-    text-align:center;
     margin-bottom: 100px;
 }
 main {
-    margin: 0 20%;
+    margin: 0 15%;
 }
 header {
     background: linear-gradient(0.12turn, yellow, orange);
     text-align: center;
-    align-items:center;
+    align-items: center;
 }
 div {
     width: 300px;
     margin: 10px;
-    display: inline-block;
+    display: inline-flex;
     vertical-align: top;
-    border: double;
+    text-align: left;
+    flex-flow: row wrap;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    flex-grow: 1;
 }
 h2 {
     color:blue;
