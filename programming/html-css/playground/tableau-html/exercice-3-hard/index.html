@@ -59,7 +59,9 @@
                             <td>Développemet Site Web E-commerce Design et développement front-end responsive</td>
                             <td><input type="text" id="quantweb" name="quantweb" value="1"></td>
                             <td>6 500,00 €</td>
-                            <td>6 500,00 €</td>
+                            <td onchange="QuantWeb"><script>function TotalQuantWeb (QuantWeb) {
+                                alert("C'est" + QuantWeb);
+                            }</script></td>
                         </tr>
                         <tr>
                             <td>API Paiement Intégration des solutions de paiement</td>
@@ -119,5 +121,6 @@
             </section>
         </main>
         <footer><p><em>®2025 - Exercice de tableau HTML/CSS</em></p></footer>
+        <script src="script.js"></script>
     </body>
 </html>
