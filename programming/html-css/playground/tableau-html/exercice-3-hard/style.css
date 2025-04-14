@@ -1,0 +1,38 @@
+table {
+    border-collapse: collapse; /* Fusionne les bordures adjacentes */
+    width: 100%;
+}
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+  
+th {
+    background-color: #002fff;
+    font-weight: bold;
+}
+  
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Lignes alternées */
+}
+header {
+    display: flex;
+    flex-direction: row;
+}
+body {
+    margin: 0 15%;
+}
+.left {
+    text-align: left;
+}
+.right {
+    display: inline-flex;
+    flex-direction: column;
+}
+.blue {
+    color: blue;
+}
+.red {
+    color:red;
+}
