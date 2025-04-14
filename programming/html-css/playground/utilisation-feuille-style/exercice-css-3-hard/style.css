@@ -87,7 +87,7 @@ section {
     margin-bottom: 100px;
 }
 main {
-    margin: 0 20%;
+    margin: 0 10%;
 }
 header {
     background: linear-gradient(0.12turn, yellow, orange);
@@ -95,8 +95,8 @@ header {
     align-items:center;
 }
 div {
-    width: 40%;
-    margin: 30px;
+    width: 300px;
+    margin: 10px;
     display: inline-block;
     vertical-align: top;
     border: double;
@@ -105,6 +105,7 @@ h2 {
     color:blue;
     border-bottom: 1px solid #555;
     text-align: left;
+
 }
 footer {
     text-align:center;
