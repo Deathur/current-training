@@ -27,8 +27,11 @@ body {
     text-align: left;
 }
 .right {
-    display: inline-flex;
+    margin: 0 50%;
+    display:inline-flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
 }
 .blue {
     color: blue;
