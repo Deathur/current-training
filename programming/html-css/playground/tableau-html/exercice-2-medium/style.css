@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse; /* Fusionne les bordures adjacentes */
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #0004ff;
+    font-weight: bold;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Lignes alternées */
+}
+caption {
+    background: linear-gradient(0.12turn, blue, green);
+    color: white;
+}
+.total {
+    text-align: right;
+}
+.region {
+    vertical-align: top;
+}
