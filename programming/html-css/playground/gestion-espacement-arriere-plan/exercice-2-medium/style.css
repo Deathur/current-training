@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("images/space.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section {
+    border: solid;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.418);
+    margin: 20vh 20% 20vh 20%;
+    padding: 3vh 0;
+    text-align: center;
+    vertical-align: center;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer {
+    min-height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    background-position: bottom;
+}
+main {
+    flex: 1;
+}
+header {
+    margin-top: 20px;
+}
