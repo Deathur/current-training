@@ -5,7 +5,6 @@ body {
     margin: 0;
     background-image: url("images/space.jpg");
     background-repeat: no-repeat;
-    background-position: fixed;
     color: white;
     background-size: cover;
 }
