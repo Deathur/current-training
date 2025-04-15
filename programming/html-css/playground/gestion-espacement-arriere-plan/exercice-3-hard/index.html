@@ -9,17 +9,17 @@
     </head>
     <body>
         <header>
-            <section class="left">
+            <section>
                 <h1>Site Reponsive</h1>
             </section>
-            <div class="right">
+            <nav class="right">
                 <ul>
                     <li>Accueil</li>
                     <li>A propos</li>
                     <li>Services</li>
                     <li>Contact</li>
                 </ul>
-            </div>
+            </nav>
         </header>
         <main>
             <section class="module">
@@ -44,13 +44,10 @@
             <section class="module">
                 <h2>Contactez-nous</h2>
                 <form>
-                    <label for="Nom">Nom</label><br>
-                    <input type="text" id="Nom" name="Nom"><br>
-                    <label for="Email">Email</label><br>
-                    <input type="text" id="Email" name="Email"><br>
-                    <label for="Message">Mesage</label><br>
-                    <input type="text" id="Message" name="Message"><br>
-                    <input type="button" value="Envoyer"><br>
+                    <textarea placeholder="Nom"></textarea><br>
+                    <textarea placeholder="Email"></textarea><br>
+                    <textarea placeholder="Message" class="message"></textarea><br>
+                    <input type="button" value="Envoyer">
                 </form>
             </section>
         </main>

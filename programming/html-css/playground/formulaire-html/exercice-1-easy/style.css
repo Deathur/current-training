@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    margin: auto;
+    width: 190px;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(219, 219, 219);
+}
+input:valid {
+    border: 1px solid rgb(0, 255, 64);
+}
+input, select {
+    border: circle;
+}
+.envoyer {
+    background-color: #0c8f1e;
+    border: circle;
+    color: white;
+    padding: 4px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+main {
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: circle;
+}

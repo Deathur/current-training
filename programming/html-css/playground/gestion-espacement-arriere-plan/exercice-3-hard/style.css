@@ -1,13 +1,63 @@
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url("images/bg-tablet.jpg");
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px;
+
+    }
+    li {
+        flex: 1 1 200px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("images/bg-mobile.jpg");
+    }
+    ul {
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 10px;
+        position: absolute;
+    }
+    li {
+        flex: 1 1 200px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url("images/bg-desktop.jpg");
+    }
+    ul {
+        right: 20vw;
+    }
+}
+
 header {
     display: inline-block;
     white-space: nowrap;
 }
 body {
+    background-position: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-image: url("images/bg-desktop.jpg");
     background-repeat: no-repeat;
     color: white;
     background-size: cover;
@@ -40,19 +90,21 @@ form {
     flex-direction: column;
     width: 100%;
 }
-#Message {
-    line-height: 75px;
-    margin-bottom: 2%;
-}
 ul {
     list-style: none;
     overflow: hidden;
+    position: absolute;
+    top: 50px;
+    vertical-align: center;
+    text-shadow: 2px 2px black;
 }
 .sousmodule {
     display: inline-block;
     border: solid;
     border-color: grey;
     background-color: rgba(128, 128, 128, 0.384);
+    height: auto;
+    width: 250px;
 }
 li {
     float: left;
@@ -67,4 +119,21 @@ input[type=button], input[type=submit], input[type=reset] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+textarea {
+    width: 30vw;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.message {
+    height: 100px;
+}
+section, div {
+    padding: 20px;
+}
+h1 {
+    text-shadow: 2px 2px black;
 }
