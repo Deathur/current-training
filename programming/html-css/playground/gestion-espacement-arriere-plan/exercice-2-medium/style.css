@@ -7,17 +7,16 @@ body {
     background-repeat: no-repeat;
     color: white;
     background-size: cover;
+    background-attachment: fixed;
 }
-
 section {
     border: solid;
     border-color: black;
     background-color: rgba(0, 0, 0, 0.418);
-    margin: 30px 20% 30px 20%;
-
+    margin: 20vh 20% 20vh 20%;
+    padding: 3vh 0;
     text-align: center;
     vertical-align: center;
-
 }
 h1 {
     text-align: center;
@@ -32,4 +31,7 @@ footer {
 }
 main {
     flex: 1;
+}
+header {
+    margin-top: 20px;
 }
