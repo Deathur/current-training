@@ -1,0 +1,37 @@
+html {
+    text-align: center;
+}
+input[type=text], select, input[type=date], input[type=password] {
+    width: 40%;
+}
+input:valid {
+    border: 1px solid green;
+}
+input:invalid, select:invalid {
+    border: 1px solid red;
+}
+button {
+    height: 40px;
+}
+button[type=reset] {
+    width: 20vw;
+    max-width: 100px;
+}
+button[type=submit] {
+    background-color: rgb(23, 142, 211);
+    width: 30vw;
+    max-width: 200px;
+}
+h4, p {
+    width: 50%;
+    text-align: left;
+    margin: 0 0 0 30vw;
+}
+p {
+    width: 40%;
+    color: grey;
+}
+input[type=radio] {
+    width: 20px;
+    text-align: left;
+}
