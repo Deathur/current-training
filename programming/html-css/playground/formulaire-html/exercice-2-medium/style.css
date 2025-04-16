@@ -1,10 +1,8 @@
 html {
-    padding: 70px 0;
     text-align: center;
 }
 input[type=text], select, input[type=date], input[type=password] {
     width: 40%;
-    box-sizing: border-box;
 }
 input:valid {
     border: 1px solid green;
@@ -32,4 +30,8 @@ h4, p {
 p {
     width: 40%;
     color: grey;
+}
+input[type=radio] {
+    width: 20px;
+    text-align: left;
 }
