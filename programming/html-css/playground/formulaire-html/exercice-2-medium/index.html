@@ -8,42 +8,42 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <body>
+        <main>
             <h1>Créer un compte</h1>
             <form class="formulaire">
                 <div>
-                    <label for="Prénom"><h4>Prénom</h4></label>
+                    <h4><label for="prenom">Prénom</label></h4>
                     <input type="text" id="prenom" name="prenom" required>
                 </div>
                 <div>
-                    <label for="nom"><h4>Nom</h4></label>
+                    <h4><label for="nom">Nom</label></h4>
                     <input type="text" id="nom" name="nom" required>
                 </div>
                 <div>
-                    <label for="email"><h4>Email</h4></label>
+                    <h4><label for="email">Email</label></h4>
                     <input type="text" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                 </div>
                 <div>
-                    <label for="password"><h4>Mot de passe</h4></label>
+                    <h4><label for="password">Mot de passe</label></h4>
                     <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                     <p>Le mot de passe doit contenir au moins 8 caractères, ue majuscule, une minuscule et un chiffre</p>
                 </div>
                 <div>
-                    <label for="passwordconf"><h4>Confirmer le mot de passe</h4></label>
+                    <h4><label for="passwordconf">Confirmer le mot de passe</label></h4>
                     <input type="password" id="passwordconf" name="passwordconf" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 </div>
                 <div>
-                    <label for="date"><h4>Date de naissance</h4></label>
+                    <h4><label for="date">Date de naissance</label></h4>
                     <input type="date" id="date" name="date" required>
                 </div>
                 <div>
-                    <label><h4>Genre</h4></label>
+                    <h4><label>Genre</label></h4>
                     <label for="homme"><input type="radio" id="homme" value="Homme" name="genre" >Homme</label>
                     <label for="femme"><input type="radio" id="femme" value="Femme" name="genre">Femme</label>
                     <label for="autre"><input type="radio" id="autre" value="Autre" name="genre" required>Autre</label>
                 </div>
                 <div>
-                    <label for="pays"><h4>Pays</h4></label>
+                    <h4><label for="pays">Pays</label></h4>
                     <select id="pays" name="pays" required>
                         <option value="">Choisissez un pays</option>
                         <option value="fr">France</option>
@@ -63,6 +63,6 @@
                     <button type="submit">Envoyer</button>
                 </div>
             </form>
-        </body>
+        </main>
     </body>
 </html>

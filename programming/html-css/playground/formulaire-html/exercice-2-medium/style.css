@@ -1,22 +1,31 @@
-body {
+html {
     padding: 70px 0;
     text-align: center;
 }
 input[type=text], select, input[type=date], input[type=password] {
     width: 40%;
-}
-input {
-    border: circle;
-}
-#reset {
-    height: 40px;
-    width: 5vw;
-}
-#submit {
-    height: 40px;
-    width: 25vw;
-    background-color: rgb(0, 132, 255);
+    box-sizing: border-box;
 }
 input:valid {
-    border: 2px solid green;
+    border: 1px solid green;
+}
+input:invalid, select:invalid {
+    border: 1px solid red;
+}
+button {
+    height: 40px;
+}
+button[type=reset] {
+    width: 20vw;
+}
+button[type=submit] {
+    background-color: rgb(23, 142, 211);
+    width: 30vw;
+}
+h4, p {
+    text-align: left;
+    margin: 0 0 0 30vw ;
+}
+p {
+    color: grey;
 }
