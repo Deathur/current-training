@@ -1,0 +1,22 @@
+body {
+    padding: 70px 0;
+    text-align: center;
+}
+input[type=text], select, input[type=date], input[type=password] {
+    width: 40%;
+}
+input {
+    border: circle;
+}
+#reset {
+    height: 40px;
+    width: 5vw;
+}
+#submit {
+    height: 40px;
+    width: 25vw;
+    background-color: rgb(0, 132, 255);
+}
+input:valid {
+    border: 2px solid green;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <body>
+            <h1>Créer un compte</h1>
+            <form class="formulaire">
+                <div>
+                    <label for="Prénom"><h4>Prénom</h4></label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="nom"><h4>Nom</h4></label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="email"><h4>Email</h4></label>
+                    <input type="text" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                </div>
+                <div>
+                    <label for="password"><h4>Mot de passe</h4></label>
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <p>Le mot de passe doit contenir au moins 8 caractères, ue majuscule, une minuscule et un chiffre</p>
+                </div>
+                <div>
+                    <label for="passwordconf"><h4>Confirmer le mot de passe</h4></label>
+                    <input type="password" id="passwordconf" name="passwordconf" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </div>
+                <div>
+                    <label for="date"><h4>Date de naissance</h4></label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label><h4>Genre</h4></label>
+                    <label for="homme"><input type="radio" id="homme" value="Homme" name="genre" >Homme</label>
+                    <label for="femme"><input type="radio" id="femme" value="Femme" name="genre">Femme</label>
+                    <label for="autre"><input type="radio" id="autre" value="Autre" name="genre" required>Autre</label>
+                </div>
+                <div>
+                    <label for="pays"><h4>Pays</h4></label>
+                    <select id="pays" name="pays" required>
+                        <option value="">Choisissez un pays</option>
+                        <option value="fr">France</option>
+                        <option value="be">Belgique</option>
+                        <option value="ch">Suisse</option>
+                        <option value="ca">Canada</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="checkbox" id="cgu" required>
+                    <label for="cgu">J'accepte les conditions   d'utilisation et la politique de  confidentialité</label><br>
+                    <input type="checkbox" id="newsletter" checked>
+                    <label for="newsletter">Je souhaite recevoir la newsletter</label>
+                </div>
+                <div>
+                    <button type="reset">Réinitialiser</button>
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+        </body>
+    </body>
+</html>
