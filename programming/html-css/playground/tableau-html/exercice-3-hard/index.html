@@ -57,41 +57,41 @@
                     <tbody>
                         <tr>
                             <td>Développemet Site Web E-commerce Design et développement front-end responsive</td>
-                            <td><input type="text" id="quantweb" name="quantweb" value="1"></td>
-                            <td>6 500,00 €</td>
-                            <td>6 500,00 €</form></td>
+                            <td><input type="text" id="quantweb" name="quantweb" value="1" onchange="calcul()"></td>
+                            <td id="oneweb">6 500,00 €</td>
+                            <td><p id="totalweb">?</p></td>
                         </tr>
                         <tr>
                             <td>API Paiement Intégration des solutions de paiement</td>
-                            <td><input type="text" id="quantapi" name="quantapi" value="1"></td>
+                            <td><input type="text" id="quantapi" name="quantapi" value="1" onchange="calcul()"></td>
                             <td>1 200,00 €</td>
-                            <td>1 200,00 €</td>
+                            <td id="totalapi">?</td>
                         </tr>
                         <tr>
                             <td>Hébergement Premium Scaleway Cloud - 12 mois</td>
-                            <td><input type="text" id="quanthebe" name="quanthebe" value="12"></td>
+                            <td><input type="text" id="quanthebe" name="quanthebe" value="12" onchange="calcul()"></td>
                             <td>150,00 €</td>
-                            <td>1 800,00 €</td>
+                            <td id="totalhebe">?</td>
                         </tr>
                         <tr>
                             <td>Formation Utilisateur Sessions de 4 heures (tarif horaire)</td>
-                            <td><input type="text" id="quantforma" name="quantforma" value="8"></td>
+                            <td><input type="text" id="quantforma" name="quantforma" value="8" onchange="calcul()"></td>
                             <td>120,00 €</td>
-                            <td>960,00 €</td>
+                            <td id="totalforma">?</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="3">Sous-total HT:</td>
-                            <td id="HT">10460,00 €</td>
+                            <td id="HT">?</td>
                         </tr>
                         <tr>
                             <td colspan="3">TVA (20%):</td>
-                            <td id="TVA">2 092,00 €</td>
+                            <td id="TVA">?</td>
                         </tr>
                         <tr>
                             <td colspan="3">Total TTC:</td>
-                            <td id="TTC">12 552,00 €</td>
+                            <td id="TTC">?</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -119,6 +119,6 @@
             </section>
         </main>
         <footer><p><em>®2025 - Exercice de tableau HTML/CSS</em></p></footer>
-        <script src="script.js"></script>
+        <script src="sript.js"></script>
     </body>
 </html>

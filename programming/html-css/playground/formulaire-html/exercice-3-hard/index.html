@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Demande de devis</h1>
+        </header>
+        <main>
+        
+            <section id="step1">
+                <h2>Informations personnelles</h2>
+                <div>
+                    <form>
+                    <div>
+                        <h4><label for="prenom">Prénom</label></h4>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div>
+                        <h4><label for="nom">Nom</label></h4>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div>
+                        <h4><label for="email">Email</label></h4>
+                        <input type="text" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div>
+                        <h4><label for="numtelephone">Téléphone</label></h4>
+                        <input type="text" id="numtelephone" name="numtelephone" required>
+                    </div>
+                    </form>
+                    <button type="submit" onclick="etape1fini()">Envoyer</button>
+                </div>
+            </section>
+            <section id="step2">
+                <h2>Détails du projet</h2>
+                <div>
+                    <h4><label for="typeprojet">Type de projet</label></h4>
+                    <select id="typeprojet" name="typeprojet" required>
+                        <option value="">Sélectionnez un type</option>
+                        <option value="web">Site Web</option>
+                        <option value="app">Application mobile</option>
+                        <option value="ecomm">E-commerce</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div>
+                    <h4><label for="budget">Type de projet</label></h4>
+                    <select id="budget" name="budget" required>
+                        <option value="">Sélectionnez une fourchette</option>
+                        <option value="budgetun">Moins de 1 000 €</option>
+                        <option value="budgetdeux">1 000 € - 5 000 €</option>
+                        <option value="budgettrois">5 000 € - 10 000 €</option>
+                        <option value="budgetquatre">Plus de 10 000 €</option>
+                    </select>
+                </div>
+                <div>
+                    <h4><label for="date">Date de naissance</label></h4>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="description">Description du projet</label>
+                    <input type="text" id="description" name="description" required>
+                </div>
+                <button onclick="reset()">Précédent</button>
+                <button onclick="etape2fini()">Suivant</button>
+            </section>
+            <section id="step3">
+                <h2>Preférence et soumission</h2>
+                <div>
+                    <h4>Fonctionnalités souhaitées</h4>
+                    <input type="checkbox" id="responsive" name="responsive">
+                    <label for="responsive">Design Reponsive</label>
+                    <input type="checkbox" id="gestion" name="gestion">
+                    <label for="gestion">Système de gestion de contenu</label>
+                    <input type="checkbox" id="analyse" name="analyse">
+                    <label for="analyse">Outils d'analyse</label>
+                    <input type="checkbox" id="seo" name="seo">
+                    <label for="seo">Optimisation SEO</label>
+                    <input type="checkbox" id="sociaux" name="sociaux">
+                    <label for="sociaux">Intégration réseaux sociaux</label>
+                </div>
+                <div>
+                    <select id="contact" name="contact">
+                        <option value="contactmail">Email</option>
+                        <option value="contactphone">Téléphone</option>
+                        <option value="contactvisio">visio-conférence</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="complementaire">Informations complémentaires</label>
+                    <input type="text" id="complementaire" name="complementaire" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="acceptation" name="acceptation" required>
+                    <label for="acceptation">J'accepte que mes informations soient utiisées pour me contacter</label>
+                </div>
+                <button onclick="etape1fini()">Précédent</button>
+                <button type="submit" onclick="etape3fini()">Suivant</button>
+            </section>
+            
+            <section id="step4" id="step4">
+                <h2>Merci pour votre demande</h2>
+                <p>Nous avons bien reçu votre demande de devis et nous vous contacterons très prochainement.</p>
+                <p id="finmail"></p>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
