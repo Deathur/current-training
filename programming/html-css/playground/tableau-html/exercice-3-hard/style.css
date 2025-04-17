@@ -24,9 +24,6 @@ header {
 body {
     margin: 0 15%;
 }
-.left {
-    white-space: nowrap;
-}
 .right {
     margin: 0 75%;
     display:flex;
