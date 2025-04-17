@@ -1,5 +1,18 @@
 html {
+    margin-top: 30px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding-bottom: 30px;
+    border: solid;
+}
+body {
+    
+}
+.align {
     text-align: center;
+}
+.radio, .checkbox {
+    margin: 0 0 0 12vw;
 }
 input[type=text], select, input[type=date], input[type=password] {
     width: 40%;
@@ -22,16 +35,16 @@ button[type=submit] {
     width: 30vw;
     max-width: 200px;
 }
-h4, p {
+h4:not(.exclude), p {
     width: 50%;
     text-align: left;
-    margin: 0 0 0 30vw;
+    margin: 0 0 0 12vw;
 }
 p {
     width: 40%;
     color: grey;
 }
-input[type=radio] {
-    width: 20px;
+#homme, #femme, #autre {
+    width: 30px;
     text-align: left;
 }
