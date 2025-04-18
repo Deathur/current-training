@@ -1,6 +1,8 @@
 table {
     border-collapse: collapse; /* Fusionne les bordures adjacentes */
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
   }
   th, td {
     border: 1px solid #000000;
@@ -11,6 +13,7 @@ table {
   th {
     background-color: #002fff;
     font-weight: bold;
+    color: white;
   }
   
   tr:nth-child(even) {
