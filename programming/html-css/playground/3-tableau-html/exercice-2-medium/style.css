@@ -7,7 +7,7 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: center;
+    text-align: left;
 }
 th {
     background-color: #0004ff;
@@ -25,5 +25,5 @@ caption {
     text-align: right;
 }
 .region {
-    vertical-align: top;
+    vertical-align: center;
 }
