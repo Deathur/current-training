@@ -1,21 +1,29 @@
 html {
     background: linear-gradient(90deg,rgba(201, 62, 62, 1) 0%, rgba(35, 204, 102, 1) 50%, rgba(56, 153, 194, 1) 100%);
+    font-family: Roboto;
 }
 body {
     display: block;
     margin: auto;
     width: 300px;
 }
-input:valid {
-    border: 1px solid rgb(0, 255, 64);
+main {
+    padding: 10px 20px;
+    margin-left: 5px;
+    margin-top: 20px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 3px 3px 3px rgba(64,64,64,0.71);
 }
 input, select {
     border-radius: 5px 5px 5px 5px;
     border: 1px solid;
-    height: 30px;
+}
+input:valid {
+    border: 1px solid rgb(0, 255, 64);
 }
 input:not([type="checkbox"]), select {
-    width: 90%;
+    width: 100%;
 }
 .envoyer {
     background-color: #09d123;
@@ -27,18 +35,11 @@ input:not([type="checkbox"]), select {
     margin: 4px 2px;
     cursor: pointer;
 }
-main {
-    padding-left: 5px;
-    margin-left: 5px;
-    margin-top: 20px;
-    background-color: rgb(212, 212, 212);
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 3px 3px 3px 3px rgba(64,64,64,0.71);
-}
 #message {
     height: 50px;
 }
 h1 {
     text-align: center;
     padding-left: auto;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.57);
 }
