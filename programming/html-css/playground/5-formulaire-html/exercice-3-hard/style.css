@@ -1,5 +1,6 @@
 html {
     background: linear-gradient(90deg,rgba(201, 62, 62, 1) 0%, rgba(35, 204, 102, 1) 50%, rgba(56, 153, 194, 1) 100%);
+    font-family:Roboto;
 }
 body {
     display: block;
@@ -11,20 +12,18 @@ body {
     box-shadow: 3px 3px 3px 3px rgba(64,64,64,0.71);
 }
 main {
-    padding-left: 5px;
-    margin-left: 5px;    
-}
-h1 {
-    text-align: center;
-    padding-left: auto;
+    padding: 10px 20px;
+    margin-left: 5px;
 }
 input, select {
     border-radius: 5px 5px 5px 5px;
     border: 1px solid;
-    height: 30px;
+}
+input:valid {
+    border: 1px solid rgb(0, 255, 64);
 }
 input[type="text"], input[type="password"], input[type="date"], select  {
-    width: 90%;
+    width: 100%;
 }
 button {
     border: 1px solid;
@@ -42,6 +41,8 @@ button {
     background-color: white;
     color: black;
 }
-input:valid {
-    border: 1px solid rgb(0, 255, 64);
+h1 {
+    text-align: center;
+    padding-left: auto;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.57);
 }
