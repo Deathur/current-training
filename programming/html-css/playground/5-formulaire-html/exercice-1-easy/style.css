@@ -1,3 +1,6 @@
+html {
+    background: linear-gradient(90deg,rgba(201, 62, 62, 1) 0%, rgba(35, 204, 102, 1) 50%, rgba(56, 153, 194, 1) 100%);
+}
 body {
     display: block;
     margin: auto;

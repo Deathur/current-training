@@ -1,47 +1,47 @@
 html {
-    margin-top: 30px;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    padding-bottom: 30px;
-    border: solid;
+    background: linear-gradient(90deg,rgba(201, 62, 62, 1) 0%, rgba(35, 204, 102, 1) 50%, rgba(56, 153, 194, 1) 100%);
 }
-.align {
+body {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+main {
+    padding-left: 5px;
+    margin-left: 5px;
+    margin-top: 20px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 3px 3px 3px rgba(64,64,64,0.71);
+}
+input, select {
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid;
+    height: 30px;
+}
+input[type="text"], input[type="password"], input[type="date"], select  {
+    width: 90%;
+}
+h1 {
     text-align: center;
-}
-.radio, .checkbox {
-    margin: 0 0 0 12vw;
-}
-input[type=text], select, input[type=date], input[type=password] {
-    width: 40%;
-}
-input:valid {
-    border: 1px solid green;
-}
-input:invalid, select:invalid {
-    border: 1px solid red;
+    padding-left: auto;
 }
 button {
-    height: 40px;
+    border: 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    padding: 4px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
-button[type=reset] {
-    width: 20vw;
-    max-width: 100px;
+.envoyer {
+    background-color: #09d123;
+    color: white;
 }
-button[type=submit] {
-    background-color: rgb(23, 142, 211);
-    width: 30vw;
-    max-width: 200px;
+.reset {
+    background-color: white;
+    color: black;
 }
-h4:not(.exclude), p {
-    width: 50%;
-    text-align: left;
-    margin: 0 0 0 12vw;
-}
-p {
-    width: 40%;
-    color: grey;
-}
-#homme, #femme, #autre {
-    width: 30px;
-    text-align: left;
+input:valid {
+    border: 1px solid rgb(0, 255, 64);
 }

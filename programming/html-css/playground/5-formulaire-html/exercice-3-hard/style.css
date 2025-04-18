@@ -1,22 +1,47 @@
-input:invalid {
-    border: 2px solid red;
-}
-input:valid {
-    border: 2px solid green;
+html {
+    background: linear-gradient(90deg,rgba(201, 62, 62, 1) 0%, rgba(35, 204, 102, 1) 50%, rgba(56, 153, 194, 1) 100%);
 }
 body {
     display: block;
-    text-align: justify;
-    border: 1px solid blue;
-    margin:0 40%;
-    margin-top: 50px;
-    padding: 10px 10px 10px 10px;
-    
+    margin: auto;
+    width: 300px;
+    margin-top: 20px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 3px 3px 3px rgba(64,64,64,0.71);
+}
+main {
+    padding-left: 5px;
+    margin-left: 5px;    
+}
+h1 {
+    text-align: center;
+    padding-left: auto;
+}
+input, select {
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid;
+    height: 30px;
+}
+input[type="text"], input[type="password"], input[type="date"], select  {
+    width: 90%;
 }
 button {
-    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    padding: 4px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
-input, select, button {
-    width: auto;
-    border-radius: 3px 3px 3px 3px;
+.envoyer {
+    background-color: #09d123;
+    color: white;
+}
+.reset {
+    background-color: white;
+    color: black;
+}
+input:valid {
+    border: 1px solid rgb(0, 255, 64);
 }
