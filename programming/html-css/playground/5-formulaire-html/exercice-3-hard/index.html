@@ -12,7 +12,6 @@
             <h1>Demande de devis</h1>
         </header>
         <main>
-        
             <section id="step1">
                 <h2>Informations personnelles</h2>
                 <div>
@@ -64,7 +63,7 @@
                     <input type="date" id="date" name="date" required>
                 </div>
                 <div>
-                    <label for="description">Description du projet</label>
+                    <h4><label for="description">Description du projet</label></h4>
                     <input type="text" id="description" name="description" required>
                 </div>
                 <button onclick="reset()">Précédent</button>
@@ -72,20 +71,31 @@
             </section>
             <section id="step3">
                 <h2>Preférence et soumission</h2>
-                <div>
+                <div class="fonctionnalité">
                     <h4>Fonctionnalités souhaitées</h4>
-                    <input type="checkbox" id="responsive" name="responsive">
-                    <label for="responsive">Design Reponsive</label>
-                    <input type="checkbox" id="gestion" name="gestion">
-                    <label for="gestion">Système de gestion de contenu</label>
-                    <input type="checkbox" id="analyse" name="analyse">
-                    <label for="analyse">Outils d'analyse</label>
-                    <input type="checkbox" id="seo" name="seo">
-                    <label for="seo">Optimisation SEO</label>
-                    <input type="checkbox" id="sociaux" name="sociaux">
-                    <label for="sociaux">Intégration réseaux sociaux</label>
+                    <div>
+                        <input type="checkbox" id="responsive" name="responsive">
+                        <label for="responsive">Design Reponsive</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="gestion" name="gestion">
+                        <label for="gestion">Système de gestion de contenu</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="analyse" name="analyse">
+                        <label for="analyse">Outils d'analyse</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="seo" name="seo">
+                        <label for="seo">Optimisation SEO</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sociaux" name="sociaux">
+                        <label for="sociaux">Intégration réseaux sociaux</label>
+                    </div>
                 </div>
                 <div>
+                    <h4><label for="contact">Préférence de contact</label></h4>
                     <select id="contact" name="contact">
                         <option value="contactmail">Email</option>
                         <option value="contactphone">Téléphone</option>
@@ -93,7 +103,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="complementaire">Informations complémentaires</label>
+                    <h4><label for="complementaire">Informations complémentaires</label></h4>
                     <input type="text" id="complementaire" name="complementaire" required>
                 </div>
                 <div>
