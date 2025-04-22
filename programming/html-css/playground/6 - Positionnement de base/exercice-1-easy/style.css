@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+#myVideo {
+    position: fixed;
+    object-fit: cover;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.content {
+    position: fixed;
+    top: 40%;
+    text-align: center;
+    color: #f1f1f1;
+    width: 100vw;
+    height: 100vw;
+}
+button {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: green;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+}
+button:hover {
+    background: rgb(62, 223, 62);
+    color: black;
+}
