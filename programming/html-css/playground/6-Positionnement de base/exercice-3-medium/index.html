@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="Stylesheet" href="reset.css">
         <link rel="Stylesheet" href="style.css">
     </head>
@@ -11,10 +14,10 @@
         <header>
             <section class="flex-container">
                 <div class="left">
-                    <img src="marque.png">
+                    <img src="marque.png" alt="logo de marque">
                     <h1>GalaxyStar</h1>
                 </div>
-                <div class="right">
+                <div>
                     <nav>
                         <ul class="navigation">
                             <li class="menu actuel">Accueil</li>
@@ -28,48 +31,53 @@
             </section>
         </header>
         <main>
-            <section>
-                <h1>Bienvenu chez GalaxyStar</h1>
-                <p>Découvrez nos szolutions innovantes pour votre entreprise</p>
+            <section class="partie un nom">
+                <h1>Bienvenue chez <strong><em>GalaxyStar</em></strong></h1>
+                <p>Découvrez nos <em>solutions innovantes</em> pour votre entreprise</p>
             </section>
-            <section>
+            <section class="partie un">
                 <h1>Nos Services</h1>
-                <div>
-                    <h2>Développement Web</h2>
-                    <p>Créations de sites web et d'applications web personnaliés pour répodre à vos besoin spécifique</p>
-                </div>
-                <div>
-                    <h2>Applications Mobiles</h2>
-                    <p>Développement d'applications mobiles natives et hybrides pour iOS et Android</p>
-                </div>
-                <div>
-                    <h2>UI/UX Design</h2>
-                    <p>Conception d'interfaces d'utilisateur intuitices et d'expériences utilisateur exceptionnelles</p>
+                <div class="souspartie">
+                    <div class="service">
+                        <h2><em>Développement Web</em></h2>
+                        <img src="monitor.png" class="imagepartie" alt="logo d'écran">
+                        <p>Créations de sites web et d'applications web personnaliés pour répodre à vos besoin spécifique</p>
+                    </div>
+                    <div class="service">
+                        <h2><em>Applications Mobiles</em></h2>
+                        <img src="mobile.png" class="imagepartie" alt="logo de mobile">
+                        <p>Développement d'applications mobiles natives et hybrides pour iOS et Android</p>
+                    </div>
+                    <div class="service">
+                        <h2><em>UI/UX Design</em></h2>
+                        <img src="pencil.png" class="imagepartie" alt="logo de crayon">
+                        <p>Conception d'interfaces d'utilisateur intuitices et d'expériences utilisateur exceptionnelles</p>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section class="partie deux">
                 <h1>Notre Portfolio</h1>
                 <p>Découvrez nos projets récents</p>
-                <div>
+                <div class="fenetre">
                     <p>Contenu du portfolio</p>
                 </div>
             </section>
-            <section>
-                <h1>A propos de nous</h1>
+            <section class="partie un">
+                <h1><em>A propos de nous</em></h1>
                 <p>GalaxyStar est une agence de développement web fondée en 2020, spécialisée dans la créations de solutions numériques innovantes.</p>
                 <p>Notre équipe" de développeurs et designers passionnés s'engage à offrir des produits de haute qualité qui répondent aux besoins uniques de chaque client.</p>
                 <p>Nous croyons en la simplicité, la fonctionnalité est l'esthétique dans tout ce que nous créons.</p>
             </section>
-            <section>
+            <section class="partie deux">
                 <h1>Contactez-nous</h1>
                 <p>Vous avez un projet en tête ? N'hésitez pas à nous contacter !</p>
-                <div>
+                <div class="fenetre">
                     <p>Formulaire de contact</p>
                 </div>
             </section>
         </main>
         <footer>
-            <p>®2025 Horizon. Tous droits réservés</p>
+            <p>®2025 GalaxyStar. Tous droits réservés</p>
         </footer>
     </body>
 </html>
