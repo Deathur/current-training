@@ -17,7 +17,7 @@ header {
     height: 80px;
     z-index: 500;
 }
-main {
+main, footer {
     position: relative;
     top: 80px;
 }
@@ -51,7 +51,56 @@ li {
     background-color: rgb(89, 0, 255);
     border-radius: 5px 5px 5px 5px;
 }
+.partie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding:40px
+    
+    
+}
+.souspartie {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.service {
+    display: flex;
+    flex-direction: column;
+}
+.imagepartie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 50px;
+}
+.un {
+    background-color: white;
+    padding-left: 200px;
+}
+.deux {
+    background-color: rgba(128, 128, 128, 0.205);
+    padding-left: 200px;
+}
+main {
+    
+}
 footer {
-    position: relative;
-    top: 70%;
+    text-align: center;
+    background: linear-gradient(90deg,rgba(18, 0, 92, 1) 0%, rgba(9, 9, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+.fenetre {
+    background-color: white;
+    border: 1px dashed black;
+    text-align: center;
+    padding: 20px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
 }
