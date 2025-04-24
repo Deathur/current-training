@@ -27,7 +27,7 @@ menuItems.forEach(item => {
   item.addEventListener('mouseenter', function(event) {
     let submenu = this.querySelector('.servicemenu');
     if (submenu) {
-        submenu.classList.toggle('show-menu');
+        submenu.classList.add('show-menu');
     }
   });
 });
@@ -35,7 +35,15 @@ menuItems.forEach(item => {
     item.addEventListener('click', function(event) {
       let submenu = this.querySelector('.servicemenu');
       if (submenu) {
-          submenu.classList.toggle('show-menu');
+          submenu.classList.remove('show-menu');
+      }
+    });
+  });
+  menuItems.forEach(item => {
+    item.addEventListener('mouseleave', function(event) {
+      let submenu = this.querySelector('.servicemenu');
+      if (submenu) {
+          submenu.classList.remove('show-menu');
       }
     });
   });
@@ -43,7 +51,7 @@ menuItems.forEach(item => {
     item.addEventListener('mouseenter', function(event) {
       let submenu = this.querySelector('.proposmenu');
       if (submenu) {
-        submenu.classList.toggle('show-menu');
+        submenu.classList.add('show-menu');
       }
     });
   });
@@ -51,8 +59,15 @@ menuItems.forEach(item => {
     item.addEventListener('click', function(event) {
       let submenu = this.querySelector('.proposmenu');
       if (submenu) {
-        submenu.classList.toggle('show-menu');
+        submenu.classList.remove('show-menu');
       }
     });
   });
-  
+  menuItems.forEach(item => {
+    item.addEventListener('mouseleave', function(event) {
+      let submenu = this.querySelector('.proposmenu');
+      if (submenu) {
+          submenu.classList.remove('show-menu');
+      }
+    });
+  });

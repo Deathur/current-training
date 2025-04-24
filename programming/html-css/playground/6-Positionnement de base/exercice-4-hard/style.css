@@ -25,8 +25,9 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    background-color: grey;
+    background-color: rgb(0, 213, 255);
 }
+#navigation, 
 .servicemenu ,.proposmenu {
     display:none;
 }
@@ -82,9 +83,10 @@ footer {
 .servicemenu.show-menu, .proposmenu.show-menu {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 212, 255, 1);
+    background-color: rgb(0, 213, 255);
+    border-radius: 5px 5px 5px 5px;
     position: absolute;
-    top: 20%;
+    top: 0vh;
     right: 100%;
     list-style: none;
 }
@@ -156,6 +158,9 @@ footer {
 }
 /* TABLET */
 @media (min-width: 769px) and (max-width: 1200px) {
+    header {
+        background: linear-gradient(90deg,rgba(18, 0, 92, 1) 0%, rgb(93, 93, 202) 40%, rgba(0, 212, 255, 1) 100%);
+    }
     #navigation > a { 
       padding:5px 10px; 
       margin:0 2px;
@@ -164,6 +169,7 @@ footer {
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 212, 255, 1);
+        border-radius: 5px 5px 5px 5px;
         position: absolute;
         list-style: none;
     }
@@ -180,6 +186,7 @@ footer {
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 212, 255, 1);
+        border-radius: 5px 5px 5px 5px;
         position: absolute;
         top: auto;
         right: auto;
