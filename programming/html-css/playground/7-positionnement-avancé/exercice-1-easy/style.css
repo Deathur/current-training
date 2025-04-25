@@ -7,10 +7,10 @@ main {
     margin-right: 10vw;
 }
 .basegrid {
-    width: 100%;
     padding: 15px;
     display: grid;
-    grid-template: repeat(5, 300px) / repeat(4, 1fr);
+    grid-template-columns: repeat(5, 200px);
+    grid-auto-rows: 200px;
     gap: 10px;
     justify-self: center;
     align-self: end;
@@ -32,11 +32,31 @@ img {
 h1 {
     text-align: center;
 }
-@media screen and (max-width:769px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     main {
         margin: 0;
     }
     .basegrid {
-        grid-template: 300px auto 300px / repeat(4, 1fr);
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-auto-rows: 200px;
+        gap: 10px;
+        justify-self: center;
+        align-self: end;
+    }
+}
+@media screen and (max-width: 769px) {
+    main {
+        margin: 0;
+    }
+    .basegrid {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-auto-rows: 200px;
+        gap: 10px;
+        justify-self: center;
+        align-self: end;
     }
 }

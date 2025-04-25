@@ -2,6 +2,9 @@ html {
     font-family: Roboto;
     font-size: 16px;
 }
+h2 {
+    font-style: italic;
+}
 .main, .sidebar  {
     margin: 0 2.5em;
 }
@@ -10,8 +13,8 @@ html {
 }
 .gridlayout {
     display: grid;
-    grid-template-rows: auto auto 1fr auto auto; /* 3 lignes */
-    gap: 10px; /* espace entre les cellules */
+    grid-template-rows: auto auto 1fr auto auto;
+    gap: 10px;
     grid-template-areas:
     "header"
     "nav"
@@ -21,6 +24,7 @@ html {
 }
 .sidebar > div  {
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
+    background-color: rgb(233, 233, 233);
     margin: 2em 0;
 }
 header, footer {
@@ -32,15 +36,18 @@ header, footer {
     background: linear-gradient(90deg,rgba(18, 0, 92, 1) 0%, rgba(9, 9, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
     color: white;
 }
-.gridlayout > div.nav {
+.gridlayout > nav {
     grid-area: nav;
     list-style: none;
 }
 .gridlayout > div.main {
     grid-area: main;
+    line-height: 2;
 }
 .gridlayout > div.sidebar {
     grid-area: sidebar;
+    line-height: 2;
+    
 }
 .gridlayout > div.footer {
     grid-area: footer;
@@ -92,6 +99,9 @@ button {
     border-radius: 5px 5px 5px 5px;
     color: white;
 }
+button:hover {
+    background-color: rgb(0, 172, 0);
+}
 .mesavantages {
     position: relative;
     left: 40%;
@@ -117,6 +127,9 @@ button {
 .textfooter {
     width: 250px;
     color: rgb(165, 165, 165);
+}
+.sidebar > div {
+    padding-bottom: 0.5em;
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
