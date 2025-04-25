@@ -171,6 +171,8 @@ footer {
         background-color: rgba(0, 212, 255, 1);
         border-radius: 5px 5px 5px 5px;
         position: absolute;
+        top: auto;
+        right: auto;
         list-style: none;
     }
     .contact {
