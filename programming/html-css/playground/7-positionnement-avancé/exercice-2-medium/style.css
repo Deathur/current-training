@@ -50,7 +50,7 @@ header, footer {
 .navigation {
     display: flex;
     justify-content: center;
-    padding: auto;
+    padding: 0;
 }
 .navigation > li {
     list-style-type: none;
@@ -70,6 +70,8 @@ header, footer {
 }
 .header, .alignementlogo {
     display: flex;
+}
+.header {
     padding: 0 1.4em;
 }
 .footer {
