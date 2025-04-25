@@ -49,6 +49,8 @@ header, footer {
 }
 .navigation {
     display: flex;
+    justify-content: center;
+    padding: auto;
 }
 .navigation > li {
     list-style-type: none;
@@ -64,6 +66,11 @@ header, footer {
 }
 .avantage {
     display: block;
+    justify-content: left;
+}
+.header, .alignementlogo {
+    display: flex;
+    padding: 0 1.4em;
 }
 .footer {
     display: block;
@@ -71,6 +78,12 @@ header, footer {
 }
 .footer > div {
     padding: 10px 0;
+}
+.logo {
+    display: flex;
+    max-width: 2.5em;
+    height: 2.5em;
+    margin-right: 1em;
 }
 button {
     background-color: rgb(0, 109, 0);
@@ -86,6 +99,22 @@ button {
     border-radius: 5px 5px 5px 5px;
     width: 95%;
     margin: 5px;
+}
+.category {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category > p {
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    margin: 5px 10px;
+    padding: 0 5px;
+}
+.sidebar > div {
+    padding-left: 5px;
+}
+.textfooter {
+    width: 250px;
+    color: rgb(165, 165, 165);
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
