@@ -15,6 +15,7 @@
             <h1>Demande de devis</h1>
         </header>
         <main>
+            <p id="Page"></p>
             <section id="step1">
                 <h2>Informations personnelles</h2>
                 <div>
@@ -69,8 +70,8 @@
                     <h4><label for="description">Description du projet</label></h4>
                     <input type="text" id="description" name="description" required>
                 </div>
-                <button onclick="reset()" class="reset">Précédent</button>
-                <button onclick="etape2fini()" class="envoyer">Suivant</button>
+                <button onclick="etape2retour()" class="reset">Précédent</button>
+                <button type="submit" onclick="etape2fini()" class="envoyer">Suivant</button>
             </section>
             <section id="step3">
                 <h2>Preférence et soumission</h2>
@@ -113,7 +114,7 @@
                     <input type="checkbox" id="acceptation" name="acceptation" required>
                     <label for="acceptation">J'accepte que mes informations soient utiisées pour me contacter</label>
                 </div>
-                <button onclick="etape1fini()" class="reset">Précédent</button>
+                <button onclick="etape3retour()" class="reset">Précédent</button>
                 <button type="submit" onclick="etape3fini()" class="envoyer">Suivant</button>
             </section>
             
