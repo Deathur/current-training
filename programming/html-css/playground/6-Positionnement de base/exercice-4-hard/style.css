@@ -27,8 +27,7 @@ header {
     flex-direction: row;
     background-color: rgb(0, 213, 255);
 }
-#navigation, 
-.servicemenu ,.proposmenu {
+#navigation, .servicemenu ,.proposmenu {
     display:none;
 }
 li {
@@ -45,6 +44,7 @@ li {
 .contact:hover {
     background-color: rgb(0, 255, 255);
     color: white;
+    transition: all ease 1s ;
 }
 img {
     padding-right: 10px;
@@ -102,7 +102,7 @@ footer {
     margin:0 2px;
     text-decoration:none;
     font: 1em Arial, Helvetica, sans-serif;
-    text-transform:uppercase; /* en majuscules */
+    text-transform:uppercase;
     color:#fff;
     border:solid 1px #fff;	
     background: #577bac;
@@ -113,7 +113,10 @@ footer {
     background:#ffaaaa; 
     color: #577bac;	
     border: solid 1px #577bac;
-}  
+} 
+.hidden {
+    display:none;
+}
 #MenuBurger { 
     position :fixed; 
     top :4px; 
@@ -142,12 +145,10 @@ footer {
     #navigation {
       flex-direction:row;
       background-color: transparent;
-      /*flex-wrap:wrap;*/
     }
     #navigation > a {
       display:flex;
       align-items:center;
-      /*flex-wrap:wrap;*/
     }
     #MenuBurger { 
       display:none;

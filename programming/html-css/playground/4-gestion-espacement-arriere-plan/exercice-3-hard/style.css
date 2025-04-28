@@ -105,7 +105,8 @@ ul {
     border-color: grey;
     background-color: rgba(128, 128, 128, 0.384);
     height: auto;
-    width: 250px;
+    margin: 0 20px;
+    width: auto;
     border-radius: 5px 5px 5px 5px;
 }
 li {

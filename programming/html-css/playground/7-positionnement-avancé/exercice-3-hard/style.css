@@ -1,0 +1,47 @@
+html {
+    font-family: Roboto;
+}
+.mongrid {
+    display: grid;
+    grid-template-areas:
+    'monmenu monmenu'
+    'sidebar sidebar'
+    'widget widget'
+    'widget widget';
+    grid-gap: 10px;
+}
+.mongrid > div {
+    text-align: center;
+    padding: 20px 0;
+}
+.monmenu {
+    grid-area: monmenu;
+    display: flex;
+    justify-content: space-between;
+
+}
+.widget {
+    grid-area: widget;
+    display: grid;
+    grid-template:
+    'wid1 wid2'
+    'wid3 wid4';
+}
+.sidebar { grid-area: sidebar; }
+.wid1 { grid-area: wid1; }
+.wid2 { grid-area: wid2; }
+.wid3 { grid-area: wid3; }
+.wid4 { grid-area: wid4; }
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+}
+.substats {
+    display: flex;
+    border: 1px dashed grey;
+    padding: 10px;
+}
+.number {
+    font-size: 20px;
+    font-weight: bold;
+}
