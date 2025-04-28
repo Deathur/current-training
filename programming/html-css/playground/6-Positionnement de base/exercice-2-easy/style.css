@@ -28,6 +28,7 @@ img {
 }
 li {
     padding: 0.5rem 1rem;
+    transition: border ease-in-out 0.5s;
 }
 .contact {
     margin-left: 10px;
