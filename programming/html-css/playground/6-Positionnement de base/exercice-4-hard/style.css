@@ -44,6 +44,7 @@ li {
 .contact:hover {
     background-color: rgb(0, 255, 255);
     color: white;
+    transition: all ease 1s ;
 }
 img {
     padding-right: 10px;
@@ -101,7 +102,7 @@ footer {
     margin:0 2px;
     text-decoration:none;
     font: 1em Arial, Helvetica, sans-serif;
-    text-transform:uppercase; /* en majuscules */
+    text-transform:uppercase;
     color:#fff;
     border:solid 1px #fff;	
     background: #577bac;

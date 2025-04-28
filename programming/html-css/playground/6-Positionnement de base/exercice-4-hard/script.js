@@ -36,6 +36,7 @@ menuItems.forEach(item => {
       let submenu = this.querySelector('.servicemenu');
       if (submenu) {
           submenu.classList.remove('show-menu');
+          document.getElementById('navigation').style.display = "none";
       }
     });
   });
@@ -60,6 +61,7 @@ menuItems.forEach(item => {
       let submenu = this.querySelector('.proposmenu');
       if (submenu) {
         submenu.classList.remove('show-menu');
+        document.getElementById('navigation').style.display = "none";
       }
     });
   });
