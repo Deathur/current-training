@@ -34,9 +34,12 @@ menuItems.forEach(item => {
 menuItems.forEach(item => {
     item.addEventListener('click', function(event) {
       let submenu = this.querySelector('.servicemenu');
+      var ww = window.innerWidth;
       if (submenu) {
           submenu.classList.remove('show-menu');
-          document.getElementById('navigation').style.display = "none";
+          if (ww < 768) {
+            document.getElementById('navigation').style.display = "none";
+          }
       }
     });
   });
@@ -59,9 +62,12 @@ menuItems.forEach(item => {
   menuItems.forEach(item => {
     item.addEventListener('click', function(event) {
       let submenu = this.querySelector('.proposmenu');
+      var ww = window.innerWidth;
       if (submenu) {
         submenu.classList.remove('show-menu');
-        document.getElementById('navigation').style.display = "none";
+        if (ww < 768) {
+          document.getElementById('navigation').style.display = "none";
+        }
       }
     });
   });
@@ -70,6 +76,15 @@ menuItems.forEach(item => {
       let submenu = this.querySelector('.proposmenu');
       if (submenu) {
           submenu.classList.remove('show-menu');
+      }
+    });
+  });
+  menuItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+      let menu = document.getElementById('navigation');
+      var ww = window.innerWidth;
+      if (menu && ww<768) {
+          menu.style.display=('none');
       }
     });
   });

@@ -113,7 +113,10 @@ footer {
     background:#ffaaaa; 
     color: #577bac;	
     border: solid 1px #577bac;
-}  
+} 
+.hidden {
+    display:none;
+}
 #MenuBurger { 
     position :fixed; 
     top :4px; 
@@ -142,12 +145,10 @@ footer {
     #navigation {
       flex-direction:row;
       background-color: transparent;
-      /*flex-wrap:wrap;*/
     }
     #navigation > a {
       display:flex;
       align-items:center;
-      /*flex-wrap:wrap;*/
     }
     #MenuBurger { 
       display:none;
