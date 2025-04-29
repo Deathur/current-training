@@ -1,0 +1,13 @@
+html {
+    font-family: Roboto;
+}
+header {
+    display: flex;
+}
+main {
+    display: block;
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
