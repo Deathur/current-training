@@ -1,13 +1,72 @@
-html {
-    font-family: Roboto;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    transition: background-color 0.5s linear;
 }
 header {
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid blue;
+    align-items: center;
+}
+h1 {
+    padding: 0.5em 1em;
+}
+.nav {
+    padding: 1em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+}
+.nav > li {
+    padding: 0 5px;
+}
+.nav > li:hover {
+    background-color: var(--couleur-sous-fond);
+}
+.actuel {
+    background-color: var(--couleur-sous-fond);
+    padding: 0 5px;
 }
 main {
     display: block;
     text-align: center;
+    margin: 1em 0;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex-container > div {
+    background-color: var(--couleur-sous-fond);
+    color: var(--couleur-sous-texte);
+    margin: 10px 20px;
+    padding: 10px;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+h3, h1, ul {
+    color: #2980b9;
 }
 footer {
     text-align: center;
+    background-color: var(--couleur-sous-fond);
+    color: var(--couleur-sous-texte); 
+}
+:root {
+    --couleur-fond: rgb(255, 255, 255);
+    --couleur-texte: rgb(0, 0, 0);
+    --couleur-sous-fond: rgba(218, 218, 218, 0.719);
+    --couleur-sous-texte: rgb(0, 0, 0);
+}
+.sombre {
+    --couleur-fond: #222222;
+    --couleur-texte: #f5f5f5;
+    --couleur-sous-fond: #333333;
+    --couleur-sous-texte: #bbbbbb;
 }
