@@ -1,0 +1,57 @@
+html {
+    font-family: Roboto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em auto;
+    background-color: rgb(81, 165, 88);
+    align-items: center;
+    color: white;
+}
+h1 {
+    padding-left: 1em;
+}
+.nav {
+    display: none;
+}
+.nav > li {
+    list-style: none;
+    padding: 0 1em;
+}
+.sousmenu > ul > li {
+    list-style: none;
+}
+.sousmenu > ul {
+    padding: 10px;
+}
+main {
+    display: block;
+    margin: 20vh 10%;
+    text-align: center;
+}
+:root {
+    --sousmenu: none;
+}
+.sousmenu {
+    position: absolute;
+    background-color: rgb(81, 165, 88);;
+    color: black;
+    display: var(--sousmenu);
+    flex-direction: row;
+}
+.produits:hover {
+    --sousmenu: flex;
+}
+/* Tablettes (768px et plus) */
+@media screen and (min-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+/* Grands écrans (1200px et plus) */
+@media screen and (min-width: 1200px) {
+    
+}
