@@ -1,5 +1,6 @@
 html {
     font-family: Roboto;
+    font-size:16px
 }
 ul, li {
     margin: 0;
@@ -25,7 +26,7 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    background-color: rgb(0, 213, 255);
+    background: linear-gradient(90deg,rgb(142, 115, 248) 0%, rgb(117, 171, 241) 40%, rgba(0, 212, 255, 1) 100%);
 }
 #navigation, .servicemenu ,.proposmenu {
     display:none;
@@ -83,7 +84,7 @@ footer {
 .servicemenu.show-menu, .proposmenu.show-menu {
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 213, 255);
+    background: linear-gradient(90deg,rgb(142, 115, 248) 0%, rgb(117, 171, 241) 40%, rgba(0, 212, 255, 1) 100%);
     border-radius: 5px 5px 5px 5px;
     position: absolute;
     top: 0vh;
@@ -122,7 +123,6 @@ footer {
 	animation-timing-function: ease-in;
 	animation-duration: 2s;
 }
-
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -193,6 +193,9 @@ footer {
     .contact {
         margin: 0;
     }
+    #navigation {
+        background: none;
+    }
 }
 /* DESKTOP */
 @media (min-width:1201px) {
@@ -211,6 +214,9 @@ footer {
     }
     .contact {
         margin: 0;
+    }
+    #navigation {
+        background: none;
     }
 }
 .logo {
