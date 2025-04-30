@@ -8,7 +8,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid var(--couleur-text-menu);
     align-items: center;
 }
 h1 {
@@ -51,7 +51,7 @@ main {
     
 }
 h3, h1, ul {
-    color: #2980b9;
+    color: var(--couleur-text-menu);
 }
 footer {
     text-align: center;
@@ -59,6 +59,7 @@ footer {
     color: var(--couleur-sous-texte); 
 }
 :root {
+    --couleur-text-menu: #2980b9;
     --couleur-fond: rgb(255, 255, 255);
     --couleur-texte: rgb(0, 0, 0);
     --couleur-sous-fond: rgba(218, 218, 218, 0.719);
