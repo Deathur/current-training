@@ -26,7 +26,7 @@ input:not([type="checkbox"]), select {
     width: 100%;
 }
 .envoyer {
-    background-color: #09d123;
+    background-color: var(--bgcolor-button);
     color: white;
     border: 1px solid;
     border-radius: 5px 5px 5px 5px;
@@ -42,4 +42,7 @@ h1 {
     text-align: center;
     padding-left: auto;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.57);
+}
+:root {
+    --bgcolor-button: #09d123;
 }
