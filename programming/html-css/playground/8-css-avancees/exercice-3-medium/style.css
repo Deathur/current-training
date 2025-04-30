@@ -12,18 +12,30 @@ header {
 h1 {
     padding-left: 1em;
 }
-.nav {
-    display: none;
-}
-.nav > li {
-    list-style: none;
-    padding: 0 1em;
-}
 .sousmenu > ul > li {
     list-style: none;
 }
 .sousmenu > ul {
     padding: 10px;
+}
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu-toggle {
+    display: none;
+}
+.menu {
+    display: var(--menu);
+}
+.menu > li {
+    list-style: none;
+    padding: 0 1em;
 }
 main {
     display: block;
@@ -32,6 +44,7 @@ main {
 }
 :root {
     --sousmenu: none;
+    --menu : none;
 }
 .sousmenu {
     position: absolute;
@@ -43,13 +56,26 @@ main {
 .produits:hover {
     --sousmenu: flex;
 }
+#menu-toggle {
+    display: block;
+}
+#menu-toggle:checked {
+    display: block;
+}
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
-    .nav {
+    .menu {
         display: flex;
-        flex-direction: row;
     }
-    
+    #menu-toggle {
+        display: none;
+    }
+    label {
+        display: none;
+    }
+    nav {
+        display: flex;
+    }
 }
 /* Grands écrans (1200px et plus) */
 @media screen and (min-width: 1200px) {
