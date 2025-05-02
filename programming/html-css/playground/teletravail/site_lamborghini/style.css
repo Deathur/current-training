@@ -1,0 +1,72 @@
+:root {
+    --fondheader: rgb(26, 26, 26);
+    --couleurtexte: white;
+    --taillelogo: 80px;
+}
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fondheader);
+    color: var(--couleurtexte);
+}
+.logo {
+    position: relative;
+    max-height: var(--taillelogo);
+    max-width: var(--taillelogo);
+    box-shadow: none;
+    padding: 10px 10px;
+}
+.ul-header {
+    display: inline-flex;
+    text-transform: uppercase;
+    list-style: none;
+}
+.ul-header > li {
+    padding: 10px 20px;
+}
+.flex-section {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-section > img {
+    max-width: 100%;
+    max-height: auto;
+    border: solid;
+}
+.grid-section {
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    justify-self: center;
+    align-self: end;
+    min-height: 0;
+    min-width: 0;
+}
+.grid-section > img {
+    max-width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+footer {
+    background-color: var(--fondheader);
+    color: white;
+}
+.div-footer {
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    justify-self: center;
+    align-self: end;
+    min-height: 0;
+    min-width: 0;
+}
+.div-footer > div {
+    display: block;
+    padding: 0 5%;
+}
