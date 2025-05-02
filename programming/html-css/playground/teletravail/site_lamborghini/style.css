@@ -2,6 +2,13 @@
     --fondheader: rgb(26, 26, 26);
     --couleurtexte: white;
     --taillelogo: 80px;
+    --espacegrid: 10px;
+}
+html {
+    font-family: Roboto;
+}
+.uppercase {
+    text-transform: uppercase;
 }
 .flex-header {
     display: flex;
@@ -39,11 +46,11 @@
     padding-bottom: 20px;
 }
 .grid-section {
-    padding: 15px 0;
+    padding: var(--espacegrid) var(--espacegrid);
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-rows: auto;
+    grid-gap: var(--espacegrid);
     justify-self: center;
     align-self: end;
     min-height: 0;
@@ -54,22 +61,14 @@
     height: 100%;
     object-fit: cover;
 }
-
-=======
-.textimage {
+.huracan{
     position: absolute;
     top: 50%;
     font-size: 24px;
     color: white;
 }
-.overlay-white {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-}
-.overlay-black {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+.urus {
+    position: sticky;
 }
 footer {
     background-color: var(--fondheader);
@@ -78,8 +77,8 @@ footer {
 .div-footer {
     padding: 15px 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, auto);
     grid-gap: 10px;
     justify-self: center;
     align-self: end;
@@ -89,4 +88,27 @@ footer {
 .div-footer > div {
     display: block;
     padding: 0 5%;
+}
+@media screen and (min-width: 992px) {
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .div-footer {
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        justify-self: center;
+        align-self: end;
+        min-height: 0;
+        min-width: 0;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .grid-section {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
