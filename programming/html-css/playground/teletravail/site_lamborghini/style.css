@@ -1,4 +1,4 @@
-/*   Initialisation variable + class utilitaire   */
+/*   Initialisation variable + classe utilitaire   */
 :root {
     --fondheader: rgb(26, 26, 26);
     --couleurtexte: white;
@@ -14,6 +14,7 @@ html {
     justify-content: space-between;
     background-color: var(--fondheader);
     color: var(--couleurtexte);
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -21,20 +22,20 @@ html {
     position: relative;
     max-height: var(--taillelogo);
     max-width: var(--taillelogo);
-    left: 45%;
-    right: 45%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
-}
-.flex-header {
-    flex-wrap: wrap;
 }
 .ul-header {
     display: flex;
+    justify-content: center;
     list-style: none;
     flex-wrap: wrap;
 }
 .ul-header > li {
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 /*   Affichage main   */
 /* Huracan & Urus */
@@ -44,10 +45,10 @@ html {
     justify-content: center;
     background-color: white;
 }
-.flex-section > section > img {
+.flex-section > div > img {
     position: relative;
-    max-width: 100%;
-    max-height: auto;
+    min-width: 100%;
+    height: auto;
     padding-bottom: 10px;
 }
 /*Vitrine voiture */
@@ -101,7 +102,7 @@ html {
 /*   Affichage footer   */
 footer {
     background-color: var(--fondheader);
-    color: white;
+    color: var(--couleurtexte);
 }
 .div-footer {
     padding: 15px 0;
@@ -141,10 +142,10 @@ footer {
         position: relative;
         max-height: var(--taillelogo);
         max-width: var(--taillelogo);
-        left: auto;
-        right: auto;
+        left: 0;
+        right: 0;
+        margin: 10px;
         box-shadow: none;
-        padding: 10px 10px;
     }
 }
 /*Ordinateur*/
@@ -155,5 +156,13 @@ footer {
     }
     .ul-header {
         flex-wrap: nowrap;
+    }
+    .logo {
+        position: relative;
+        max-height: var(--taillelogo);
+        max-width: var(--taillelogo);
+        left: 0;
+        right: 0;
+        box-shadow: none;
     }
 }
