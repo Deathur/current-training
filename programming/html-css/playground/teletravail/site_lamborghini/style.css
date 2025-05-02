@@ -1,3 +1,4 @@
+/*   Initialisation variable + class utilitaire   */
 :root {
     --fondheader: rgb(26, 26, 26);
     --couleurtexte: white;
@@ -10,18 +11,7 @@ html {
 .uppercase {
     text-transform: uppercase;
 }
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 24px;
-    transform: translate(-50%, -50%);
-}
+/*   Affichage en-tête   */
 .flex-header {
     display: flex;
     justify-content: space-between;
@@ -45,18 +35,21 @@ html {
 .ul-header > li {
     padding: 10px 20px;
 }
+/*   Affichage main   */
+/* Huracan & Urus */
 .flex-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: white;
 }
-.flex-section > img {
+.flex-section > div > img {
     position: relative;
     max-width: 100%;
     max-height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
+/*Vitrine voiture */
 .grid-section {
     padding: var(--espacegrid) var(--espacegrid);
     display: grid;
@@ -73,15 +66,36 @@ html {
     height: 100%;
     object-fit: cover;
 }
-.huracan{
+.nomvoiture {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+/*Texte centré dans les images*/
+.container {
+    position: relative;
+    text-align: center;
+}
+.centered {
     position: absolute;
     top: 50%;
+    left: 50%;
     font-size: 24px;
+    transform: translate(-50%, -50%);
+}
+/*Effet texte*/
+.overlay-black {
     color: white;
 }
-.urus {
-    position: sticky;
+.overlay-black > img {
+    filter: brightness(0.3);
 }
+.overlay-white {
+    color: black;
+}
+.overlay-white > img {
+    opacity: 0.7;
+}
+/*   Affichage footer   */
 footer {
     background-color: var(--fondheader);
     color: white;
@@ -101,6 +115,7 @@ footer {
     display: block;
     padding: 0 5%;
 }
+/*   Media Queries   */
 @media screen and (min-width: 992px) {
     .grid-section {
         grid-template-columns: repeat(2, 1fr);
