@@ -8,6 +8,8 @@
     justify-content: space-between;
     background-color: var(--fondheader);
     color: var(--couleurtexte);
+    justify-content: space-between;
+    align-items: center;
 }
 .logo {
     position: relative;
@@ -26,14 +28,15 @@
 }
 .flex-section {
     display: flex;
-    position: relative;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: white;
 }
 .flex-section > img {
+    position: relative;
     max-width: 100%;
     max-height: auto;
-    border: solid;
+    padding-bottom: 20px;
 }
 .grid-section {
     padding: 15px 0;
@@ -50,6 +53,23 @@
     max-width: auto;
     height: 100%;
     object-fit: cover;
+}
+
+=======
+.textimage {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+}
+.overlay-white {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+.overlay-black {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 footer {
     background-color: var(--fondheader);
