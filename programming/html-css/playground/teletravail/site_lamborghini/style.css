@@ -8,9 +8,6 @@
 html {
     font-family: Roboto;
 }
-.uppercase {
-    text-transform: uppercase;
-}
 /*   Affichage en-tête   */
 .flex-header {
     display: flex;
@@ -24,13 +21,17 @@ html {
     position: relative;
     max-height: var(--taillelogo);
     max-width: var(--taillelogo);
-    box-shadow: none;
-    padding: 10px 10px;
+    left: 45%;
+    right: 45%;
+    margin-top: 10px;
+}
+.flex-header {
+    flex-wrap: wrap;
 }
 .ul-header {
-    display: inline-flex;
-    text-transform: uppercase;
+    display: flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 .ul-header > li {
     padding: 10px 20px;
@@ -51,7 +52,9 @@ html {
 }
 /*Vitrine voiture */
 .grid-section {
-    padding: var(--espacegrid) var(--espacegrid);
+    padding-right: var(--espacegrid);
+    padding-left: var(--espacegrid);
+    padding-bottom: var(--espacegrid);
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-auto-rows: auto;
@@ -116,6 +119,8 @@ footer {
     padding: 0 5%;
 }
 /*   Media Queries   */
+/*   MOBILE PAR DEFAUT   */
+/*Tablette*/
 @media screen and (min-width: 992px) {
     .grid-section {
         grid-template-columns: repeat(2, 1fr);
@@ -132,10 +137,24 @@ footer {
         min-height: 0;
         min-width: 0;
     }
+    .logo {
+        position: relative;
+        max-height: var(--taillelogo);
+        max-width: var(--taillelogo);
+        left: auto;
+        right: auto;
+        box-shadow: none;
+        padding: 10px 10px;
+    }
 }
+/*Ordinateur*/
 @media screen and (min-width: 1280px) {
     .grid-section {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .ul-header {
+        flex-wrap: nowrap;
     }
 }
