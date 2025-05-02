@@ -58,7 +58,7 @@ html {
     padding-bottom: var(--espacegrid);
     display: grid;
     grid-template-columns: repeat(1, auto);
-    grid-auto-rows: auto;
+    grid-auto-rows: 500px;
     grid-gap: var(--espacegrid);
     justify-self: center;
     align-self: end;
@@ -125,7 +125,7 @@ footer {
 @media screen and (min-width: 992px) {
     .grid-section {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 500px);
     }
     .div-footer {
         padding: 15px 0;
@@ -152,7 +152,7 @@ footer {
 @media screen and (min-width: 1280px) {
     .grid-section {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 500px);
     }
     .ul-header {
         flex-wrap: nowrap;
