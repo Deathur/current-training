@@ -6,119 +6,40 @@
         <title>Document</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <section class="left">
-                <h1 class="blue">TechSolutions SAS</h1>
-                <p>123 Avenue de l'Innovation</p>
-                <p>75001 Paris, France</p><br>
-                <p>Email: contact@techsolutions.fr</p>
-                <p>Tél: +33 1 23 45 67 89</p><br>
-                <p>SIRET: 123 456 789 00012</p>
-            </section>
-            <img class="logo" src="logo.png" alt="Logo de la société">
-            <section class="right">
-                <h1 class="red">Facture</h1>
-                <table>
-                    <tr>
-                        <td>Facture N°</td>
-                        <td>FA-2023-0458</td>
-                    </tr>
-                    <tr>
-                        <td>Date</td>
-                        <td>10/04/2025</td>
-                    </tr>
-                    <tr>
-                        <td>Échéance</td>
-                        <td>10/05/2025</td>
-                    </tr>
-                </table>
-            </section>
-        </header>
-        <main>
-            <section class="left">
-                <h2>Facturer à:</h2>
-                <p>Digital Innovations SARL</p>
-                <p>56 Rue du Commerce</p>
-                <p>69002 Lyon, France</p>
-                <p>SIRET: 987 654 321 00021</p>
-            </section>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Quantité</th>
-                            <th>Prix unitaire</th>
-                            <th>Total HT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Développemet Site Web E-commerce Design et développement front-end responsive</td>
-                            <td><input type="text" id="quantweb" name="quantweb" value="1" onchange="calcul()"></td>
-                            <td id="oneweb">6 500,00 €</td>
-                            <td><p id="totalweb">?</p></td>
-                        </tr>
-                        <tr>
-                            <td>API Paiement Intégration des solutions de paiement</td>
-                            <td><input type="text" id="quantapi" name="quantapi" value="1" onchange="calcul()"></td>
-                            <td>1 200,00 €</td>
-                            <td id="totalapi">?</td>
-                        </tr>
-                        <tr>
-                            <td>Hébergement Premium Scaleway Cloud - 12 mois</td>
-                            <td><input type="text" id="quanthebe" name="quanthebe" value="12" onchange="calcul()"></td>
-                            <td>150,00 €</td>
-                            <td id="totalhebe">?</td>
-                        </tr>
-                        <tr>
-                            <td>Formation Utilisateur Sessions de 4 heures (tarif horaire)</td>
-                            <td><input type="text" id="quantforma" name="quantforma" value="8" onchange="calcul()"></td>
-                            <td>120,00 €</td>
-                            <td id="totalforma">?</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Sous-total HT:</td>
-                            <td id="HT">?</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">TVA (20%):</td>
-                            <td id="TVA">?</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">Total TTC:</td>
-                            <td id="TTC">?</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <section class="normal">
-                <h2>Informations de paiement</h2>
-                <table>
-                    <tr>
-                        <td>IBAN</td>
-                        <td>FR76 1234 5678 9101 1121 3141 516</td>
-                    </tr>
-                    <tr>
-                        <td>BIC</td>
-                        <td>AGRIFPPR</td>
-                    </tr>
-                    <tr>
-                        <td>Banque</td>
-                        <td>Crédit Agricole, Paris</td>
-                    </tr>
-                </table>
-            </section>
-            <section>
-                <h2>Conditions de paiement</h2>
-                <p>Paiement dû à 30 jours date de facture. Un intérêt de 10% sera applique sur les paiements effectués aprèsla date d'échéance.<br>Nous vous remercions de votre confiance</p>
-            </section>
-        </main>
-        <footer><p><em>®2025 - Exercice de tableau HTML/CSS</em></p></footer>
-        <script src="sript.js"></script>
+        <table>
+            <caption>Rapport des ventes par Région</caption>
+            <tr>
+                <th>Région</th>
+                <th>Produit</th>
+                <th>Chiffre d'affaires</th>
+            </tr>
+            <tr>
+                <td rowspan="2" class="region">Europe</td>
+                <td>Ordinateur</td>
+                <td>85 000 €</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td>92 500 €</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="region">Amérique</td>
+                <td>Ordinateur</td>
+                <td>112 000 €</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td>143 800 €</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="total"><strong>Total</strong></td>
+                <td><strong>433 300 €</strong></td>
+            </tr>
+        </table>
     </body>
 </html>
