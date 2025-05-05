@@ -1,6 +1,6 @@
 /*   Initialisation variable + classe utilitaire   */
 :root {
-    --fondheader: rgb(26, 26, 26);
+    --fondheader: rgb(70, 70, 70);
     --couleurtexte: white;
     --taillelogo: 80px;
     --espacegrid: 10px;
@@ -17,6 +17,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0 var(--espacegrid);
 }
 .logo {
     position: relative;
@@ -26,16 +27,14 @@ html {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: var(--espacegrid);
 }
 .ul-header {
     display: flex;
     justify-content: center;
     list-style: none;
     flex-wrap: wrap;
-}
-.ul-header > li {
-    padding: 10px 10px;
+    gap: var(--espacegrid);
 }
 /*   Affichage main   */
 /* Huracan & Urus */
@@ -44,15 +43,16 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     background-color: white;
+    gap: var(--espacegrid);
 }
 .flex-section > div > img {
     position: relative;
     min-width: 100%;
     height: auto;
-    padding-bottom: 10px;
 }
 /*Vitrine voiture */
 .grid-section {
+    padding-top: var(--espacegrid);
     padding-right: var(--espacegrid);
     padding-left: var(--espacegrid);
     padding-bottom: var(--espacegrid);

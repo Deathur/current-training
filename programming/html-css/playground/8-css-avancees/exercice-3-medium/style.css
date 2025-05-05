@@ -1,6 +1,10 @@
 html {
     font-family: Roboto;
 }
+:root {
+    --sousmenu: none;
+    --menu : none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -18,18 +22,6 @@ h1 {
 .sousmenu > ul {
     padding: 10px;
 }
-.menu-button-container {
-    display: none;
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#menu-toggle {
-    display: none;
-}
 .menu {
     display: var(--menu);
 }
@@ -42,10 +34,6 @@ main {
     margin: 20vh 10%;
     text-align: center;
 }
-:root {
-    --sousmenu: none;
-    --menu : none;
-}
 .sousmenu {
     position: absolute;
     background-color: rgb(81, 165, 88);;
@@ -56,18 +44,26 @@ main {
 .produits:hover {
     --sousmenu: flex;
 }
-#menu-toggle {
-    display: block;
-}
-#menu-toggle:checked {
+#toggle:checked {
     --menu : flex;
+}
+input[type=checkbox] {
+    position: absolute;
+    left: -999px;
+}
+input[type=checkbox]:checked {
+    --menu: flex;
+}
+label {
+    font-size: 24px;
+    margin-right: 10px;
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
     .menu {
         display: flex;
     }
-    #menu-toggle {
+    #toggle {
         display: none;
     }
     label {
