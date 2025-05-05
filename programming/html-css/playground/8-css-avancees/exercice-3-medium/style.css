@@ -1,6 +1,10 @@
 html {
     font-family: Roboto;
 }
+:root {
+    --sousmenu: none;
+    --menu : none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -27,9 +31,6 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#menu-toggle {
-    display: none;
-}
 .menu {
     display: var(--menu);
 }
@@ -42,13 +43,9 @@ main {
     margin: 20vh 10%;
     text-align: center;
 }
-:root {
-    --sousmenu: none;
-    --menu : none;
-}
 .sousmenu {
     position: absolute;
-    background-color: rgb(81, 165, 88);;
+    background-color: rgb(81, 165, 88);
     color: black;
     display: var(--sousmenu);
     flex-direction: row;
@@ -56,11 +53,30 @@ main {
 .produits:hover {
     --sousmenu: flex;
 }
-#menu-toggle {
-    display: block;
+input[type=checkbox] {
+    opacity: 0.3;
 }
-#menu-toggle:checked {
-    --menu : flex;
+input[type=checkbox]:checked, label {
+    --menu: block;
+}
+nav label {
+    text-align: right;
+    display: block;
+    padding: 0.5em;
+    line-height: 1.6em;
+    align-self: center;
+}
+nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+nav input[type='checkbox']:checked ~ ul {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top:20px;
+    background-color: rgb(62, 173, 72);
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
