@@ -36,6 +36,9 @@ html {
     flex-wrap: wrap;
     gap: var(--espacegrid);
 }
+.ul-header li {
+    text-transform: uppercase;
+}
 /*   Affichage main   */
 /* Huracan & Urus */
 .flex-section {

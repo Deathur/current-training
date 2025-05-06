@@ -4,30 +4,26 @@ html {
 :root {
     --sousmenu: none;
     --menu : none;
+    --color-header:rgb(81, 165, 88);
 }
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em auto;
-    background-color: rgb(81, 165, 88);
+    background-color: var(--color-header);
     align-items: center;
     color: white;
 }
 h1 {
     padding-left: 1em;
 }
-.sousmenu > ul > li {
-    list-style: none;
-}
-.sousmenu > ul {
-    padding: 10px;
-}
 .menu {
     display: var(--menu);
+    padding: 0;
 }
 .menu > li {
     list-style: none;
-    padding: 0 1em;
+    padding: 0.25em 1em;
 }
 main {
     display: block;
@@ -36,27 +32,56 @@ main {
 }
 .sousmenu {
     position: absolute;
-    background-color: rgb(81, 165, 88);;
+    background-color: var(--color-header);
     color: black;
     display: var(--sousmenu);
     flex-direction: row;
+    top: 0px;
+    right: 90px;
+    padding: 0.25em 1em;
+}
+.sousmenu > ul {
+    padding: 0 20px;
+}
+.sousmenu > ul > li {
+    list-style: none;
 }
 .produits:hover {
     --sousmenu: flex;
 }
-#toggle:checked {
-    --menu : flex;
+/*   Menu hamburger   */
+/* Bouton Hamburger */
+.menu-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-right: 20px;
 }
+.menu-hamburger .trait {
+    display: block;
+    background: rgb(0, 247, 255);
+    height: 5px;
+    width: 40px;
+    margin: 4px 0;
+}
+/* Checkbox Hack */
 input[type=checkbox] {
     position: absolute;
     left: -999px;
 }
-input[type=checkbox]:checked {
-    --menu: flex;
+#menu-mobile:checked ~ .nav-menu{
+    --menu: block;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background-color: var(--color-header);
+    text-align: center;
 }
 label {
+    position: absolute;
     font-size: 24px;
-    margin-right: 10px;
+    right: 0;
+    align-content: right;
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
@@ -69,8 +94,24 @@ label {
     label {
         display: none;
     }
-    nav {
+    .menu-hamburger {
+        display: none;
+    }
+    #menu-mobile:checked ~ .nav-menu{
+        position: static;
+    }
+    .sousmenu {
+        position: absolute;
+        background-color: rgb(81, 165, 88);;
+        color: black;
+        display: var(--sousmenu);
+        flex-direction: row;
+        top: auto;
+        right: auto;
+    }
+    .sousmenu > ul {
         display: flex;
+        gap: 20px;
     }
 }
 /* Grands écrans (1200px et plus) */
