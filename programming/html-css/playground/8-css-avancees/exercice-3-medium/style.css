@@ -25,6 +25,9 @@ h1 {
     list-style: none;
     padding: 0.25em 1em;
 }
+.menuliste:hover {
+    border-bottom: 2px solid blue;
+}
 main {
     display: block;
     margin: 20vh 10%;
@@ -113,8 +116,4 @@ label {
         display: flex;
         gap: 20px;
     }
-}
-/* Grands écrans (1200px et plus) */
-@media screen and (min-width: 1200px) {
-    
 }
