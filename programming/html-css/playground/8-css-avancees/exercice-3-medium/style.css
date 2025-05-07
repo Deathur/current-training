@@ -5,6 +5,7 @@ html {
     --sousmenu: none;
     --menu : none;
     --color-header:rgb(81, 115, 165);
+    --duree-animation: 0.5s;
 }
 header {
     display: flex;
@@ -28,15 +29,12 @@ h1 {
     display: var(--menu);
     background-color: var(--color-header);
     padding-left: 0;
-    animation-duration: 0.5s;
+    animation-duration: var(--duree-animation);
     animation-name: fadein;
 }
 .menu > li {
     list-style: none;
     padding: 0.25em 1em;
-}
-.menuliste:hover {
-    border-bottom: 2px solid blue;
 }
 main {
     display: block;
@@ -53,7 +51,7 @@ main {
     right: 90px;
     padding: 0.25em 1em;
     border-radius: 5px 5px 5px 5px;
-    animation-duration: 0.5s;
+    animation-duration: var(--duree-animation);
     animation-name: fadein;
 }
 .sousmenu > ul {
@@ -75,6 +73,7 @@ main {
     }
 }
 /*   Menu hamburger   */
+
 /* Bouton Hamburger */
 .menu-hamburger {
     display: flex;
