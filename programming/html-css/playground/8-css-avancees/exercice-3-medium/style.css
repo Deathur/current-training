@@ -4,7 +4,8 @@ html {
 :root {
     --sousmenu: none;
     --menu : none;
-    --color-header:rgb(81, 165, 88);
+    --color-header:rgb(81, 115, 165);
+    --duree-animation: 0.5s;
 }
 header {
     display: flex;
@@ -13,20 +14,27 @@ header {
     background-color: var(--color-header);
     align-items: center;
     color: white;
+    height: 50px;
+}
+.container-links {
+    color: black;
+}
+.container-links:active {
+    color: red;
 }
 h1 {
     padding-left: 1em;
 }
 .menu {
     display: var(--menu);
-    padding: 0;
+    background-color: var(--color-header);
+    padding-left: 0;
+    animation-duration: var(--duree-animation);
+    animation-name: fadein;
 }
 .menu > li {
     list-style: none;
     padding: 0.25em 1em;
-}
-.menuliste:hover {
-    border-bottom: 2px solid blue;
 }
 main {
     display: block;
@@ -42,17 +50,30 @@ main {
     top: 0px;
     right: 90px;
     padding: 0.25em 1em;
+    border-radius: 5px 5px 5px 5px;
+    animation-duration: var(--duree-animation);
+    animation-name: fadein;
 }
 .sousmenu > ul {
     padding: 0 20px;
 }
 .sousmenu > ul > li {
-    list-style: none;
+    list-style: none;;
+    border-radius: 5px 5px 5px 5px;
 }
 .produits:hover {
     --sousmenu: flex;
 }
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /*   Menu hamburger   */
+
 /* Bouton Hamburger */
 .menu-hamburger {
     display: flex;
@@ -90,6 +111,8 @@ label {
 @media screen and (min-width: 768px) {
     .menu {
         display: flex;
+        margin-right: 10px;
+        animation-duration: 0s;
     }
     #toggle {
         display: none;
@@ -105,15 +128,16 @@ label {
     }
     .sousmenu {
         position: absolute;
-        background-color: rgb(81, 165, 88);;
         color: black;
         display: var(--sousmenu);
         flex-direction: row;
-        top: auto;
-        right: auto;
+        top: 45px;
+        right: 84px;
+        height: 30px;
     }
     .sousmenu > ul {
-        display: flex;
-        gap: 20px;
+        display: inline-flex;
+        gap: 10px;
+        padding: 0px;
     }
 }
