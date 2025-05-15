@@ -10,6 +10,9 @@ html {
     background-color: var(--couleur-background);
 }
 
+body {
+}
+
 .barre {
     height: 50px;
     background-color: var(--couleur-primaire);
@@ -26,8 +29,11 @@ html {
 .chargement {
     display: flex;
     justify-self: center;
-    margin-top: 50vh;
-    margin-bottom: 50vh;
+    align-self: center;
+    margin: 50vh 0;
+}
+
+.cercle {
     animation: pulse var(--duree-animation) ease-in-out infinite;
 }
 
@@ -78,5 +84,5 @@ html {
 
 .loader {
     animation: rotation var(--duree-animation) linear infinite;
-    margin-right: 50px;
+    margin-right: 10px;
 }
