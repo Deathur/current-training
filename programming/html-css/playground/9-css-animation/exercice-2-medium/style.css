@@ -1,0 +1,159 @@
+:root {
+    --hauteur-image: 200px;
+    --round-button: 20px;
+    --duree-animation: 0.5s;
+    --couleur-texte: rgb(134, 0, 0);
+}
+
+html {
+    background-color: white;
+}
+
+.titre {
+    text-align: center;
+}
+
+h1 {
+    color: var(--couleur-texte);
+}
+
+.div-text {
+    height: max-content;
+    margin: 10px;
+    height: 100px;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 100px;
+    gap: 20px;
+    justify-content: space-around;
+}
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    gap: 20px;
+    animation: fadeInUp var(--duree-animation) ease-out forwards;
+    opacity: 0;
+    overflow: hidden;
+}
+.container-flex:nth-child(1) {
+    animation-delay: 0.4s;
+}
+  
+.container-flex:nth-child(2) {
+    animation-delay: 0.8s;
+}
+  
+.container-flex:nth-child(3) {
+    animation-delay: 1.2s;
+}
+.container-image {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.container-text {
+    padding: 10px;
+}
+
+.container-titre {
+    position: relative;
+    width: fit-content;
+}
+
+.container-titre::before {
+    position: absolute;
+    content: "";
+    border-bottom: solid;
+    display: block;
+    height: 25px;
+    top: 12px;
+    left: 0;
+}
+.container-flex:hover > .container-image > img {
+    animation: imageScaleUp var(--duree-animation) linear forwards;
+}
+
+
+
+.container-flex > .div-text > .container-titre::before {
+    animation: fadeBorderOut var(--duree-animation) linear forwards;
+}
+
+
+.container-flex:hover > .div-text > .container-titre::before {
+    animation: fadeBorder var(--duree-animation) linear forwards;
+}
+.container-button {
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0 10px;
+    width: fit-content;
+    border-radius:  var(--round-button) var(--round-button) var(--round-button) var(--round-button);
+    background-color: var(--couleur-texte);
+    color: white;
+}
+.container-button::before {
+    position: absolute;
+    display: block;
+    content: "";
+    border-radius:  var(--round-button) var(--round-button) var(--round-button) var(--round-button);
+    height: 25px;
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+.button-text {
+    position: relative;
+}
+
+.container-button:hover::before {
+    animation: fadeBorder 0.3s linear forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageScaleUp {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
+}
+
+@keyframes fadeBorder {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeBorderOut {
+    from {
+        width:100%;
+    }
+    to {
+        width: 0%;
+    }
+}
