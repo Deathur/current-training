@@ -10,13 +10,6 @@ html {
     background-color: var(--couleur-background);
 }
 
-body {
-}
-
-.barre {
-    height: 50px;
-    background-color: var(--couleur-primaire);
-}
 
 .loader {
     width: 50px;
@@ -73,6 +66,25 @@ body {
         width: 100%;
     }
 }
+
+.border::after {
+    content: "";
+    height: 50px;
+    background-color: var(--couleur-primaire);
+    animation-name: barrechargement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    display: block;
+
+}
+
+.barre {
+    height: 50px;
+    background-color: var(--couleur-primaire);
+}
+
 
 .barre {
     animation-name: barrechargement;
