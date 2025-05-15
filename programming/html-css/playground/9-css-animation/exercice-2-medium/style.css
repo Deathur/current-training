@@ -1,6 +1,6 @@
 :root {
     --hauteur-image: 200px;
-    --round-button: 30px;
+    --round-button: 20px;
     --duree-animation: 0.5s;
     --couleur-texte: rgb(134, 0, 0);
 }
@@ -34,7 +34,6 @@ h1 {
 .container-flex {
     display: flex;
     flex-direction: column;
-    max-width: auto;
     border-radius: 5px 5px 5px 5px;
     border: 1px solid;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -55,7 +54,7 @@ h1 {
     animation-delay: 1.2s;
 }
 .container-image {
-    height: 250px;
+    height: 200px;
     width: auto;
     object-fit: cover;
     overflow: hidden;
@@ -83,6 +82,13 @@ h1 {
     animation: imageScaleUp var(--duree-animation) linear forwards;
 }
 
+
+
+.container-flex > .div-text > .container-titre::before {
+    animation: fadeBorderOut var(--duree-animation) linear forwards;
+}
+
+
 .container-flex:hover > .div-text > .container-titre::before {
     animation: fadeBorder var(--duree-animation) linear forwards;
 }
@@ -93,7 +99,8 @@ h1 {
     padding: 0 10px;
     width: fit-content;
     border-radius:  var(--round-button) var(--round-button) var(--round-button) var(--round-button);
-    background-color: red;
+    background-color: var(--couleur-texte);
+    color: white;
 }
 .container-button::before {
     position: absolute;
@@ -103,7 +110,7 @@ h1 {
     height: 25px;
     top: 0;
     left: 0;
-    background-color: rgb(255, 137, 137);
+    background-color: red;
 }
 .button-text {
     position: relative;
@@ -139,5 +146,14 @@ h1 {
     }
     to {
         width: 100%;
+    }
+}
+
+@keyframes fadeBorderOut {
+    from {
+        width:100%;
+    }
+    to {
+        width: 0%;
     }
 }
