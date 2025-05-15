@@ -1,0 +1,82 @@
+:root {
+    --couleur-primaire: #3498db;
+    --couleur-secondaire: #f3f3f3;
+    --couleur-background: grey;
+    --duree-animation: 1.5s;
+    height: 100vh;
+}
+
+html {
+    background-color: var(--couleur-background);
+}
+
+.barre {
+    height: 50px;
+    background-color: var(--couleur-primaire);
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--couleur-secondaire);
+    border-top: 5px solid var(--couleur-primaire);
+    border-radius: 50%;
+}
+
+.chargement {
+    display: flex;
+    justify-self: center;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    animation: pulse var(--duree-animation) ease-in-out infinite;
+}
+
+.border {
+    background-color: var(--couleur-secondaire);
+    border: 1px solid;
+    width: 400px;
+    height: auto;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes barrechargement {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.barre {
+    animation-name: barrechargement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.loader {
+    animation: rotation var(--duree-animation) linear infinite;
+    margin-right: 50px;
+}
