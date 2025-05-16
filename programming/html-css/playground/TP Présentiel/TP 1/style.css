@@ -25,6 +25,9 @@ a {
 .background-black {
     background-color: var(--secondary-color);
 }
+.background-black, .background-gold {
+    padding: var(--gap-size);
+}
 
 .container-header {
     display: flex;
@@ -64,7 +67,7 @@ a {
 }
 
 .titre, .titre-footer, .gros-titre {
-    margin: 20px 0;
+    padding: 20px 0;
     letter-spacing: 10px;
 }
 
