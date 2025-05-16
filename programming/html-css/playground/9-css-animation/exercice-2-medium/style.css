@@ -45,11 +45,11 @@ h1 {
 .container-flex:nth-child(1) {
     animation-delay: 0.4s;
 }
-  
+
 .container-flex:nth-child(2) {
     animation-delay: 0.8s;
 }
-  
+
 .container-flex:nth-child(3) {
     animation-delay: 1.2s;
 }
@@ -78,20 +78,24 @@ h1 {
     top: 12px;
     left: 0;
 }
+/*Version avec transition & transform*/
 .container-flex:hover > .container-image > img {
-    animation: imageScaleUp var(--duree-animation) linear forwards;
+    transform: scale(1.1);
 }
 
-
-
+.container-flex > .container-image > img {
+    transition: all var(--duree-animation) linear;
+}
+/**/
+/*Version avec Keyframe*/
 .container-flex > .div-text > .container-titre::before {
     animation: fadeBorderOut var(--duree-animation) linear forwards;
 }
 
-
 .container-flex:hover > .div-text > .container-titre::before {
     animation: fadeBorder var(--duree-animation) linear forwards;
 }
+/**/
 .container-button {
     position: relative;
     margin-bottom: 10px;
@@ -115,11 +119,15 @@ h1 {
 .button-text {
     position: relative;
 }
-
+/*Version avec Keyframes*/
 .container-button:hover::before {
-    animation: fadeBorder 0.3s linear forwards;
+    animation: fadeBorder var(--duree-animation) linear forwards;
 }
 
+.container-button::before {
+    animation: fadeBorderOut var(--duree-animation) linear forwards;
+}
+/**/
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -128,15 +136,6 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes imageScaleUp {
-    0% {
-        scale: 1;
-    }
-    100% {
-        scale: 1.1;
     }
 }
 

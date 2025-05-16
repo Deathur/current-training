@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #CCA57C;
+    --secondary-color: #272727;
+    --text-color: white;
+    --gap-size: 40px;
+    background-color: #606060;
+    color: var(--text-color);
+}
+a {
+    color: none;   
+}
+
+.gold {
+    color: var(--primary-color);
+}
+
+.black {
+    color: var(--secondary-color);
+}
+
+.background-gold {
+    background-color: var(--primary-color);
+}
+
+.background-black {
+    background-color: var(--secondary-color);
+}
+.background-black, .background-gold {
+    padding: var(--gap-size);
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-image: url(images/bg_header.jpg);
+    background-size: cover;
+}
+
+
+.container-gohall {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 400px;
+    justify-content: center;
+    text-align: left;
+}
+
+.text-gohall > h2, .text-gohall > p {
+    padding: 10px;
+    width: 400px;
+}
+
+.button-style {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: right;
+}
+
+.content-header {
+    text-align: right;
+    color: var(--text-color);
+    max-width: 100%;
+    margin: 0 15%;
+    margin-top: 15%;
+}
+
+.gros-titre {
+    font-size: 48px;
+}
+
+.titre, .titre-image {
+    text-align: center;
+}
+
+.titre, .titre-footer, .gros-titre {
+    padding: 20px 0;
+    letter-spacing: 10px;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.flex-main > section {
+    height: auto;
+    padding: var(--gap-size);
+}
+
+.the-hall {
+    width: 300px;
+    height: 100px;
+    background-image: url(images/logo_header.png);
+    background-repeat: no-repeat;
+    margin: 0 10px;
+}
+
+.logo12 {
+    height: 150px;
+    background-image: url(images/logo12.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.london-hall {
+    position: relative;
+    width: 300px;
+    height: auto;
+    background-image: url(images/london_hall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titre-london-hall {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    background-color: var(--primary-color);
+    padding: 0 10px;
+}
+
+.the-hall:hover {
+    background-image: url(images/logo_hover.png);
+}
+
+.content-nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+    margin: 0 40px;
+    padding: 0;
+}
+.section-nav ul li {
+    color: var(--primary-color);
+}
+.container-main {
+    margin: 0 15%;
+}
+
+.container-footer {
+    background-image: url(images/bg_footer.jpg);
+}
+.flex-footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.flex-footer div {
+    width: fit-content;
+}
+.call-back {
+    background-image: url(images/visuelgauche.jpg);
+}
+.call-back > h1 {
+    font-size: large;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.citation {
+    border-left: 1px solid;
+    padding-left: 10px;
+}
+.concert-paris {
+    background-image: url(images/paris.jpg);
+}
+.concert-london {
+    background-image: url(images/london.jpg);
+}
+.concert-paris, .concert-london {
+    width: 400px;
+    height: 350px;
+    position: relative;
+    margin-bottom: var(--gap-size);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 0 10px;
+    background-color: black;
+}
+.flex-projects {
+    display: flex;
+    width: auto;
+    justify-items: center;
+    margin: 0 20px;
+    gap: var(--gap-size);
+}
+.years {
+    max-width: 600px;
+}
+.flex-services {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    gap: var(--gap-size);
+}
+.cards-services {
+    position: relative;
+    width: 25%;
+    height: 400px;
+    align-self: auto;
+}
+.cards-services2 {
+    width: 40%;
+    height: 400px;
+    align-self: auto;
+}
+.bouton-services {
+    background-color: grey;
+    position: absolute;
+    bottom: var(--gap-size);
+    width: 100px;
+}
+.bouton-services:hover {
+    background-color: var(--primary-color);
+}
+.button-header {
+    border-radius: 5px 5px 5px 5px;
+}
+.carte {
+    padding: 10px 0;
+    border-top: solid var(--primary-color);
+    border-bottom: solid var(--primary-color);
+}
+.projects-main {
+    text-align: left;
+}
