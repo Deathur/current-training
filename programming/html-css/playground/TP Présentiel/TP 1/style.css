@@ -43,8 +43,11 @@ a {
 .container-gohall {
     display: flex;
     flex-direction: row;
+    margin-left: 40px;
+} 
+.text-gohall > h2, p {
+    padding: 10px;
 }
-
 .button-style {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -142,7 +145,7 @@ a {
     gap: 20px;
 }
 .flex-footer div {
-    width: 200px;
+    width: fit-content;
 }
 .call-back {
     background-image: url(images/visuelgauche.jpg);
@@ -164,11 +167,12 @@ a {
     background-image: url(images/london.jpg);
 }
 .concert-paris, .concert-london {
-    width: 500px;
+    width: 400px;
+    height: 500px;
     position: relative;
     margin-bottom: var(--gap-size);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .date {
     position: absolute;
@@ -180,9 +184,12 @@ a {
 .flex-projects {
     display: flex;
     width: auto;
-    justify-content: space-between;
+    justify-items: center;
     margin: 0 20px;
     gap: var(--gap-size);
+}
+.years {
+    max-width: 600px;
 }
 .flex-services {
     display: flex;
