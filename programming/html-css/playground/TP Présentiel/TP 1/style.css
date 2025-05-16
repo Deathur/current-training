@@ -6,6 +6,9 @@
     background-color: #606060;
     color: var(--text-color);
 }
+a {
+    color: none;   
+}
 
 .gold {
     color: var(--primary-color);
@@ -27,8 +30,16 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 500px;
+    height: auto;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
     background-image: url(images/bg_header.jpg);
+    background-size: cover;
+}
+
+.container-gohall {
+    display: flex;
+    flex-direction: row;
 }
 
 .button-style {
@@ -46,6 +57,15 @@
 
 .gros-titre {
     font-size: 48px;
+}
+
+.titre, .titre-image {
+    text-align: center;
+}
+
+.titre, .titre-footer, .gros-titre {
+    margin: 20px 0;
+    letter-spacing: 10px;
 }
 
 .section-nav {
@@ -71,6 +91,23 @@
     height: 150px;
     background-image: url(images/logo12.png);
     background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.london-hall {
+    position: relative;
+    width: 500px;
+    height: auto;
+    background-image: url(images/london_hall.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.titre-london-hall {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    background-color: var(--primary-color);
 }
 
 .the-hall:hover {
@@ -81,11 +118,13 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: var(--gap-size);
-    margin: 0;
+    gap: 40px;
+    margin: 0 40px;
     padding: 0;
 }
-
+.section-nav ul li {
+    color: var(--primary-color);
+}
 .container-main {
     margin: 0 15%;
 }
@@ -108,7 +147,7 @@
 .call-back > h1 {
     font-size: large;
 }
-.titre {
+.uppercase {
     text-transform: uppercase;
 }
 .citation {
@@ -123,11 +162,21 @@
 }
 .concert-paris, .concert-london {
     width: 500px;
+    position: relative;
     margin-bottom: var(--gap-size);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+.date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 0 10px;
+    background-color: black;
+}
 .flex-projects {
     display: flex;
+    width: auto;
     justify-content: space-between;
     margin: 0 20px;
     gap: var(--gap-size);
@@ -142,4 +191,7 @@
     padding: 10px 0;
     border-top: solid var(--primary-color);
     border-bottom: solid var(--primary-color);
+}
+.projects-main {
+    text-align: left;
 }
