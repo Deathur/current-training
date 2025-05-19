@@ -2,8 +2,8 @@
     --primary-color: #CCA57C;
     --secondary-color: #272727;
     --text-color: white;
-    --gap-size: 40px;
-    --dureetransition: 0.5s;
+    --gap-size: 20px;
+    --dureetransition: 0.3s;
     background-color: #606060;
     color: var(--text-color);
     font-family: Roboto;
@@ -13,7 +13,7 @@
     text-transform: uppercase;
 }
 .animation {
-    transition-property: background-color, color, border-bottom;
+    transition-property: background-color, color, border-bottom-color, border-bottom-style;
     transition-duration: var(--dureetransition);
     transition-timing-function: linear;
 }
@@ -58,10 +58,13 @@
     padding: 0 30px;
 }
 .nav-menu:hover {
-    border-bottom: solid var(--primary-color);
+    border-bottom-style: solid;
+    border-bottom-color: var(--primary-color);
     color: var(--primary-color);
 }
-
+.content-nav {
+    padding-top: 15px;
+}
 .content-nav > ul {
     display: flex;
     flex-direction: row;
@@ -133,6 +136,9 @@
     background-repeat: no-repeat;
     margin: 0 10px;
 }
+.the-hall:hover {
+    background-image: url(images/logo_hover.png);
+}
 
 .logo12 {
     height: 150px;
@@ -158,9 +164,6 @@
     padding: 0 10px;
 }
 
-.the-hall:hover {
-    background-image: url(images/logo_hover.png);
-}
 
 .container-main {
     margin: 0 15%;
@@ -251,7 +254,7 @@
     color: black;
 }
 .button-header {
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 15px 15px 15px 15px;
 }
 .carte {
     padding: 10px 0;
@@ -260,4 +263,16 @@
 }
 .projects-main {
     text-align: left;
+}
+.button-footer {
+    border-radius: 5px 5px 5px 5px;
+}
+#message, label {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    vertical-align: text-top;
+    padding-top: 0;
+    line-break: auto;
 }
