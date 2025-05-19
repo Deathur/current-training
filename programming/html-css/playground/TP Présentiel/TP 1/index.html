@@ -35,16 +35,16 @@
             <div class="div-reseaux">
                 <nav class="nav-reseaux">
                     <ul>
-                        <li class="reseaux"><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
-                        <li class="reseaux"><a href="#"><img src="images/pinterest.png" alt="Pinterest"></a></li>
-                        <li class="reseaux"><a href="#"><img src="images/fa_youtube.png" alt="Youtube"></a></li>
+                        <li class="reseaux"><a href="https://www.facebook.com/?locale=fr_FR/"><img src="images/facebook.png" alt="Facebook"></a></li>
+                        <li class="reseaux"><a href="https://fr.pinterest.com/"><img src="images/pinterest.png" alt="Pinterest"></a></li>
+                        <li class="reseaux"><a href="https://www.youtube.com/?app=desktop&hl=FR"><img src="images/fa_youtube.png" alt="Youtube"></a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main class="container-main">
             <div class="flex-main">
-                <div class="background-black" id="about">
+                <div class="background-black">
                     <h1 class="uppercase titre">About <span  class="gold">Go.Hall</span></h1>
                     <div class="container-gohall">
                         <div class="text-gohall">
@@ -62,11 +62,11 @@
                     <h1 class="uppercase titre">About <span class="black">Projects</span></h1>
                     <div class="flex-projects">
                         <div class="projects-main concert-paris">
-                            <h1 class="uppercase">Concert Hall in <span class="gold">Paris</span></h1>
+                            <h1 class="uppercase text-concert">Concert Hall in <span class="gold">Paris</span></h1>
                             <p class="date uppercase">Janvier 2017</p>
                         </div>
                         <div class="projects-main concert-london">
-                            <h1 class="uppercase">Concert Hall in <span class="gold">London</span></h1>
+                            <h1 class="uppercase text-concert">Concert Hall in <span class="gold">London</span></h1>
                             <p class="date uppercase">Mars 2018</p>
                         </div>
                         <div class="projects-main twelvesyears">
@@ -108,15 +108,15 @@
                     <form>
                         <div>
                             <h4><label for="nom">Nom *</label></h4>
-                            <input type="text" id="nom" name="nom" required>
+                            <input type="text" id="nom" name="nom" autocomplete="off" required>
                         </div>
                         <div>
                             <h4><label for="email">Email *</label></h4>
-                            <input type="text" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                            <input type="text" id="email" name="email" autocomplete="off" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                         </div>
                         <div class="input-message">
                             <h4><label for="message">Message *</label></h4>
-                            <input type="text" id="message" name="message" required>
+                            <input type="text" id="message" name="message" autocomplete="off" required>
                         </div>
                         <button type="submit" class="button-style button-footer">Envoyer</button>
                     </form>

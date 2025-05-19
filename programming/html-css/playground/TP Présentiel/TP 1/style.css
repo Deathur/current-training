@@ -6,11 +6,12 @@
     --supplementary-color: #606060;
     --gap-size: 20px;
     --dureetransition: 0.3s;
+    --espacement-lateraux: 15%;
 }
 html {
     background-color: var(--supplementary-color);
     font-family: Roboto;
-    color: white;
+    color: var(--text-color);
 }
 /*Changement couleur */
 .gold {
@@ -59,8 +60,8 @@ html {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 40px;
-    margin: 0 40px;
+    gap: var(--gap-size);
+    margin: 0 var(--gap-size);
     padding: 0;
 }
 .section-nav ul li {
@@ -72,14 +73,14 @@ html {
     color: var(--text-color);
     max-width: 30%;
     margin-left: auto;
-    margin-right: 15%;
+    margin-right: var(--espacement-lateraux);
     margin-top: 150px;
 }
 .gros-titre {
     font-size: 48px;
 }
 .button-header {
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
 }
 .the-hall {
     width: 300px;
@@ -113,7 +114,7 @@ html {
 }
 /*Main*/
 .container-main {
-    margin: 0 15%;
+    margin: 0 var(--espacement-lateraux);
 }
 .container-gohall {
     display: flex;
@@ -123,12 +124,9 @@ html {
     padding: 10px;
     max-width: 400px;
 }
-.flex-projects {
-    display: flex;
-    width: auto;
-    justify-items: center;
-    margin: 0 20px;
-    gap: var(--gap-size);
+.citation {
+    border-left: 1px solid;
+    margin-left: 10px;
 }
 .london-hall {
     position: relative;
@@ -145,15 +143,15 @@ html {
     background-color: var(--primary-color);
     padding: 0 10px;
 }
-.logo12 {
-    height: 150px;
-    background-image: url(images/logo12.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+.flex-projects {
+    display: flex;
+    width: auto;
+    justify-items: center;
+    margin: 0 20px;
+    gap: var(--gap-size);
 }
-.citation {
-    border-left: 1px solid;
-    margin-left: 10px;
+.projects-main {
+    text-align: left;
 }
 .concert-paris {
     background-image: url(images/paris.jpg);
@@ -169,6 +167,9 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.text-concert {
+    margin: 10px;
+}
 .date {
     position: absolute;
     bottom: 10px;
@@ -179,6 +180,12 @@ html {
 .twelvesyears {
     max-width: 600px;
 }
+.logo12 {
+    height: 150px;
+    background-image: url(images/logo12.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .flex-services {
     display: flex;
     justify-content: space-between;
@@ -188,11 +195,10 @@ html {
 .cards-services {
     position: relative;
     max-width: 30%;
-    height: 400px;
-    align-self: auto;
+    height: auto;
 }
 .cards-services2 {
-    max-width: 30%;
+    max-width: 50%;
     object-fit: contain;
     text-align: right;
 }
@@ -203,15 +209,17 @@ html {
 .bouton-services {
     background-color: grey;
     position: absolute;
-    bottom: var(--gap-size);
+    bottom: 0;
     width: 100px;
 }
 .bouton-services:hover {
     background-color: var(--primary-color);
     color: black;
 }
-.projects-main {
-    text-align: left;
+.carte {
+    padding: 10px 0;
+    border-top: solid var(--primary-color);
+    border-bottom: solid var(--primary-color);
 }
 /*Footer*/
 .container-footer {
@@ -232,17 +240,6 @@ html {
 .call-back > h1 {
     font-size: medium;
 }
-.carte {
-    padding: 10px 0;
-    border-top: solid var(--primary-color);
-    border-bottom: solid var(--primary-color);
-}
-.button-footer {
-    border-radius: 5px 5px 5px 5px;
-}
-.button-header, .button-footer {
-    background-color: var(--primary-color);
-}
 input {
     width: 300px;
 }
@@ -253,6 +250,9 @@ input {
     vertical-align: text-top;
     padding-top: 0;
     overflow-wrap: break-word;
+}
+.button-footer {
+    border-radius: 5px;
 }
 /*Divers*/
 .uppercase {
@@ -268,12 +268,15 @@ input {
     text-align: right;
     margin-top: 15px;
 }
-.titre, .titre-image {
+.titre {
     text-align: center;
 }
 .titre, .titre-footer, .gros-titre {
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 .titre, .titre-footer {
     padding: 20px 0;
+}
+.button-header, .button-footer {
+    background-color: var(--primary-color);
 }
