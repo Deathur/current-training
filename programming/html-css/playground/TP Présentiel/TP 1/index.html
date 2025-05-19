@@ -6,33 +6,45 @@
         <title>TP</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="container-header">
             <div class="section-nav">
                 <nav class="content-nav">
                     <ul>
-                        <li class="uppercase"><a href="#">Home</a></li>
-                        <li class="uppercase"><a href="#about">About</a></li>
+                        <li class="nav-menu uppercase animation">Home</li>
+                        <li class="nav-menu uppercase animation">About</li>
                     </ul>
                 </nav>
                 <span class="the-hall"></span>
                 <nav class="content-nav">
                     <ul>
-                        <li class="uppercase"><a href="#projects">Projects</a></li>
-                        <li class="uppercase"><a href="#contacts">Contacts</a></li>
+                        <li class="nav-menu uppercase animation">Projects</li>
+                        <li class="nav-menu uppercase animation">Contacts</li>
                     </ul>
                 </nav>
             </div>
             <div class="content-header">
-                <h1 class="uppercase gros-titre">Concert hall in New York</h1>
+                <h1 class="uppercase gros-titre">Concert hall in </h1><h1 class="uppercase gros-titre">New York</h1>
                 <p class="uppercase">Concert Hall is the architecture of a new generation a building that exists not only in the dimension of space but also in the dimention of time and communication</p>
                 <button type="button" class="button-style button-header">Look More -></button>
+            </div>
+            <div class="div-reseaux">
+                <nav class="nav-reseaux">
+                    <ul>
+                        <li class="reseaux"><a href="https://www.facebook.com/?locale=fr_FR/"><img src="images/facebook.png" alt="Facebook"></a></li>
+                        <li class="reseaux"><a href="https://fr.pinterest.com/"><img src="images/pinterest.png" alt="Pinterest"></a></li>
+                        <li class="reseaux"><a href="https://www.youtube.com/?app=desktop&hl=FR"><img src="images/fa_youtube.png" alt="Youtube"></a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main class="container-main">
             <div class="flex-main">
-                <div class="background-black" id="about">
+                <div class="background-black">
                     <h1 class="uppercase titre">About <span  class="gold">Go.Hall</span></h1>
                     <div class="container-gohall">
                         <div class="text-gohall">
@@ -50,14 +62,14 @@
                     <h1 class="uppercase titre">About <span class="black">Projects</span></h1>
                     <div class="flex-projects">
                         <div class="projects-main concert-paris">
-                            <h1 class="uppercase">Concert Hall in <span class="gold">Paris</span></h1>
+                            <h1 class="uppercase text-concert">Concert Hall in <span class="gold">Paris</span></h1>
                             <p class="date uppercase">Janvier 2017</p>
                         </div>
                         <div class="projects-main concert-london">
-                            <h1 class="uppercase">Concert Hall in <span class="gold">London</span></h1>
+                            <h1 class="uppercase text-concert">Concert Hall in <span class="gold">London</span></h1>
                             <p class="date uppercase">Mars 2018</p>
                         </div>
-                        <div class="projects-main years">
+                        <div class="projects-main twelvesyears">
                             <div class="logo12"></div>
                             <h1 class="uppercase black">Years of successfull work</h1><h1 class="uppercase">in the market</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maxime porro quae nisi dolorem illum, ut culpa, minima obcaecati sequi saepe placeat provident labore ducimus voluptates amet, facere delectus quibusdam.</p>
@@ -71,13 +83,13 @@
                             <img src="images/mini-logo.png" alt="logo developpement">
                             <h3>Developpement</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae doloribus ullam officiis expedita eaque, temporibus dolore tempora laboriosam eos possimus molestiae est dignissimos atque impedit cumque nostrum illum. Illo?</p>
-                            <button type="button" class="button-style bouton-services">More</button>
+                            <button type="button" class="button-style bouton-services animation">More</button>
                         </div>
                         <div class="cards-services">
                             <img src="images/3d-logo.png" alt="logo plan works">
                             <h3>Plan Works</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae doloribus ullam officiis expedita eaque, temporibus dolore tempora laboriosam.</p>
-                            <button type="button" class="button-style bouton-services">More</button>
+                            <button type="button" class="button-style bouton-services animation">More</button>
                         </div>
                         <div class="cards-services2">
                             <img src="images/map.png" class="carte" alt="carte">
@@ -89,24 +101,24 @@
         </main>
         <footer class="container-footer">
             <div class="flex-footer" id="contacts">
-                <div class="background-gold call-back">
+                <div class="background-gold call-back background-footer">
                     <h1 class="uppercase titre-footer">Request<br>a call back</h1>
                 </div>
-                <div class="background-black">
+                <div class="background-black background-footer">
                     <form>
                         <div>
                             <h4><label for="nom">Nom *</label></h4>
-                            <input type="text" id="nom" name="nom" required>
+                            <input type="text" id="nom" name="nom" autocomplete="off" required>
                         </div>
                         <div>
                             <h4><label for="email">Email *</label></h4>
-                            <input type="text" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                            <input type="text" id="email" name="email" autocomplete="off" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                         </div>
-                        <div>
+                        <div class="input-message">
                             <h4><label for="message">Message *</label></h4>
-                            <input type="text" id="message" name="message" required>
+                            <input type="text" id="message" name="message" autocomplete="off" required>
                         </div>
-                        <button type="submit" class="button-style">Envoyer</button>
+                        <button type="submit" class="button-style button-footer">Envoyer</button>
                     </form>
                 </div>
             </div>

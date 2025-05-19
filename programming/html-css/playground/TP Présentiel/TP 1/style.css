@@ -1,98 +1,87 @@
+/*Initialisation des valeurs*/
 :root {
     --primary-color: #CCA57C;
     --secondary-color: #272727;
     --text-color: white;
-    --gap-size: 40px;
-    background-color: #606060;
+    --supplementary-color: #606060;
+    --gap-size: 20px;
+    --dureetransition: 0.3s;
+    --espacement-lateraux: 15%;
+}
+html {
+    background-color: var(--supplementary-color);
+    font-family: Roboto;
     color: var(--text-color);
 }
-a {
-    color: none;   
-}
-
+/*Changement couleur */
 .gold {
     color: var(--primary-color);
 }
-
 .black {
     color: var(--secondary-color);
 }
-
 .background-gold {
     background-color: var(--primary-color);
 }
-
 .background-black {
     background-color: var(--secondary-color);
 }
 .background-black, .background-gold {
     padding: var(--gap-size);
 }
-
+/*Header*/
 .container-header {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: auto;
-    padding-bottom: 10px;
+    height: 600px;
     background-repeat: no-repeat;
     background-image: url(images/bg_header.jpg);
     background-size: cover;
 }
-
-
-.container-gohall {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    height: 400px;
-    justify-content: center;
-    text-align: left;
-}
-
-.text-gohall > h2, .text-gohall > p {
-    padding: 10px;
-    width: 400px;
-}
-
-.button-style {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    text-align: right;
-}
-
-.content-header {
-    text-align: right;
-    color: var(--text-color);
-    max-width: 100%;
-    margin: 0 15%;
-    margin-top: 15%;
-}
-
-.gros-titre {
-    font-size: 48px;
-}
-
-.titre, .titre-image {
-    text-align: center;
-}
-
-.titre, .titre-footer, .gros-titre {
-    padding: 20px 0;
-    letter-spacing: 10px;
-}
-
 .section-nav {
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
-
-.flex-main > section {
-    height: auto;
-    padding: var(--gap-size);
+.nav-menu {
+    font-size: 24px;
+    padding: 0 30px;
 }
-
+.nav-menu:hover {
+    border-bottom-style: solid;
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.content-nav {
+    padding-top: 15px;
+}
+.content-nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: var(--gap-size);
+    margin: 0 var(--gap-size);
+    padding: 0;
+}
+.section-nav ul li {
+    color: var(--text-color);
+}
+.content-header {
+    display: block;
+    text-align: right;
+    color: var(--text-color);
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: var(--espacement-lateraux);
+    margin-top: 150px;
+}
+.gros-titre {
+    font-size: 48px;
+}
+.button-header {
+    border-radius: 15px;
+}
 .the-hall {
     width: 300px;
     height: 100px;
@@ -100,14 +89,45 @@ a {
     background-repeat: no-repeat;
     margin: 0 10px;
 }
-
-.logo12 {
-    height: 150px;
-    background-image: url(images/logo12.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+.the-hall:hover {
+    background-image: url(images/logo_hover.png);
 }
-
+.div-reseaux {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+.nav-reseaux > ul {
+    margin: 0;
+    padding: 0;
+}
+.reseaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    width: 32px;
+    height: 32px;
+    list-style: none;
+    border: 1px solid var(--supplementary-color);
+}
+/*Main*/
+.container-main {
+    margin: 0 var(--espacement-lateraux);
+}
+.container-gohall {
+    display: flex;
+    justify-content: center;
+}
+.text-gohall > h2, .text-gohall > p {
+    padding: 10px;
+    max-width: 400px;
+}
+.citation {
+    border-left: 1px solid;
+    margin-left: 10px;
+}
 .london-hall {
     position: relative;
     width: 300px;
@@ -116,7 +136,6 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .titre-london-hall {
     position: absolute;
     bottom: -10px;
@@ -124,26 +143,85 @@ a {
     background-color: var(--primary-color);
     padding: 0 10px;
 }
-
-.the-hall:hover {
-    background-image: url(images/logo_hover.png);
-}
-
-.content-nav > ul {
+.flex-projects {
     display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 40px;
-    margin: 0 40px;
-    padding: 0;
+    width: auto;
+    justify-items: center;
+    margin: 0 20px;
+    gap: var(--gap-size);
 }
-.section-nav ul li {
-    color: var(--primary-color);
+.projects-main {
+    text-align: left;
 }
-.container-main {
-    margin: 0 15%;
+.concert-paris {
+    background-image: url(images/paris.jpg);
 }
-
+.concert-london {
+    background-image: url(images/london.jpg);
+}
+.concert-paris, .concert-london {
+    width: 300px;
+    height: 350px;
+    position: relative;
+    margin-bottom: var(--gap-size);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-concert {
+    margin: 10px;
+}
+.date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 0 10px;
+    background-color: black;
+}
+.twelvesyears {
+    max-width: 600px;
+}
+.logo12 {
+    height: 150px;
+    background-image: url(images/logo12.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.flex-services {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-size);
+    height: fit-content;
+}
+.cards-services {
+    position: relative;
+    max-width: 30%;
+    height: auto;
+}
+.cards-services2 {
+    max-width: 50%;
+    object-fit: contain;
+    text-align: right;
+}
+.cards-services2 > img {
+    width: 100%;
+    height: auto;
+}
+.bouton-services {
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+}
+.bouton-services:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+.carte {
+    padding: 10px 0;
+    border-top: solid var(--primary-color);
+    border-bottom: solid var(--primary-color);
+}
+/*Footer*/
 .container-footer {
     background-image: url(images/bg_footer.jpg);
 }
@@ -153,87 +231,52 @@ a {
     padding: 20px 0;
     gap: 20px;
 }
-.flex-footer div {
-    width: fit-content;
+.flex-footer > div {
+    min-width: 340px;
 }
 .call-back {
     background-image: url(images/visuelgauche.jpg);
 }
 .call-back > h1 {
-    font-size: large;
+    font-size: medium;
 }
+input {
+    width: 300px;
+}
+#message {
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    vertical-align: text-top;
+    padding-top: 0;
+    overflow-wrap: break-word;
+}
+.button-footer {
+    border-radius: 5px;
+}
+/*Divers*/
 .uppercase {
     text-transform: uppercase;
 }
-.citation {
-    border-left: 1px solid;
-    padding-left: 10px;
+.animation {
+    transition-property: background-color, color, border-bottom-color, border-bottom-style;
+    transition-duration: var(--dureetransition);
+    transition-timing-function: linear;
 }
-.concert-paris {
-    background-image: url(images/paris.jpg);
+.button-style {
+    color: var(--text-color);
+    text-align: right;
+    margin-top: 15px;
 }
-.concert-london {
-    background-image: url(images/london.jpg);
+.titre {
+    text-align: center;
 }
-.concert-paris, .concert-london {
-    width: 400px;
-    height: 350px;
-    position: relative;
-    margin-bottom: var(--gap-size);
-    background-repeat: no-repeat;
-    background-size: cover;
+.titre, .titre-footer, .gros-titre {
+    letter-spacing: 5px;
 }
-.date {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    padding: 0 10px;
-    background-color: black;
+.titre, .titre-footer {
+    padding: 20px 0;
 }
-.flex-projects {
-    display: flex;
-    width: auto;
-    justify-items: center;
-    margin: 0 20px;
-    gap: var(--gap-size);
-}
-.years {
-    max-width: 600px;
-}
-.flex-services {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 20px;
-    gap: var(--gap-size);
-}
-.cards-services {
-    position: relative;
-    width: 25%;
-    height: 400px;
-    align-self: auto;
-}
-.cards-services2 {
-    width: 40%;
-    height: 400px;
-    align-self: auto;
-}
-.bouton-services {
-    background-color: grey;
-    position: absolute;
-    bottom: var(--gap-size);
-    width: 100px;
-}
-.bouton-services:hover {
+.button-header, .button-footer {
     background-color: var(--primary-color);
-}
-.button-header {
-    border-radius: 5px 5px 5px 5px;
-}
-.carte {
-    padding: 10px 0;
-    border-top: solid var(--primary-color);
-    border-bottom: solid var(--primary-color);
-}
-.projects-main {
-    text-align: left;
 }
