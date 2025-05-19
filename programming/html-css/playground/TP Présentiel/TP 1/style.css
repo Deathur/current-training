@@ -3,13 +3,21 @@
     --secondary-color: #272727;
     --text-color: white;
     --gap-size: 40px;
+    --dureetransition: 0.5s;
     background-color: #606060;
     color: var(--text-color);
+    font-family: Roboto;
+    
 }
-a {
-    color: none;   
+.uppercase {
+    text-transform: uppercase;
 }
-
+.animation {
+    transition-property: background-color, color, border-bottom;
+    transition-duration: var(--dureetransition);
+    transition-timing-function: linear;
+}
+/**/
 .gold {
     color: var(--primary-color);
 }
@@ -28,24 +36,49 @@ a {
 .background-black, .background-gold {
     padding: var(--gap-size);
 }
-
+/**/
 .container-header {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: auto;
+    height: 600px;
     padding-bottom: 10px;
     background-repeat: no-repeat;
     background-image: url(images/bg_header.jpg);
     background-size: cover;
 }
 
+.section-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.nav-menu {
+    font-size: 24px;
+    padding: 0 30px;
+}
+.nav-menu:hover {
+    border-bottom: solid var(--primary-color);
+    color: var(--primary-color);
+}
 
+.content-nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+    margin: 0 40px;
+    padding: 0;
+}
+.section-nav ul li {
+    color: var(--text-color);
+}
+/**/
 .container-gohall {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    height: 400px;
+    height: auto;
     justify-content: center;
     text-align: left;
 }
@@ -59,14 +92,17 @@ a {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: right;
+    margin-top: 15px;
 }
 
 .content-header {
+    display: block;
     text-align: right;
     color: var(--text-color);
-    max-width: 100%;
-    margin: 0 15%;
-    margin-top: 15%;
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: 15%;
+    margin-top: 150px;
 }
 
 .gros-titre {
@@ -78,14 +114,11 @@ a {
 }
 
 .titre, .titre-footer, .gros-titre {
-    padding: 20px 0;
     letter-spacing: 10px;
 }
 
-.section-nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+.titre, .titre-footer {
+    padding: 20px 0;
 }
 
 .flex-main > section {
@@ -129,17 +162,6 @@ a {
     background-image: url(images/logo_hover.png);
 }
 
-.content-nav > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 40px;
-    margin: 0 40px;
-    padding: 0;
-}
-.section-nav ul li {
-    color: var(--primary-color);
-}
 .container-main {
     margin: 0 15%;
 }
@@ -160,10 +182,7 @@ a {
     background-image: url(images/visuelgauche.jpg);
 }
 .call-back > h1 {
-    font-size: large;
-}
-.uppercase {
-    text-transform: uppercase;
+    font-size: medium;
 }
 .citation {
     border-left: 1px solid;
@@ -203,19 +222,23 @@ a {
 .flex-services {
     display: flex;
     justify-content: space-between;
-    margin: 0 20px;
     gap: var(--gap-size);
+    height: fit-content;
 }
 .cards-services {
     position: relative;
-    width: 25%;
+    width: 50%;
     height: 400px;
     align-self: auto;
 }
 .cards-services2 {
-    width: 40%;
-    height: 400px;
-    align-self: auto;
+    width: 60%;
+    object-fit: contain;
+    text-align: right;
+}
+.cards-services2 > img {
+    width: 100%;
+    height: auto;
 }
 .bouton-services {
     background-color: grey;
@@ -225,6 +248,7 @@ a {
 }
 .bouton-services:hover {
     background-color: var(--primary-color);
+    color: black;
 }
 .button-header {
     border-radius: 5px 5px 5px 5px;
