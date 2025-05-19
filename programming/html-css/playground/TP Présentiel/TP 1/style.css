@@ -3,25 +3,25 @@
     --primary-color: #CCA57C;
     --secondary-color: #272727;
     --text-color: white;
+    --supplementary-color: #606060;
     --gap-size: 20px;
     --dureetransition: 0.3s;
-    background-color: #606060;
-    color: var(--text-color);
+}
+html {
+    background-color: var(--supplementary-color);
     font-family: Roboto;
+    color: white;
 }
 /*Changement couleur */
 .gold {
     color: var(--primary-color);
 }
-
 .black {
     color: var(--secondary-color);
 }
-
 .background-gold {
     background-color: var(--primary-color);
 }
-
 .background-black {
     background-color: var(--secondary-color);
 }
@@ -75,7 +75,6 @@
     margin-right: 15%;
     margin-top: 150px;
 }
-
 .gros-titre {
     font-size: 48px;
 }
@@ -92,26 +91,41 @@
 .the-hall:hover {
     background-image: url(images/logo_hover.png);
 }
+.div-reseaux {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+.nav-reseaux > ul {
+    margin: 0;
+    padding: 0;
+}
+.reseaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    width: 32px;
+    height: 32px;
+    list-style: none;
+    border: 1px solid var(--supplementary-color);
+}
 /*Main*/
 .container-main {
     margin: 0 15%;
 }
 .container-gohall {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    height: auto;
     justify-content: center;
-    text-align: left;
 }
-
 .text-gohall > h2, .text-gohall > p {
     padding: 10px;
-    width: 400px;
+    max-width: 400px;
 }
 .flex-projects {
     display: flex;
-    width: auto;
+    max-width: auto;
     justify-items: center;
     margin: 0 20px;
     gap: var(--gap-size);
@@ -124,7 +138,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .titre-london-hall {
     position: absolute;
     bottom: -10px;
@@ -149,7 +162,7 @@
     background-image: url(images/london.jpg);
 }
 .concert-paris, .concert-london {
-    width: 400px;
+    width: 300px;
     height: 350px;
     position: relative;
     margin-bottom: var(--gap-size);
@@ -174,12 +187,12 @@
 }
 .cards-services {
     position: relative;
-    width: 50%;
+    max-width: 30%;
     height: 400px;
     align-self: auto;
 }
 .cards-services2 {
-    width: 60%;
+    max-width: 30%;
     object-fit: contain;
     text-align: right;
 }
@@ -210,8 +223,8 @@
     padding: 20px 0;
     gap: 20px;
 }
-.flex-footer div {
-    width: fit-content;
+.flex-footer > div {
+    min-width: 340px;
 }
 .call-back {
     background-image: url(images/visuelgauche.jpg);
@@ -227,8 +240,13 @@
 .button-footer {
     border-radius: 5px 5px 5px 5px;
 }
+.button-header, .button-footer {
+    background-color: var(--primary-color);
+}
+input {
+    width: 300px;
+}
 #message {
-    width: 100%;
     height: 50px;
     padding-top: 10px;
     padding-bottom: 30px;
@@ -246,7 +264,6 @@
     transition-timing-function: linear;
 }
 .button-style {
-    background-color: var(--primary-color);
     color: var(--text-color);
     text-align: right;
     margin-top: 15px;
@@ -257,7 +274,6 @@
 .titre, .titre-footer, .gros-titre {
     letter-spacing: 10px;
 }
-
 .titre, .titre-footer {
     padding: 20px 0;
 }
