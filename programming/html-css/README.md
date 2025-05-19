@@ -1,7 +1,6 @@
 # HTML & CSS
 
-# Introduction aux languages informatiques:
-[Link to PDF](Cours/00_introduction_aux_langages_informatiques.pdf)
+[Introduction aux languages informatiques](Cours/00_introduction_aux_langages_informatiques.pdf)
 # 01 - Environnement de Développement:
 [Test](Cours/01_environnement_de_dveloppement.pdf)
 # 02 - Structure d'une page HTML et Balise de base:
