@@ -125,7 +125,7 @@ html {
 }
 .flex-projects {
     display: flex;
-    max-width: auto;
+    width: auto;
     justify-items: center;
     margin: 0 20px;
     gap: var(--gap-size);
