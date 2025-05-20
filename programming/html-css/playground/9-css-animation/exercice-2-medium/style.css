@@ -54,7 +54,7 @@ h1 {
     animation-delay: 1.2s;
 }
 .container-image {
-    height: 200px;
+    height: 300px;
     width: auto;
     object-fit: cover;
     overflow: hidden;
@@ -127,7 +127,6 @@ h1 {
 .container-button::before {
     animation: fadeBorderOut var(--duree-animation) linear forwards;
 }
-/**/
 @keyframes fadeInUp {
     from {
         opacity: 0;

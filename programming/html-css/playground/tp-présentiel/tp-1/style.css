@@ -2,16 +2,49 @@
 :root {
     --primary-color: #CCA57C;
     --secondary-color: #272727;
+    --black-transparency: hsla(0, 0%, 0%, 0.7);
     --text-color: white;
     --supplementary-color: #606060;
-    --gap-size: 20px;
+    --gap-sized2: 20px;
+    --gap-size: 40px;
+    --gap-sizex2: 80px;
     --dureetransition: 0.3s;
-    --espacement-lateraux: 15%;
+    --espacement-lateraux: 16%;
 }
 html {
     background-color: var(--supplementary-color);
     font-family: Roboto;
     color: var(--text-color);
+}
+a {
+    all: unset;
+    cursor: pointer;
+}
+/*Divers*/
+.uppercase {
+    text-transform: uppercase;
+}
+.animation {
+    transition-property: background-color, color, border-bottom-color, border-bottom-style, border;
+    transition-duration: var(--dureetransition);
+    transition-timing-function: linear;
+}
+.button-style {
+    color: var(--text-color);
+    text-align: right;
+    margin-top: 15px;
+}
+.titre {
+    text-align: center;
+}
+.titre, .titre-footer, .gros-titre {
+    letter-spacing: 5px;
+}
+.titre, .titre-footer {
+    padding: 20px 0;
+}
+.button-header, .button-footer {
+    background-color: var(--primary-color);
 }
 /*Changement couleur */
 .gold {
@@ -26,8 +59,11 @@ html {
 .background-black {
     background-color: var(--secondary-color);
 }
+.backgound-black-transparent {
+    background-color: var(--black-transparency);
+}
 .background-black, .background-gold {
-    padding: var(--gap-size);
+    padding: var(--gap-sizex2);
 }
 /*Header*/
 .container-header {
@@ -38,20 +74,12 @@ html {
     background-repeat: no-repeat;
     background-image: url(images/bg_header.jpg);
     background-size: cover;
+    align-items: center;
 }
 .section-nav {
     display: flex;
     justify-content: center;
     flex-direction: row;
-}
-.nav-menu {
-    font-size: 24px;
-    padding: 0 30px;
-}
-.nav-menu:hover {
-    border-bottom-style: solid;
-    border-bottom-color: var(--primary-color);
-    color: var(--primary-color);
 }
 .content-nav {
     padding-top: 15px;
@@ -64,8 +92,32 @@ html {
     margin: 0 var(--gap-size);
     padding: 0;
 }
-.section-nav ul li {
-    color: var(--text-color);
+.nav-menu {
+    position: relative;
+    font-size: 24px;
+    padding: 0 30px;
+    
+}
+.nav-menu:hover::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    color: var(--primary-color);
+    border-bottom-style: solid;
+    animation: border-menu var(--dureetransition) linear forwards;
+}
+@keyframes border-menu {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.nav-menu:hover {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
 }
 .content-header {
     display: block;
@@ -81,13 +133,13 @@ html {
 }
 .button-header {
     border-radius: 15px;
+    padding: 0 10px;
 }
 .the-hall {
     width: 300px;
     height: 100px;
     background-image: url(images/logo_header.png);
     background-repeat: no-repeat;
-    margin: 0 10px;
 }
 .the-hall:hover {
     background-image: url(images/logo_hover.png);
@@ -112,26 +164,30 @@ html {
     list-style: none;
     border: 1px solid var(--supplementary-color);
 }
+.reseaux:hover {
+    border: 1px solid var(--primary-color);
+}
 /*Main*/
 .container-main {
     margin: 0 var(--espacement-lateraux);
 }
 .container-gohall {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .text-gohall > h2, .text-gohall > p {
-    padding: 10px;
-    max-width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 80%;
 }
 .citation {
     border-left: 1px solid;
-    margin-left: 10px;
+    padding-left: 100px;
 }
 .london-hall {
     position: relative;
-    width: 300px;
-    height: auto;
+    width: 60%;
+    height: 400px;
     background-image: url(images/london_hall.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -148,7 +204,7 @@ html {
     width: auto;
     justify-items: center;
     margin: 0 20px;
-    gap: var(--gap-size);
+    gap: var(--gap-sized2);
 }
 .projects-main {
     text-align: left;
@@ -168,6 +224,7 @@ html {
     background-size: cover;
 }
 .text-concert {
+    font-size: 24px;
     margin: 10px;
 }
 .date {
@@ -175,10 +232,10 @@ html {
     bottom: 10px;
     left: 10px;
     padding: 0 10px;
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 .twelvesyears {
-    max-width: 600px;
+    max-width: 470px;
 }
 .logo12 {
     height: 150px;
@@ -210,11 +267,13 @@ html {
     background-color: grey;
     position: absolute;
     bottom: 0;
+    border-left: 2px solid var(--primary-color);
     width: 100px;
+    color: var(--primary-color);
 }
 .bouton-services:hover {
     background-color: var(--primary-color);
-    color: black;
+    color: var(--secondary-color);
 }
 .carte {
     padding: 10px 0;
@@ -229,10 +288,14 @@ html {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    gap: 20px;
+    gap: var(--gap-sized2);
 }
 .flex-footer > div {
     min-width: 340px;
+}
+.background-footer {
+    width: 300px;
+    padding: var(--gap-sized2);
 }
 .call-back {
     background-image: url(images/visuelgauche.jpg);
@@ -240,43 +303,17 @@ html {
 .call-back > h1 {
     font-size: medium;
 }
-input {
-    width: 300px;
+input, textarea {
+    width: 100%;
+    margin: 5px 0;
+    background-color: initial;
+    color: var(--text-color);
+    resize: none;
 }
 #message {
-    height: 50px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    height: 100px;
     vertical-align: text-top;
-    padding-top: 0;
-    overflow-wrap: break-word;
 }
 .button-footer {
     border-radius: 5px;
-}
-/*Divers*/
-.uppercase {
-    text-transform: uppercase;
-}
-.animation {
-    transition-property: background-color, color, border-bottom-color, border-bottom-style;
-    transition-duration: var(--dureetransition);
-    transition-timing-function: linear;
-}
-.button-style {
-    color: var(--text-color);
-    text-align: right;
-    margin-top: 15px;
-}
-.titre {
-    text-align: center;
-}
-.titre, .titre-footer, .gros-titre {
-    letter-spacing: 5px;
-}
-.titre, .titre-footer {
-    padding: 20px 0;
-}
-.button-header, .button-footer {
-    background-color: var(--primary-color);
 }
