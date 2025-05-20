@@ -20,7 +20,7 @@ html {
     text-transform: uppercase;
 }
 .animation {
-    transition-property: background-color, color, border-bottom-color, border-bottom-style;
+    transition-property: background-color, color, border-bottom-color, border-bottom-style, border;
     transition-duration: var(--dureetransition);
     transition-timing-function: linear;
 }
@@ -277,8 +277,9 @@ input {
 }
 #message {
     height: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     vertical-align: text-top;
-    padding-top: 0;
 }
 .button-footer {
     border-radius: 5px;
