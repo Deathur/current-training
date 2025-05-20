@@ -8,12 +8,16 @@
     --gap-size: 40px;
     --gap-sizex2: 80px;
     --dureetransition: 0.3s;
-    --espacement-lateraux: 20%;
+    --espacement-lateraux: 16%;
 }
 html {
     background-color: var(--supplementary-color);
     font-family: Roboto;
     color: var(--text-color);
+}
+a {
+    all: unset;
+    cursor: pointer;
 }
 /*Divers*/
 .uppercase {
@@ -84,11 +88,29 @@ html {
     padding: 0;
 }
 .nav-menu {
+    position: relative;
     font-size: 24px;
     padding: 0 30px;
+    
+}
+.nav-menu:hover::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    color: var(--primary-color);
+    border-bottom-style: solid;
+    animation: border-menu var(--dureetransition) linear forwards;
+}
+@keyframes border-menu {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 .nav-menu:hover {
-    border-bottom-style: solid;
     border-bottom-color: var(--primary-color);
     color: var(--primary-color);
 }
@@ -106,6 +128,7 @@ html {
 }
 .button-header {
     border-radius: 15px;
+    padding: 0 10px;
 }
 .the-hall {
     width: 300px;
@@ -197,6 +220,7 @@ html {
     background-size: cover;
 }
 .text-concert {
+    font-size: 24px;
     margin: 10px;
 }
 .date {
@@ -239,6 +263,7 @@ html {
     background-color: grey;
     position: absolute;
     bottom: 0;
+    border-left: 2px solid var(--primary-color);
     width: 100px;
     color: var(--primary-color);
 }
