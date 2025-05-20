@@ -2,6 +2,7 @@
 :root {
     --primary-color: #CCA57C;
     --secondary-color: #272727;
+    --black-transparency: hsla(0, 0%, 0%, 0.7);
     --text-color: white;
     --supplementary-color: #606060;
     --gap-sized2: 20px;
@@ -58,6 +59,9 @@ a {
 .background-black {
     background-color: var(--secondary-color);
 }
+.backgound-black-transparent {
+    background-color: var(--black-transparency);
+}
 .background-black, .background-gold {
     padding: var(--gap-sizex2);
 }
@@ -70,6 +74,7 @@ a {
     background-repeat: no-repeat;
     background-image: url(images/bg_header.jpg);
     background-size: cover;
+    align-items: center;
 }
 .section-nav {
     display: flex;
@@ -135,7 +140,6 @@ a {
     height: 100px;
     background-image: url(images/logo_header.png);
     background-repeat: no-repeat;
-    margin: 0 10px;
 }
 .the-hall:hover {
     background-image: url(images/logo_hover.png);
@@ -284,10 +288,14 @@ a {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    gap: 20px;
+    gap: var(--gap-sized2);
 }
 .flex-footer > div {
     min-width: 340px;
+}
+.background-footer {
+    width: 300px;
+    padding: var(--gap-sized2);
 }
 .call-back {
     background-image: url(images/visuelgauche.jpg);
@@ -295,21 +303,17 @@ a {
 .call-back > h1 {
     font-size: medium;
 }
-input {
+input, textarea {
     width: 100%;
-    background-color: black;
+    margin: 5px 0;
+    background-color: initial;
     color: var(--text-color);
+    resize: none;
 }
 #message {
-    height: 50px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    height: 100px;
     vertical-align: text-top;
 }
 .button-footer {
     border-radius: 5px;
-}
-.background-footer {
-    width: 400px;
-    padding: var(--gap-sized2);
 }

@@ -104,19 +104,19 @@
                 <div class="background-gold call-back background-footer">
                     <h1 class="uppercase titre-footer">Request<br>a call back</h1>
                 </div>
-                <div class="background-black background-footer">
+                <div class="backgound-black-transparent background-footer">
                     <form>
                         <div>
-                            <h4><label for="nom">Nom *</label></h4>
-                            <input type="text" id="nom" name="nom" autocomplete="off" required>
+                            <label for="nom"></label>
+                            <input type="text" id="nom" name="nom" autocomplete="off" placeholder="Nom" required>
                         </div>
                         <div>
-                            <h4><label for="email">Email *</label></h4>
-                            <input type="text" id="email" name="email" autocomplete="off" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                            <label for="email"></label>
+                            <input type="text" id="email" name="email" autocomplete="off" placeholder="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                         </div>
                         <div class="input-message">
-                            <h4><label for="message">Message *</label></h4>
-                            <input type="text" id="message" name="message" autocomplete="off" required>
+                            <label for="message"></label>
+                            <textarea id="message" rows="3" name="message" autocomplete="off" placeholder="Message" required></textarea>
                         </div>
                         <button type="submit" class="button-style button-footer">Envoyer</button>
                     </form>
