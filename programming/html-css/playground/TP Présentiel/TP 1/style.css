@@ -4,7 +4,7 @@
     --secondary-color: #272727;
     --text-color: white;
     --supplementary-color: #606060;
-    --gap-size: 20px;
+    --gap-size: 40px;
     --dureetransition: 0.3s;
     --espacement-lateraux: 15%;
 }
@@ -44,15 +44,6 @@ html {
     justify-content: center;
     flex-direction: row;
 }
-.nav-menu {
-    font-size: 24px;
-    padding: 0 30px;
-}
-.nav-menu:hover {
-    border-bottom-style: solid;
-    border-bottom-color: var(--primary-color);
-    color: var(--primary-color);
-}
 .content-nav {
     padding-top: 15px;
 }
@@ -64,8 +55,14 @@ html {
     margin: 0 var(--gap-size);
     padding: 0;
 }
-.section-nav ul li {
-    color: var(--text-color);
+.nav-menu {
+    font-size: 24px;
+    padding: 0 30px;
+}
+.nav-menu:hover {
+    border-bottom-style: solid;
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
 }
 .content-header {
     display: block;
@@ -118,20 +115,21 @@ html {
 }
 .container-gohall {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .text-gohall > h2, .text-gohall > p {
-    padding: 10px;
-    max-width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 80%;
 }
 .citation {
     border-left: 1px solid;
-    margin-left: 10px;
+    padding-left: 100px;
 }
 .london-hall {
     position: relative;
-    width: 300px;
-    height: auto;
+    width: 40%;
+    height: 400px;
     background-image: url(images/london_hall.jpg);
     background-repeat: no-repeat;
     background-size: cover;

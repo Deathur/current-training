@@ -19,7 +19,7 @@
 
 [08 - Positionnement de base](Cours/08_lessons_basic_positioning.pdf)
 
-[09 - Positionnement avancés (grid & responsive)](Cours/09_advanced%20positioning.pdf.pdf)
+[09 - Positionnement avancés (grid & responsive)](Cours/09_advanced_positioning.pdf.pdf)
 
 [10 - CSS Avancées (transitions, transformations et variables CSS)](Cours/10_lessons_advanced_css_(transitions_transformations_and_css_variables).pdf)
 
