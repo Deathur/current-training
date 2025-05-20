@@ -4,14 +4,42 @@
     --secondary-color: #272727;
     --text-color: white;
     --supplementary-color: #606060;
+    --gap-sized2: 20px;
     --gap-size: 40px;
+    --gap-sizex2: 80px;
     --dureetransition: 0.3s;
-    --espacement-lateraux: 15%;
+    --espacement-lateraux: 20%;
 }
 html {
     background-color: var(--supplementary-color);
     font-family: Roboto;
     color: var(--text-color);
+}
+/*Divers*/
+.uppercase {
+    text-transform: uppercase;
+}
+.animation {
+    transition-property: background-color, color, border-bottom-color, border-bottom-style;
+    transition-duration: var(--dureetransition);
+    transition-timing-function: linear;
+}
+.button-style {
+    color: var(--text-color);
+    text-align: right;
+    margin-top: 15px;
+}
+.titre {
+    text-align: center;
+}
+.titre, .titre-footer, .gros-titre {
+    letter-spacing: 5px;
+}
+.titre, .titre-footer {
+    padding: 20px 0;
+}
+.button-header, .button-footer {
+    background-color: var(--primary-color);
 }
 /*Changement couleur */
 .gold {
@@ -27,7 +55,7 @@ html {
     background-color: var(--secondary-color);
 }
 .background-black, .background-gold {
-    padding: var(--gap-size);
+    padding: var(--gap-sizex2);
 }
 /*Header*/
 .container-header {
@@ -109,6 +137,9 @@ html {
     list-style: none;
     border: 1px solid var(--supplementary-color);
 }
+.reseaux:hover {
+    border: 1px solid var(--primary-color);
+}
 /*Main*/
 .container-main {
     margin: 0 var(--espacement-lateraux);
@@ -128,7 +159,7 @@ html {
 }
 .london-hall {
     position: relative;
-    width: 40%;
+    width: 60%;
     height: 400px;
     background-image: url(images/london_hall.jpg);
     background-repeat: no-repeat;
@@ -146,7 +177,7 @@ html {
     width: auto;
     justify-items: center;
     margin: 0 20px;
-    gap: var(--gap-size);
+    gap: var(--gap-sized2);
 }
 .projects-main {
     text-align: left;
@@ -173,10 +204,10 @@ html {
     bottom: 10px;
     left: 10px;
     padding: 0 10px;
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 .twelvesyears {
-    max-width: 600px;
+    max-width: 470px;
 }
 .logo12 {
     height: 150px;
@@ -209,10 +240,11 @@ html {
     position: absolute;
     bottom: 0;
     width: 100px;
+    color: var(--primary-color);
 }
 .bouton-services:hover {
     background-color: var(--primary-color);
-    color: black;
+    color: var(--secondary-color);
 }
 .carte {
     padding: 10px 0;
@@ -239,42 +271,19 @@ html {
     font-size: medium;
 }
 input {
-    width: 300px;
+    width: 100%;
+    background-color: black;
+    color: var(--text-color);
 }
 #message {
     height: 50px;
-    padding-top: 10px;
-    padding-bottom: 30px;
     vertical-align: text-top;
     padding-top: 0;
-    overflow-wrap: break-word;
 }
 .button-footer {
     border-radius: 5px;
 }
-/*Divers*/
-.uppercase {
-    text-transform: uppercase;
-}
-.animation {
-    transition-property: background-color, color, border-bottom-color, border-bottom-style;
-    transition-duration: var(--dureetransition);
-    transition-timing-function: linear;
-}
-.button-style {
-    color: var(--text-color);
-    text-align: right;
-    margin-top: 15px;
-}
-.titre {
-    text-align: center;
-}
-.titre, .titre-footer, .gros-titre {
-    letter-spacing: 5px;
-}
-.titre, .titre-footer {
-    padding: 20px 0;
-}
-.button-header, .button-footer {
-    background-color: var(--primary-color);
+.background-footer {
+    width: 400px;
+    padding: var(--gap-sized2);
 }
