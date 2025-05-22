@@ -1,29 +1,63 @@
 :root {
     font-family: Roboto;
+    --font-XS: 10px;
     --font-S: 12px;
     --font-M: 16px;
     --font-L: 20px;
+    --gap-size: 20px;
     --weight-font: 400;
     --primary-color: #FDC98A;
     --secondary-color: #606060;
     --supplement-color: #C2C57E;
     --text-color: black;
+    --white-color: white;
 }
 * {
     background-repeat: no-repeat;
 }
+li {
+    list-style: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.relative {
+    position: relative;
+}
+.gold-text {
+    color: var(--primary-color);
+}
+.white-text {
+    color: var(--white-color);
+}
 html {
-    background-color: var(--secondary-color);
     color: var(--text-color);
     font-size: var(--font-M);
     font-weight: var(--weight-font);
 }
+main {
+    background-color: var(--secondary-color);
+}
 .uppercase {
     text-transform: uppercase;
 }
+.xs-text {
+    font-size: var(--font-XS)
+}
+.s-text {
+    font-size: var(--font-S);
+}
+.m-text {
+    font-size: var(--font-M);
+}
+.l-text {
+    font-size: var(--font-L);
+}
 .header-fond {
     background-image: url(images/bg_header.png);
-    height: 500px;
+    height: 350px;
+    background-size: cover;
 }
 .header-fond > img {
     display: flex;
@@ -32,20 +66,71 @@ html {
     padding-top: 50px;
 }
 .header-menu {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
+    padding: 0 10px;
     width: 100%;
+    height: auto;
     background-color: var(--primary-color);
+}
+.menu-liste {
+    display: flex;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+.menu-liste > nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 20px;
+    margin: 10px 0;
+}
+.menu-text {
+    color: var(--secondary-color);
+}
+.menu-text:hover {
+    color: black;
+}
+.header-research {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    justify-content: center;
+}
+.research-icon {
+    background-image: url(images/loupe.png);
+    background-color: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    padding: 20px;
+}
+.research-barre {
+    width: 250px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+}
+.container-main {
+    padding: 0 32px;
 }
 .main-foodtype {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap-size) 0;
+    gap: var(--gap-size);
 }
 .main-foodtype > div {
     width: 300px;
-    height: 250px;
-    margin: 20px auto;
+    height: 225px;
+    background-size: contain;
 }
 .food-soup {
     background-image: url(images/soupe.png);
@@ -61,12 +146,20 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.text-surlignement {
+    width: 300px;
+    text-align: center;
+    justify-self: center;
     color: var(--primary-color);
     padding: 0 50px;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     font-size: 20px;
     text-transform: uppercase;
+}
+.titre-surlignement {
+    margin-bottom: 20px;
 }
 .recette {
     font-weight: 500;
@@ -76,6 +169,11 @@ html {
 }
 .plat, .description-plat {
     font-size: var(--font-L);
+}
+.description-plat {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .article-image {
     width: 100%;
@@ -119,23 +217,89 @@ html {
     padding: 5px 0;
     font-size: var(--font-S);
 }
-.relative {
-    position: relative;
-}
 .main-article {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 300px);
+    justify-content: center;
+    grid-auto-rows: 1fr;
+    gap: var(--gap-size);
+    margin-bottom: var(--gap-size);
+}
+.main-about {
+    display: grid;
+    grid-template-columns: minmax(0, 300px);
     grid-auto-rows: 1fr;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+.main-about > div {
+    max-width: 300px;
+}
+.amonsujet {
+    background-color: #fdc98aa6;
+    height: 477px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 0 50px;
+}
+.image-sujet {
+    background-image: url(images/me-avatar\ 1.png);
+    width: 146px;
+    height: 146px;
+    align-self: center;
+    margin-top: 30px;
+    border-radius: 9999px;
+}
+.category {
+    max-width: 300px;
+}
+.image-category {
+    width: 100%;
+    min-height: 350px;
+    background-size: cover;
+    padding: 8px;
+    align-self: center;
+    text-align: center;
+    margin: 8px;
+}
+.bieres {
+    background-image: url(images/bieres.png);
+}
+.cafe {
+    background-image: url(images/cafe.png);
+}
+.border-category {
+    width: auto;
+    height: 330px;
+    border: 1px solid var(--primary-color);
+}
+.absolute-category {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+.category-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 5px 0;
 }
 .grid-gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 300px);;
     grid-auto-rows: 1fr;
     gap: 10px;
+    justify-content: center;
 }
 .gallery {
-    width: 300px;
+    width: 100%;
     height: 300px;
     background-position: center;
     background-size: cover;
@@ -158,4 +322,83 @@ html {
 }
 .poisson {
     background-image: url(images/poisson_small.png);
+}
+footer {
+    background-image: url(images/bg_footer.png);
+}
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+}
+.logo-footer {
+    background-image: url(images/logo_footer.png);
+    width: 140px;
+    height: 62px;
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .container-main {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-areas:
+        "typefood typefood"
+        "recette sidecategory"
+        "gallery gallery";
+        grid-template-columns: auto auto;
+        grid-template-rows: 300px auto auto;
+        gap: var(--gap-size);
+    }
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu-liste {
+        margin: auto 0;
+    }
+    .main-foodtype {
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-area: typefood;
+    }
+    .main-foodtype > div {
+        background-size: auto;
+    }
+    .main-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: var(--gap-size);
+        margin-bottom: var(--gap-size);
+        grid-area: recette;
+    }
+    .description-plat {
+        white-space: initial;
+    }
+    .column, .double {
+        grid-column-start: initial;
+        grid-column-end: span 2;
+    }
+    .row, .double {
+        grid-row-start: initial;
+        grid-row-end: span 2;
+    }
+    .main-about {
+        align-items: start;
+        grid-area: sidecategory;
+    }
+    .main-gallery {
+        grid-area: gallery;
+    }
+    .titre {
+        width: 100%;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
