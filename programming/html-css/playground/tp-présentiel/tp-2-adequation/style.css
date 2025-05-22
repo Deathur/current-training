@@ -15,6 +15,13 @@
 * {
     background-repeat: no-repeat;
 }
+li {
+    list-style: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
 .relative {
     position: relative;
 }
@@ -25,10 +32,12 @@
     color: var(--white-color);
 }
 html {
-    background-color: var(--secondary-color);
     color: var(--text-color);
     font-size: var(--font-M);
     font-weight: var(--weight-font);
+}
+main {
+    background-color: var(--secondary-color);
 }
 .uppercase {
     text-transform: uppercase;
@@ -60,6 +69,49 @@ html {
     bottom: 0;
     width: 100%;
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+.menu-liste {
+    max-width: 235px;
+    height: auto;
+    margin: auto;
+    justify-items: center;
+}
+.menu-liste > nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 20px;
+    margin: 10px 0;
+}
+.menu-text {
+    color: var(--secondary-color);
+}
+.menu-text:hover {
+    color: black;
+}
+.header-research {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.research-icon {
+    background-image: url(images/loupe.png);
+    background-color: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    padding: 20px;
+}
+.research-barre {
+    width: 250px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
 }
 .container-main {
     padding: 0 32px;
@@ -252,4 +304,7 @@ html {
 }
 .poisson {
     background-image: url(images/poisson_small.png);
+}
+.container-footer {
+    background-image: url(images/bg_footer.png);
 }
