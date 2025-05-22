@@ -35,21 +35,16 @@
             <div class="container-main">
                 <div class="main-foodtype">
                     <div class="food-soup relative">
-                        <div class="text-food">
-                            <p class="titre">Soupe</p>
-                        </div>
+                        <p class="titre text-food text-surlignement">Soupe</p>
                     </div>
                     <div class="food-salad relative">
-                        <div class="text-food">
-                            <p class="titre">Salade</p>
-                        </div>
+                        <p class="titre text-food text-surlignement">Salade</p>
                     </div>
                     <div class="food-dessert relative">
-                        <div class="text-food">
-                            <p class="titre">Dessert</p>
-                        </div>
+                        <p class="titre text-food text-surlignement">Dessert</p>
                     </div>
                 </div>
+                <h1 class="text-surlignement titre-surlignement">Articles Récents</h1>
                 <div class="main-article">
                     <div class="article">
                         <div class="image-tacos article-image"></div>
@@ -97,16 +92,45 @@
                     </div>
                 </div>
                 <div class="main-about">
-                    <div class="amonsujet">
+                    <div class="amonsujet relative">
                         <div class="image-sujet"></div>
-                        <div class="contenu-sujet"></div>
+                        <div class="contenu-sujet">
+                            <p>A mon sujet</p>
+                            <p>Depuis 2005, je partage mes recettes quotidienne plus gourmandes les unes que les autres</p>
+                        </div>
                     </div>
-                    <div class="category"></div>
-                    <div class="bieres"></div>
-                    <div class="cafe"></div>
+                    <div class="category">
+                        <p class="uppercase text-surlignement titre-surlignement">Catégories</p>
+                        <ul>
+                            <li><p>Alcool</p><p>-></p></li>
+                            <li><p>Jus de fruit</p><p>-></p></li>
+                            <li><p>Vive le bio</p><p>-></p></li>
+                        </ul>
+                    </div>
+                    <div class="bieres image-category relative">
+                        <div class="border-category">
+                            <div class="absolute-category uppercase">
+                                <p class="gold-text xs-text">Mes bières</p>
+                                <p class="gold-text l-text">Préférées</p>
+                                <button type="button" class="category-button uppercase white-text s-text">Lire Plus</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cafe image-category relative">
+                        <div class="border-category">
+                            <div class="absolute-category uppercase">
+                                <p class="gold-text xs-text">L'art</p>
+                                <p class="gold-text l-text">Du café</p>
+                                <button type="button" class="category-button uppercase white-text s-text">Lire Plus</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cafe relative">
+                        <div class="absolute-category"></div>
+                    </div>
                 </div>
                 <div class="main-gallery">
-                    <h1 class="text-decoration">Ma Galerie Photo</h1>
+                    <h1 class="text-surlignement titre-surlignement">Ma Galerie Photo</h1>
                     <div class="grid-gallery">
                         <div class="hamburger gallery"></div>
                         <div class="wrap gallery"></div>
@@ -118,5 +142,8 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="container-footer"></div>
+        </footer>
     </body>
 </html>
