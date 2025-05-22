@@ -56,7 +56,8 @@ main {
 }
 .header-fond {
     background-image: url(images/bg_header.png);
-    height: 500px;
+    height: 350px;
+    background-size: cover;
 }
 .header-fond > img {
     display: flex;
@@ -65,18 +66,20 @@ main {
     padding-top: 50px;
 }
 .header-menu {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color);
 }
 .menu-liste {
-    max-width: 235px;
+    display: flex;
     height: auto;
     margin: auto;
-    justify-items: center;
+    padding: 0;
 }
 .menu-liste > nav > ul {
     display: flex;
@@ -94,8 +97,8 @@ main {
 .header-research {
     display: flex;
     flex-direction: row;
+    margin: 10px 0;
     justify-content: center;
-    margin-bottom: 10px;
 }
 .research-icon {
     background-image: url(images/loupe.png);
@@ -119,12 +122,15 @@ main {
 .main-foodtype {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap-size) 0;
+    gap: var(--gap-size);
 }
 .main-foodtype > div {
     width: 300px;
-    height: 250px;
-    margin: 20px auto;
+    height: 225px;
+    background-size: contain;
 }
 .food-soup {
     background-image: url(images/soupe.png);
@@ -142,7 +148,9 @@ main {
     transform: translate(-50%, -50%);
 }
 .text-surlignement {
+    width: 300px;
     text-align: center;
+    justify-self: center;
     color: var(--primary-color);
     padding: 0 50px;
     border-top: 2px solid var(--primary-color);
@@ -151,7 +159,7 @@ main {
     text-transform: uppercase;
 }
 .titre-surlignement {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 .recette {
     font-weight: 500;
@@ -161,6 +169,11 @@ main {
 }
 .plat, .description-plat {
     font-size: var(--font-L);
+}
+.description-plat {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .article-image {
     width: 100%;
@@ -206,22 +219,23 @@ main {
 }
 .main-article {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 300px);
+    justify-content: center;
     grid-auto-rows: 1fr;
     gap: var(--gap-size);
     margin-bottom: var(--gap-size);
 }
 .main-about {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 300px);
     grid-auto-rows: 1fr;
     gap: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-self: center;
 }
 .main-about > div {
-    width: 100%;
+    max-width: 300px;
 }
 .amonsujet {
     background-color: #fdc98aa6;
@@ -238,9 +252,13 @@ main {
     height: 146px;
     align-self: center;
     margin-top: 30px;
+    border-radius: 9999px;
+}
+.category {
+    max-width: 300px;
 }
 .image-category {
-    max-width: 306px;
+    width: 100%;
     min-height: 350px;
     background-size: cover;
     padding: 8px;
@@ -250,7 +268,6 @@ main {
 }
 .bieres {
     background-image: url(images/bieres.png);
-    
 }
 .cafe {
     background-image: url(images/cafe.png);
@@ -276,12 +293,13 @@ main {
 }
 .grid-gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 300px);;
     grid-auto-rows: 1fr;
     gap: 10px;
+    justify-content: center;
 }
 .gallery {
-    width: 300px;
+    width: 100%;
     height: 300px;
     background-position: center;
     background-size: cover;
@@ -305,6 +323,82 @@ main {
 .poisson {
     background-image: url(images/poisson_small.png);
 }
-.container-footer {
+footer {
     background-image: url(images/bg_footer.png);
+}
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+}
+.logo-footer {
+    background-image: url(images/logo_footer.png);
+    width: 140px;
+    height: 62px;
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .container-main {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-areas:
+        "typefood typefood"
+        "recette sidecategory"
+        "gallery gallery";
+        grid-template-columns: auto auto;
+        grid-template-rows: 300px auto auto;
+        gap: var(--gap-size);
+    }
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu-liste {
+        margin: auto 0;
+    }
+    .main-foodtype {
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-area: typefood;
+    }
+    .main-foodtype > div {
+        background-size: auto;
+    }
+    .main-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: var(--gap-size);
+        margin-bottom: var(--gap-size);
+        grid-area: recette;
+    }
+    .description-plat {
+        white-space: initial;
+    }
+    .column, .double {
+        grid-column-start: initial;
+        grid-column-end: span 2;
+    }
+    .row, .double {
+        grid-row-start: initial;
+        grid-row-end: span 2;
+    }
+    .main-about {
+        align-items: start;
+        grid-area: sidecategory;
+    }
+    .main-gallery {
+        grid-area: gallery;
+    }
+    .titre {
+        width: 100%;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
