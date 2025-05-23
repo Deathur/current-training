@@ -14,6 +14,7 @@
     --white-color: white;
     --inner-width: 300px;
     --duree-transition: 0.3s;
+    --menu: hidden;
 }
 * {
     background-repeat: no-repeat;
@@ -35,6 +36,9 @@ main {
     background-color: var(--secondary-color);
 }
 /*Utilitaire*/
+.text-title {
+    width: 100%;
+}
 .relative {
     position: relative;
 }
@@ -53,13 +57,10 @@ main {
 .s-text {
     font-size: var(--font-S);
 }
-.m-text {
-    font-size: var(--font-M);
-}
 .l-text {
     font-size: var(--font-L);
 }
-.link-header:hover, .link-footer:hover, .article-button:hover {
+.link-header:hover, .link-footer:hover, .article-button:hover, .icone-reseaux:hover {
     transition-property: all;
     transition-duration: var(--duree-transition);
     transition-timing-function: linear;
@@ -130,6 +131,37 @@ main {
     padding: 5px;
     border: 1px solid var(--secondary-color);
 }
+/**Menu Burger**/
+.menu-hamburger {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.menu-hamburger .trait {
+    display: block;
+    background: rgb(0, 247, 255);
+    height: 5px;
+    width: 20px;
+    margin: 4px 10px;
+}
+input[type=checkbox] {
+    position: absolute;
+    left: -999px;
+}
+label {
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+    align-content: right;
+}
+#menu-mobile:checked ~ .nav-menu{
+    --menu: block;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background-color: var(--color-header);
+    text-align: center;
+}
 /*Main*/
 .container-main {
     max-width: 960px;
@@ -143,9 +175,6 @@ main {
     align-items: center;
     padding: var(--gap-size) 0;
     gap: var(--gap-size);
-}
-.link-footer:hover {
-    color: var(--primary-color);
 }
 .main-foodtype > div {
     width: var(--inner-width);
@@ -167,8 +196,8 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);   
 }
-.text-title {
-    width: 100%;
+.titre-surlignement {
+    margin-bottom: 20px;
 }
 .text-surlignement {
     text-align: center;
@@ -179,23 +208,6 @@ main {
     border-bottom: 2px solid var(--primary-color);
     font-size: 20px;
     text-transform: uppercase;
-}
-.titre-surlignement {
-    margin-bottom: 20px;
-}
-.recette {
-    font-weight: 500;
-}
-.auteur, .recette {
-    color: var(--secondary-color);
-}
-.plat, .description-plat {
-    font-size: var(--font-L);
-}
-.description-plat {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 .article-image {
     width: 100%;
@@ -223,6 +235,20 @@ main {
     transform: translateX(-50%);
     background-image: url(images/toque.png);
 }
+.recette {
+    font-weight: 500;
+}
+.auteur, .recette {
+    color: var(--secondary-color);
+}
+.plat, .description-plat {
+    font-size: var(--font-L);
+}
+.description-plat {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .contenu-tacos, .contenu-boeuf, .contenu-carotte, .contenu-cookie {
     background-color: var(--supplement-color);
     display: flex;
@@ -245,8 +271,8 @@ main {
 .main-article, .grid-gallery {
     display: grid;
     grid-template-columns: minmax(0, var(--inner-width));
-    justify-content: center;
     grid-auto-rows: 1fr;
+    justify-content: center;
     gap: var(--gap-size);
     margin-bottom: var(--gap-size);
 }
@@ -254,30 +280,60 @@ main {
     display: grid;
     grid-template-columns: minmax(0, var(--inner-width));
     grid-auto-rows: 1fr;
-    gap: 10px;
+    gap: var(--gap-size);
+    justify-self: center;
     display: flex;
     flex-direction: column;
-    justify-self: center;
 }
 .main-about > div {
     max-width: var(--inner-width);
 }
 .amonsujet {
     background-color: #fdc98aa6;
-    height: 477px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--gap-size);
     text-align: center;
-    padding: 0 50px;
+    justify-content: center;
+    padding: var(--gap-size) 70px;
 }
 .image-sujet {
     background-image: url(images/me-avatar\ 1.png);
     width: 146px;
     height: 146px;
     align-self: center;
-    margin-top: 30px;
     border-radius: 9999px;
+}
+.text-amonsujet {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+.reseaux-sociaux {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: 10px;
+}
+.icone-reseaux {
+    width: 32px;
+    height: 32px;
+}
+.icone-reseaux:hover {
+    opacity: 0.7;
+}
+.icone-facebook {
+    background-image: url(images/facebook.png);
+}
+.icone-pinterest {
+    background-image: url(images/pinterest.png);
+}
+.icone-twitter {
+    background-image: url(images/twitter.png);
+}
+.icone-rss {
+    background-image: url(images/carre-rss.png);
 }
 .category {
     width: var(--inner-width);
@@ -326,6 +382,7 @@ main {
     color: var(--white-color);
     padding: 5px 0;
 }
+/*************************************/
 .main-gallery {
     display: grid;
     grid-template-columns: minmax(0, var(--inner-width));
@@ -361,6 +418,7 @@ main {
 .poisson {
     background-image: url(images/poisson_small.png);
 }
+/*Footer*/
 footer {
     background: rgba(0, 0, 0, 0.7) url(images/bg_footer.png);
     background-blend-mode: darken;
@@ -382,6 +440,9 @@ footer {
 .menu-footer {
     justify-content: center;
 }
+.link-footer:hover {
+    color: var(--primary-color);
+}
 .text-footer {
     width: var(--inner-width);
     text-align: center;
@@ -390,7 +451,6 @@ footer {
 @media screen and (min-width: 1024px) {
     .container-main {
         display: grid;
-        
         height: auto;
         grid-template-areas:
         "typefood typefood"
@@ -473,7 +533,6 @@ footer {
     }
 }
 @media screen and (min-width: 1728px) {
-
     .header-menu {
         padding: 0 25%;
         justify-content: center;
