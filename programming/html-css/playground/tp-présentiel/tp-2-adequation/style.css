@@ -1,3 +1,4 @@
+/*Initialisation*/
 :root {
     font-family: Roboto;
     --font-XS: 10px;
@@ -11,9 +12,18 @@
     --supplement-color: #C2C57E;
     --text-color: black;
     --white-color: white;
+    --inner-width: 300px;
+    --duree-transition: 0.3s;
+    --menu: none;
 }
-* {
+*{
     background-repeat: no-repeat;
+    background-position: center;
+}
+html {
+    color: var(--text-color);
+    font-size: var(--font-M);
+    font-weight: var(--weight-font);
 }
 li {
     list-style: none;
@@ -21,6 +31,13 @@ li {
 ul {
     margin: 0;
     padding: 0;
+}
+main {
+    background-color: var(--secondary-color);
+}
+/*Utilitaire*/
+.text-title {
+    width: 100%;
 }
 .relative {
     position: relative;
@@ -31,14 +48,6 @@ ul {
 .white-text {
     color: var(--white-color);
 }
-html {
-    color: var(--text-color);
-    font-size: var(--font-M);
-    font-weight: var(--weight-font);
-}
-main {
-    background-color: var(--secondary-color);
-}
 .uppercase {
     text-transform: uppercase;
 }
@@ -48,12 +57,36 @@ main {
 .s-text {
     font-size: var(--font-S);
 }
-.m-text {
-    font-size: var(--font-M);
-}
 .l-text {
     font-size: var(--font-L);
 }
+.link-header:hover, .link-footer:hover, .article-button:hover, .icone-reseaux:hover {
+    transition-property: all;
+    transition-duration: var(--duree-transition);
+    transition-timing-function: linear;
+}
+/**Menu Burger**/
+.menu-hamburger {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.menu-hamburger .trait {
+    display: block;
+    background: rgb(0, 247, 255);
+    height: 5px;
+    width: 20px;
+    margin: 4px 10px;
+}
+input[type=checkbox] {
+    position: absolute;
+    left: 10px;
+    z-index: 30;
+}
+#menu-mobile:checked ~ div .menu-liste {
+    --menu: flex;
+}
+/*Header*/
 .header-fond {
     background-image: url(images/bg_header.png);
     height: 350px;
@@ -63,30 +96,38 @@ main {
     display: flex;
     justify-self: center;
     align-self: center;
-    padding-top: 50px;
+    padding: 50px;
 }
 .header-menu {
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    padding: 0 10px;
+    padding: 0 var(--gap-size);
     width: 100%;
     height: auto;
     background-color: var(--primary-color);
 }
 .menu-liste {
-    display: flex;
+    display: var(--menu);
     height: auto;
     margin: auto;
     padding: 0;
 }
 .menu-liste > nav > ul {
+    position: absolute;
+    left: 0;
+    bottom: -210px;
     display: flex;
-    flex-direction: row;
-    width: auto;
-    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--gap-size);
     margin: 10px 0;
+    z-index: 3;
+    background-color: var(--primary-color);
+}
+.link-header:hover {
+    color: var(--text-color);
 }
 .menu-text {
     color: var(--secondary-color);
@@ -97,7 +138,7 @@ main {
 .header-research {
     display: flex;
     flex-direction: row;
-    margin: 10px 0;
+    margin: var(--gap-size) 0;
     justify-content: center;
 }
 .research-icon {
@@ -116,8 +157,11 @@ main {
     padding: 5px;
     border: 1px solid var(--secondary-color);
 }
+/*Main*/
 .container-main {
-    padding: 0 32px;
+    max-width: 960px;
+    padding: 0 16px;
+    justify-self: center;
 }
 .main-foodtype {
     display: flex;
@@ -128,9 +172,9 @@ main {
     gap: var(--gap-size);
 }
 .main-foodtype > div {
-    width: 300px;
+    width: var(--inner-width);
     height: 225px;
-    background-size: contain;
+    background-size: cover;
 }
 .food-soup {
     background-image: url(images/soupe.png);
@@ -145,10 +189,12 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
+}
+.titre-surlignement {
+    margin-bottom: 20px;
 }
 .text-surlignement {
-    width: 300px;
     text-align: center;
     justify-self: center;
     color: var(--primary-color);
@@ -158,26 +204,9 @@ main {
     font-size: 20px;
     text-transform: uppercase;
 }
-.titre-surlignement {
-    margin-bottom: 20px;
-}
-.recette {
-    font-weight: 500;
-}
-.auteur, .recette {
-    color: var(--secondary-color);
-}
-.plat, .description-plat {
-    font-size: var(--font-L);
-}
-.description-plat {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
 .article-image {
     width: 100%;
-    min-height: 300px;
+    height: 180px;
     background-size: cover;
 }
 .image-tacos {
@@ -201,6 +230,20 @@ main {
     transform: translateX(-50%);
     background-image: url(images/toque.png);
 }
+.recette {
+    font-weight: 500;
+}
+.auteur, .recette {
+    color: var(--secondary-color);
+}
+.plat, .description-plat {
+    font-size: var(--font-L);
+}
+.description-plat {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .contenu-tacos, .contenu-boeuf, .contenu-carotte, .contenu-cookie {
     background-color: var(--supplement-color);
     display: flex;
@@ -212,50 +255,93 @@ main {
 .article-button {
     background-color: var(--secondary-color);
     color: white;
-    width: 25%;
+    width: 100px;
     margin: auto;
     padding: 5px 0;
     font-size: var(--font-S);
 }
-.main-article {
+.article-button:hover {
+    opacity: 0.7;
+}
+.main-article, .grid-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 300px);
-    justify-content: center;
+    grid-template-columns: minmax(0, var(--inner-width));
     grid-auto-rows: 1fr;
+    justify-content: center;
     gap: var(--gap-size);
     margin-bottom: var(--gap-size);
 }
 .main-about {
     display: grid;
-    grid-template-columns: minmax(0, 300px);
+    grid-template-columns: minmax(0, var(--inner-width));
     grid-auto-rows: 1fr;
-    gap: 10px;
+    gap: var(--gap-size);
+    justify-self: center;
     display: flex;
     flex-direction: column;
-    justify-self: center;
 }
 .main-about > div {
-    max-width: 300px;
+    max-width: var(--inner-width);
 }
 .amonsujet {
     background-color: #fdc98aa6;
-    height: 477px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--gap-size);
     text-align: center;
-    padding: 0 50px;
+    justify-content: center;
+    padding: var(--gap-size) 70px;
 }
 .image-sujet {
     background-image: url(images/me-avatar\ 1.png);
     width: 146px;
     height: 146px;
     align-self: center;
-    margin-top: 30px;
     border-radius: 9999px;
 }
+.text-amonsujet {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+.reseaux-sociaux {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: 10px;
+}
+.icone-reseaux {
+    width: 32px;
+    height: 32px;
+}
+.icone-reseaux:hover {
+    opacity: 0.7;
+}
+.icone-facebook {
+    background-image: url(images/facebook.png);
+}
+.icone-pinterest {
+    background-image: url(images/pinterest.png);
+}
+.icone-twitter {
+    background-image: url(images/twitter.png);
+}
+.icone-rss {
+    background-image: url(images/carre-rss.png);
+}
 .category {
-    max-width: 300px;
+    width: var(--inner-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+.justify-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-size: var(--font-L);
 }
 .image-category {
     width: 100%;
@@ -291,19 +377,23 @@ main {
     color: var(--white-color);
     padding: 5px 0;
 }
-.grid-gallery {
+/*************************************/
+.main-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 300px);;
+    grid-template-columns: minmax(0, var(--inner-width));
     grid-auto-rows: 1fr;
     gap: 10px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 }
 .gallery {
-    width: 100%;
+    width: var(--inner-width);
     height: 300px;
     background-position: center;
     background-size: cover;
     justify-self: center;
+    align-items: center;
 }
 .hamburger {
     background-image: url(images/hamburger_small.png);
@@ -323,41 +413,73 @@ main {
 .poisson {
     background-image: url(images/poisson_small.png);
 }
+/*Footer*/
 footer {
-    background-image: url(images/bg_footer.png);
+    background: rgba(0, 0, 0, 0.7) url(images/bg_footer.png);
+    background-blend-mode: darken;
+    background-position: center;
 }
 .container-footer {
     display: flex;
     flex-direction: column;
-    justify-self: center;
     text-align: center;
+    color: var(--white-color);
 }
 .logo-footer {
     background-image: url(images/logo_footer.png);
     width: 140px;
     height: 62px;
     margin: auto;
+    justify-self: center;
 }
-
+.menu-footer {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+.link-footer:hover {
+    color: var(--primary-color);
+}
+.text-footer {
+    width: var(--inner-width);
+    text-align: center;
+    justify-self: center;
+}
 @media screen and (min-width: 1024px) {
     .container-main {
         display: grid;
-        width: 100%;
         height: auto;
         grid-template-areas:
         "typefood typefood"
         "recette sidecategory"
         "gallery gallery";
         grid-template-columns: auto auto;
-        grid-template-rows: 300px auto auto;
+        grid-template-rows: var(--inner-width) auto auto;
         gap: var(--gap-size);
     }
+    .menu-liste > nav > ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--gap-size);
+    margin: 10px 0;
+    z-index: 3;
+    background-color: var(--primary-color);
+}
     .header-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+    #menu-mobile:checked ~ div > .menu-liste{
+        position: static;
+    }
     .menu-liste {
+        display: flex;
+        position: static;
+        flex-direction: row;
         margin: auto 0;
     }
     .main-foodtype {
@@ -393,12 +515,50 @@ footer {
     }
     .main-gallery {
         grid-area: gallery;
+        width: 932px;
     }
     .titre {
-        width: 100%;
+        width: 80%;
     }
     .grid-gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
         grid-template-rows: 1fr 1fr;
+        width: 100%;
+        justify-items: center;
+        gap: var(--gap-size);
+    }
+    .logo-footer {
+        justify-items: left;
+        margin: var(--gap-size) 200px;
+    }
+    .menu-footer {
+        width: initial;
+        justify-self: right;
+    }
+    .menu-text-footer {
+        margin: var(--gap-size) 200px;
+        width: auto;
+        justify-items: right;
+        text-align: right;
+    }
+    .text-footer {
+        width: initial;
+        justify-self: right;
+    }
+    /*Menu burger*/
+    .menu-hamburger, #menu-mobile {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 1728px) {
+    .header-menu {
+        padding: 0 25%;
+        justify-content: center;
+        gap: var(--gap-size);
+    }
+    li {
+        margin: 0;
+        padding: 0;
     }
 }
