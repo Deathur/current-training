@@ -14,9 +14,9 @@
     --white-color: white;
     --inner-width: 300px;
     --duree-transition: 0.3s;
-    --menu: hidden;
+    --menu: none;
 }
-* {
+*{
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -65,6 +65,27 @@ main {
     transition-duration: var(--duree-transition);
     transition-timing-function: linear;
 }
+/**Menu Burger**/
+.menu-hamburger {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.menu-hamburger .trait {
+    display: block;
+    background: rgb(0, 247, 255);
+    height: 5px;
+    width: 20px;
+    margin: 4px 10px;
+}
+input[type=checkbox] {
+    position: absolute;
+    left: 10px;
+    z-index: 30;
+}
+#menu-mobile:checked ~ div .menu-liste {
+    --menu: flex;
+}
 /*Header*/
 .header-fond {
     background-image: url(images/bg_header.png);
@@ -88,17 +109,22 @@ main {
     background-color: var(--primary-color);
 }
 .menu-liste {
-    display: flex;
+    display: var(--menu);
     height: auto;
     margin: auto;
     padding: 0;
 }
 .menu-liste > nav > ul {
+    position: absolute;
+    left: 0;
+    bottom: -210px;
     display: flex;
-    flex-direction: row;
-    width: auto;
+    flex-direction: column;
+    width: 100%;
     gap: var(--gap-size);
     margin: 10px 0;
+    z-index: 3;
+    background-color: var(--primary-color);
 }
 .link-header:hover {
     color: var(--text-color);
@@ -130,37 +156,6 @@ main {
     color: var(--secondary-color);
     padding: 5px;
     border: 1px solid var(--secondary-color);
-}
-/**Menu Burger**/
-.menu-hamburger {
-    position: absolute;
-    right: 0;
-    z-index: 2;
-}
-.menu-hamburger .trait {
-    display: block;
-    background: rgb(0, 247, 255);
-    height: 5px;
-    width: 20px;
-    margin: 4px 10px;
-}
-input[type=checkbox] {
-    position: absolute;
-    left: -999px;
-}
-label {
-    position: absolute;
-    font-size: 24px;
-    right: 0;
-    align-content: right;
-}
-#menu-mobile:checked ~ .nav-menu{
-    --menu: block;
-    position: absolute;
-    top: 48px;
-    right: 0;
-    background-color: var(--color-header);
-    text-align: center;
 }
 /*Main*/
 .container-main {
@@ -438,6 +433,9 @@ footer {
     justify-self: center;
 }
 .menu-footer {
+    display: flex;
+    width: auto;
+    flex-direction: row;
     justify-content: center;
 }
 .link-footer:hover {
@@ -460,12 +458,28 @@ footer {
         grid-template-rows: var(--inner-width) auto auto;
         gap: var(--gap-size);
     }
+    .menu-liste > nav > ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--gap-size);
+    margin: 10px 0;
+    z-index: 3;
+    background-color: var(--primary-color);
+}
     .header-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+    #menu-mobile:checked ~ div > .menu-liste{
+        position: static;
+    }
     .menu-liste {
+        display: flex;
+        position: static;
+        flex-direction: row;
         margin: auto 0;
     }
     .main-foodtype {
@@ -531,6 +545,11 @@ footer {
         width: initial;
         justify-self: right;
     }
+    /*Menu burger*/
+    .menu-hamburger, #menu-mobile {
+        display: none;
+    }
+
 }
 @media screen and (min-width: 1728px) {
     .header-menu {
