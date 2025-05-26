@@ -73,7 +73,7 @@ main {
 }
 .menu-hamburger .trait {
     display: block;
-    background: rgb(0, 247, 255);
+    background: var(--primary-color);
     height: 5px;
     width: 20px;
     margin: 4px 10px;
@@ -377,7 +377,6 @@ input[type=checkbox] {
     color: var(--white-color);
     padding: 5px 0;
 }
-/*************************************/
 .main-gallery {
     display: grid;
     grid-template-columns: minmax(0, var(--inner-width));
@@ -418,6 +417,8 @@ footer {
     background: rgba(0, 0, 0, 0.7) url(images/bg_footer.png);
     background-blend-mode: darken;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container-footer {
     display: flex;
@@ -459,15 +460,15 @@ footer {
         gap: var(--gap-size);
     }
     .menu-liste > nav > ul {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: var(--gap-size);
-    margin: 10px 0;
-    z-index: 3;
-    background-color: var(--primary-color);
-}
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: var(--gap-size);
+        margin: 10px 0;
+        z-index: 3;
+        background-color: var(--primary-color);
+    }
     .header-menu {
         display: flex;
         flex-direction: row;
@@ -549,7 +550,24 @@ footer {
     .menu-hamburger, #menu-mobile {
         display: none;
     }
-
+    .hamburger {
+        background-image: url(images/hamburger_big.png);
+    }
+    .wrap {
+        background-image: url(images/wrap_big.png);
+    }
+    .gateau {
+        background-image: url(images/gateau_big.png);
+    }
+    .pancake {
+        background-image: url(images/pancakes_big.png);
+    }
+    .oeufs {
+        background-image: url(images/eoufs_big.png);
+    }
+    .poisson {
+        background-image: url(images/poisson_big.png);
+    }
 }
 @media screen and (min-width: 1728px) {
     .header-menu {
