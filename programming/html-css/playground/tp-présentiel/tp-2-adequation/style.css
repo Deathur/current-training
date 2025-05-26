@@ -80,7 +80,7 @@ main {
 }
 input[type=checkbox] {
     position: absolute;
-    left: 10px;
+    left: -9999px;
     z-index: 30;
 }
 #menu-mobile:checked ~ div .menu-liste {
