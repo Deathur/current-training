@@ -73,14 +73,14 @@ main {
 }
 .menu-hamburger .trait {
     display: block;
-    background: rgb(0, 247, 255);
+    background: var(--primary-color);
     height: 5px;
     width: 20px;
     margin: 4px 10px;
 }
 input[type=checkbox] {
     position: absolute;
-    left: 10px;
+    left: -9999px;
     z-index: 30;
 }
 #menu-mobile:checked ~ div .menu-liste {
@@ -248,6 +248,7 @@ input[type=checkbox] {
     background-color: var(--supplement-color);
     display: flex;
     flex-direction: column;
+    height: 300px;
     gap: 20px;
     padding: 50px;
     text-align: center;
@@ -376,8 +377,8 @@ input[type=checkbox] {
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: 5px 0;
+    width: 100px;
 }
-/*************************************/
 .main-gallery {
     display: grid;
     grid-template-columns: minmax(0, var(--inner-width));
@@ -418,6 +419,8 @@ footer {
     background: rgba(0, 0, 0, 0.7) url(images/bg_footer.png);
     background-blend-mode: darken;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container-footer {
     display: flex;
@@ -459,15 +462,15 @@ footer {
         gap: var(--gap-size);
     }
     .menu-liste > nav > ul {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: var(--gap-size);
-    margin: 10px 0;
-    z-index: 3;
-    background-color: var(--primary-color);
-}
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: var(--gap-size);
+        margin: 10px 0;
+        z-index: 3;
+        background-color: var(--primary-color);
+    }
     .header-menu {
         display: flex;
         flex-direction: row;
@@ -501,13 +504,9 @@ footer {
     .description-plat {
         white-space: initial;
     }
-    .column, .double {
+    .column {
         grid-column-start: initial;
         grid-column-end: span 2;
-    }
-    .row, .double {
-        grid-row-start: initial;
-        grid-row-end: span 2;
     }
     .main-about {
         align-items: start;
@@ -545,11 +544,37 @@ footer {
         width: initial;
         justify-self: right;
     }
+    .article-button {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .contenu-tacos, .contenu-boeuf, .contenu-carotte, .contenu-cookie {
+        height: 524px;
+    }
     /*Menu burger*/
     .menu-hamburger, #menu-mobile {
         display: none;
     }
-
+    .hamburger {
+        background-image: url(images/hamburger_big.png);
+    }
+    .wrap {
+        background-image: url(images/wrap_big.png);
+    }
+    .gateau {
+        background-image: url(images/gateau_big.png);
+    }
+    .pancake {
+        background-image: url(images/pancakes_big.png);
+    }
+    .oeufs {
+        background-image: url(images/eoufs_big.png);
+    }
+    .poisson {
+        background-image: url(images/poisson_big.png);
+    }
 }
 @media screen and (min-width: 1728px) {
     .header-menu {
