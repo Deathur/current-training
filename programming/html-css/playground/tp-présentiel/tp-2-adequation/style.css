@@ -248,6 +248,7 @@ input[type=checkbox] {
     background-color: var(--supplement-color);
     display: flex;
     flex-direction: column;
+    height: 300px;
     gap: 20px;
     padding: 50px;
     text-align: center;
@@ -376,6 +377,7 @@ input[type=checkbox] {
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: 5px 0;
+    width: 100px;
 }
 .main-gallery {
     display: grid;
@@ -502,13 +504,9 @@ footer {
     .description-plat {
         white-space: initial;
     }
-    .column, .double {
+    .column {
         grid-column-start: initial;
         grid-column-end: span 2;
-    }
-    .row, .double {
-        grid-row-start: initial;
-        grid-row-end: span 2;
     }
     .main-about {
         align-items: start;
@@ -545,6 +543,15 @@ footer {
     .text-footer {
         width: initial;
         justify-self: right;
+    }
+    .article-button {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .contenu-tacos, .contenu-boeuf, .contenu-carotte, .contenu-cookie {
+        height: 524px;
     }
     /*Menu burger*/
     .menu-hamburger, #menu-mobile {
