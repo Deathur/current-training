@@ -56,12 +56,9 @@ tableau2.shift();
 
 console.table(tableau2);
 // Exercice 6
-let personne = [
-    {nom: `Alice`, age: 25, ville: `Paris`}
-];
+let personne ={nom: `Alice`, age: 25, ville: `Paris`};
 console.log(personne)
 ////
-let personne2 = [
-    {titulaire: `John Doe`, solde: 1000}
-];
+let personne2 ={titulaire: `John Doe`, solde: 1000};
+personne2.solde += 500;
 console.log(personne2);
