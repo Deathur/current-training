@@ -69,3 +69,25 @@ function date() {
             break;
     }
 }
+
+let carre = document.getElementById('carre');
+carre.addEventListener('click', () => {
+    let color = Math.floor(Math.random() * 5) + 1;
+    switch (color) {
+        case 1:
+            carre.style.backgroundColor = "red";
+            break;
+        case 2:
+            carre.style.backgroundColor = "green";
+            break;
+        case 3:
+            carre.style.backgroundColor = "blue";
+            break;
+        case 4:
+            carre.style.backgroundColor = "black";
+            break;
+        case 5:
+            carre.style.backgroundColor = "yellow";
+            break;
+    }
+})
