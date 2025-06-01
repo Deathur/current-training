@@ -1,3 +1,6 @@
+html {
+    font-family: Roboto;
+}
 table {
     border-collapse: collapse; /* Fusionne les bordures adjacentes */
     width: 80%;
@@ -20,6 +23,7 @@ tr:nth-child(even) {
 caption {
     background: linear-gradient(0.12turn, blue, green);
     color: white;
+    font-size: 32px;
 }
 .total {
     text-align: right;

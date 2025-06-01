@@ -1,83 +1,143 @@
 html {
     font-family: Roboto;
 }
+:root {
+    --sousmenu: none;
+    --menu : none;
+    --color-header:rgb(81, 115, 165);
+    --duree-animation: 0.5s;
+}
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em auto;
-    background-color: rgb(81, 165, 88);
+    background-color: var(--color-header);
     align-items: center;
     color: white;
+    height: 50px;
+}
+.container-links {
+    color: black;
+}
+.container-links:active {
+    color: red;
 }
 h1 {
     padding-left: 1em;
 }
-.sousmenu > ul > li {
-    list-style: none;
-}
-.sousmenu > ul {
-    padding: 10px;
-}
-.menu-button-container {
-    display: none;
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#menu-toggle {
-    display: none;
-}
 .menu {
     display: var(--menu);
+    background-color: var(--color-header);
+    padding-left: 0;
+    animation-duration: var(--duree-animation);
+    animation-name: fadein;
 }
 .menu > li {
     list-style: none;
-    padding: 0 1em;
+    padding: 0.25em 1em;
 }
 main {
     display: block;
     margin: 20vh 10%;
     text-align: center;
 }
-:root {
-    --sousmenu: none;
-    --menu : none;
-}
 .sousmenu {
     position: absolute;
-    background-color: rgb(81, 165, 88);;
+    background-color: var(--color-header);
     color: black;
     display: var(--sousmenu);
     flex-direction: row;
+    top: 0px;
+    right: 90px;
+    padding: 0.25em 1em;
+    border-radius: 5px 5px 5px 5px;
+    animation-duration: var(--duree-animation);
+    animation-name: fadein;
+}
+.sousmenu > ul {
+    padding: 0 20px;
+}
+.sousmenu > ul > li {
+    list-style: none;
+    border-radius: 5px 5px 5px 5px;
 }
 .produits:hover {
     --sousmenu: flex;
 }
-#menu-toggle {
-    display: block;
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-#menu-toggle:checked {
-    --menu : flex;
+/*   Menu hamburger   */
+
+/* Bouton Hamburger */
+.menu-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-right: 20px;
+}
+.menu-hamburger .trait {
+    display: block;
+    background: rgb(0, 247, 255);
+    height: 5px;
+    width: 40px;
+    margin: 4px 0;
+}
+/* Checkbox Hack */
+input[type=checkbox] {
+    position: absolute;
+    left: -999px;
+}
+#menu-mobile:checked ~ .nav-menu{
+    --menu: block;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background-color: var(--color-header);
+    text-align: center;
+}
+label {
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+    align-content: right;
 }
 /* Tablettes (768px et plus) */
 @media screen and (min-width: 768px) {
     .menu {
         display: flex;
+        margin-right: 10px;
+        animation-duration: 0s;
     }
-    #menu-toggle {
+    #toggle {
         display: none;
     }
     label {
         display: none;
     }
-    nav {
-        display: flex;
+    .menu-hamburger {
+        display: none;
     }
-}
-/* Grands écrans (1200px et plus) */
-@media screen and (min-width: 1200px) {
-    
+    #menu-mobile:checked ~ .nav-menu{
+        position: static;
+    }
+    .sousmenu {
+        position: absolute;
+        color: black;
+        display: var(--sousmenu);
+        flex-direction: row;
+        top: 45px;
+        right: 84px;
+        height: 30px;
+    }
+    .sousmenu > ul {
+        display: inline-flex;
+        gap: 10px;
+        padding: 0px;
+    }
 }
