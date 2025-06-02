@@ -8,22 +8,23 @@
     </head>
     <body>
         <h1 class="titre">Morpion</h1>
-        <p class="joueur">Tour du joueur 1</p>
+
+        <p class="joueur"></p>
         <div class="menu_jeu">
             <div class="menu_joueur">
-                <p class="nom_joueur">Joueur 1</p>
+                <p class="nom_joueur">Joueur 1 (rouge)</p>
                 <p class="score">Score : 0</p>
             </div>
             <div class="container-grid">
-                <div class="case1 case"></div>
-                <div class="case2 case"></div>
-                <div class="case3 case"></div>
-                <div class="case4 case"></div>
-                <div class="case5 case"></div>
-                <div class="case6 case"></div>
-                <div class="case7 case"></div>
-                <div class="case8 case"></div>
-                <div class="case9 case"></div>
+                <div class="case" id="case1" onclick="clicking()"></div>
+                <div class="case" id="case2" onclick="clicking()"></div>
+                <div class="case" id="case3" onclick="clicking()"></div>
+                <div class="case" id="case4" onclick="clicking()"></div>
+                <div class="case" id="case5" onclick="clicking()"></div>
+                <div class="case" id="case6" onclick="clicking()"></div>
+                <div class="case" id="case7" onclick="clicking()"></div>
+                <div class="case" id="case8" onclick="clicking()"></div>
+                <div class="case" id="case9" onclick="clicking()"></div>
             </div>
             <div class="menu_joueur">
                 <p class="nom_joueur">Joueur 2</p>
@@ -31,5 +32,7 @@
             </div>
         </div>
         <button onclick="gameStart()">Start</button>
+        <button onclick="reinitialisation()">Reset</button>
+        <script src="script.js"></script>
     </body>
 </html>
