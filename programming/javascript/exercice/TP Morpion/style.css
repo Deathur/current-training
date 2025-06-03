@@ -16,3 +16,12 @@
     justify-content: center;
     gap: 20px;
 }
+.menu_joueur {
+    width: 110px;
+    text-align: center;
+}
+.button_menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
