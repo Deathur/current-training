@@ -63,20 +63,24 @@ function clicking() {
 }
 
 function fonctionnement() {
-    //if (gameStarting == true) {
+    if (gameStarting == true) {
         switch (tourJoueur) {
             case 0:
                 tourJoueur1();
+                console.log('Tour du joueur 1')
                 break;
             case 1:
                 tourJoueur2();
+                console.log('Tour du joueur 2')
                 break;
         }
         verification();
         if (caseColor == 9) {
+            gameStarting = false;
             reinitialisation()
         }
-    //}
+    }
+    return
 }
 
 function tourJoueur1() {
