@@ -13,6 +13,7 @@ let case6Background;
 let case7Background;
 let case8Background;
 let case9Background;
+let elementClass;
 let case1 = document.getElementById('case1');
 let case2 = document.getElementById('case2');
 let case3 = document.getElementById('case3');
@@ -27,8 +28,7 @@ let joueur = document.getElementsByClassName("joueur");
 
 function reinitialisation() {
     gameStarting = false;
-    console.log(gameStarting)
-    phraseJoueur.innerText = "";
+    phraseJoueur.innerText = "Tour du joueur ?";
     tourJoueur = 0;
     caseColor = 0;
     case1.style.backgroundColor = "";
@@ -42,21 +42,24 @@ function reinitialisation() {
     case9.style.backgroundColor = "";
 }
 function gameStart() {
+    reinitialisation();
     gameStarting = true;
     tourJoueur = 0;
     console.log("Game start !");
+    phraseJoueur.innerText = "Tour du joueur 1";
 }
 function clicking() {
     if (gameStarting == true) {
         document.addEventListener('click', (e) => {
-            let elementClass = e.target.className;
+            elementClass = e.target.className;
+            console.log(elementClass);
             if (elementClass == 'case') {
                 let caseActuel = document.getElementById(e.target.id);
                 if (tourJoueur == "0") {
                     if (caseActuel.style.backgroundColor=="") {
                         caseActuel.style.backgroundColor = "red";
                         console.log('Joueur rouge');
-                        phraseJoueur.innerText = "Tour du joueur 1";
+                        phraseJoueur.innerText = "Tour du joueur 2";
                         tourJoueur = 1;
                         caseColor += 1;
                         if (caseColor == 9) {
@@ -72,7 +75,7 @@ function clicking() {
                     if (caseActuel.style.backgroundColor=="") {
                         caseActuel.style.backgroundColor = "black";
                         console.log('Joueur noir');
-                        phraseJoueur.innerText = "Tour du joueur 2";
+                        phraseJoueur.innerText = "Tour du joueur 1";
                         tourJoueur = 0;
                         caseColor += 1;
                         if (caseColor == 9) {
