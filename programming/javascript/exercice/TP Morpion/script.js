@@ -14,6 +14,8 @@ let case7Background;
 let case8Background;
 let case9Background;
 let elementClass;
+let player1Score;
+let Player2Score;
 let case1 = document.getElementById('case1');
 let case2 = document.getElementById('case2');
 let case3 = document.getElementById('case3');
@@ -24,10 +26,10 @@ let case7 = document.getElementById('case7');
 let case8 = document.getElementById('case8');
 let case9 = document.getElementById('case9');
 let joueur = document.getElementsByClassName("joueur");
+let test = 0;
 
 
 function reinitialisation() {
-    gameStarting = false;
     phraseJoueur.innerText = "Tour du joueur ?";
     tourJoueur = 0;
     caseColor = 0;
@@ -48,54 +50,64 @@ function gameStart() {
     console.log("Game start !");
     phraseJoueur.innerText = "Tour du joueur 1";
 }
+
 function clicking() {
-    if (gameStarting == true) {
-        document.addEventListener('click', (e) => {
-            elementClass = e.target.className;
-            console.log(elementClass);
-            if (elementClass == 'case') {
-                let caseActuel = document.getElementById(e.target.id);
-                if (tourJoueur == "0") {
-                    if (caseActuel.style.backgroundColor=="") {
-                        caseActuel.style.backgroundColor = "red";
-                        console.log('Joueur rouge');
-                        phraseJoueur.innerText = "Tour du joueur 2";
-                        tourJoueur = 1;
-                        caseColor += 1;
-                        if (caseColor == 9) {
-                            morpionComplet += 1;
-                            reinitialisation();
-                        }
-                    }
-                    else {
-                        console.log("Case déjà pris");
-                    }
-                }
-                else {
-                    if (caseActuel.style.backgroundColor=="") {
-                        caseActuel.style.backgroundColor = "black";
-                        console.log('Joueur noir');
-                        phraseJoueur.innerText = "Tour du joueur 1";
-                        tourJoueur = 0;
-                        caseColor += 1;
-                        if (caseColor == 9) {
-                            morpionComplet += 1;
-                            console.log(morpionComplet);
-                            reinitialisation();
-                        }
-                    }
-                    else {
-                        console.log("Case déjà pris");
-                    }
-                }
-                verification();
-                if (morpionComplet == 9) {
-                    reinitialisation();
-                }
-            }
-        });
-    }
+    document.addEventListener('click', (e) => {
+        elementClass = e.target.className;
+        if (elementClass == 'case') {
+            caseActuel = document.getElementById(e.target.id);
+            fonctionnement();
+        }
+    });
+    
 }
+
+function fonctionnement() {
+    //if (gameStarting == true) {
+        switch (tourJoueur) {
+            case 0:
+                tourJoueur1();
+                break;
+            case 1:
+                tourJoueur2();
+                break;
+        }
+        verification();
+        if (caseColor == 9) {
+            reinitialisation()
+        }
+    //}
+}
+
+function tourJoueur1() {
+    if (caseActuel.style.backgroundColor=="") {
+        console.log('Je me transforme en rouge');
+        caseActuel.style.backgroundColor = "red";
+        phraseJoueur.innerText = "Tour du joueur 2"
+        tourJoueur = 1;
+        caseColor += 1;
+    }
+    else {
+        console.log('Déjà pris');
+    }
+    console.log('tourJoueur1');
+}
+
+function tourJoueur2() {
+    if (caseActuel.style.backgroundColor=="") {
+        console.log('Je me transforme en noir');
+        caseActuel.style.backgroundColor = "black";
+        phraseJoueur.innerText = "Tour du joueur 1"
+        tourJoueur = 0;
+        caseColor += 1;
+    }
+    else {
+        console.log('Déjà pris');
+    } 
+    console.log('tourJoueur2');
+}
+
+
 function verification() {
     case1Background = case1.style.backgroundColor;
     case2Background = case2.style.backgroundColor;
