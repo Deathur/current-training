@@ -11,11 +11,13 @@
         <div class="button_menu">
             <button onclick="gameStart()">Start</button>
             <button onclick="reinitialisation()">Reset</button>
+            <button onclick="setNames()">Choisir les noms</button>
         </div>
         <p class="joueur">Tour du joueur ?</p>
+        <p class="nul">Nombre de tour avant match nul : <span class=matchnul>?</span> / 9</p>
         <div class="menu_jeu">
             <div class="menu_joueur">
-                <p class="nom_joueur">Joueur 1 (rouge)</p>
+                <p class="nom_joueur"><span class="joueur1">Joueur 1</span> (rouge)</p>
                 <p class="score">Score : <span class='score1'>0</span></p>
             </div>
             <div class="container-grid">
@@ -30,7 +32,7 @@
                 <div class="case" id="case9" onclick="clicking()"></div>
             </div>
             <div class="menu_joueur">
-                <p class="nom_joueur">Joueur 2 (noir)</p>
+                <p class="nom_joueur"><span class="joueur2">Joueur 2</span> (noir)</p>
                 <p class="score">Score : <span class='score2'>0</span></p>
             </div>
         </div>
