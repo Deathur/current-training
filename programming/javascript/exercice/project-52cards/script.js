@@ -5,7 +5,6 @@ let card;
 let cardSuit;
 let cardRank;
 
-
 let deckInitial = [];
 for (let suit of color) {
     for (let rank of number) {
