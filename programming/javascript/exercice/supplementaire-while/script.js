@@ -34,7 +34,6 @@ function exo3() {
         }
     }
 }
-
 function exo4() {
     let finish = false;
     let promptText = prompt("Veuillez écrire 'oui' ou 'non' pour arrêter la boucle");
