@@ -44,7 +44,7 @@ function devin() {
 }
 //Exercice 4
 function date() {
-    let input2 = parseInt(prompt());
+    let input2 = parseInt(prompt("Mettez le mois en chiffre (entre 1 et 12)"));
     switch (input2) {
         case 1:
         case 3:
@@ -62,7 +62,13 @@ function date() {
             console.log("30 jours");
             break;
         case 2:
-            console.log("29 jours (bissextiles), 28 jours (non bissextiles)");
+            let years = parseInt(prompt("Veuillez donner l'année de ce mois"));
+            if (years%4 == 0) {
+                console.log("29 jours");
+            }
+            else {
+                console.log("28 jours");
+            }
             break;
         default:
             console.log("Insérez une valeur entre 1 et 12");
