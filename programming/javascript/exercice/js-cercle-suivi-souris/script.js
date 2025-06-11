@@ -2,10 +2,18 @@ let cercle = document.querySelector('.rectangle');
 console.log(cercle);
 
 document.addEventListener('mousemove', (event) => {
-    cercle.style.position = "absolute";
-    positionY = event.clientY - 50;
-    positionX = event.clientX - 50;
+    /*
+    positionY = event.clientY - (cercle.clientHeight / 2);
+    positionX = event.clientX - (cercle.clientWidth / 2);
     cercle.style.top = positionY + "px";
     cercle.style.left = positionX + "px";
+    //NE PAS OUBLIER: RAJOUTER PX LORS D'UNE POSITION
+    */
+   cercle.style.transform = `translate(${event.clientX - (cercle.clientWidth / 2)}px,${event.clientY - (cercle.clientHeight / 2)}px)`;
 })
-//NE PAS OUBLIER: RAJOUTER PX LORS D'UNE POSITION
+document.addEventListener('click', (event) => {
+    
+    let taille = Math.floor(Math.random() * 100) + 100;
+    cercle.style.height = taille + "px";
+    cercle.style.width = taille + "px";
+})
