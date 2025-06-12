@@ -1,4 +1,28 @@
 window.onload = reset();
+let boutonRed = document.querySelector('.button1');
+boutonRed.addEventListener('click', () => {
+    red();
+})
+
+let boutonWhite = document.querySelector('.button2');
+boutonWhite.addEventListener('click', () => {
+    white();
+})
+
+let boutonBlack = document.querySelector('.button3');
+boutonBlack.addEventListener('click', () => {
+    black();
+})
+
+let boutonYellow = document.querySelector('.button4');
+boutonYellow.addEventListener('click', () => {
+    yellow();
+})
+
+let boutonReset = document.querySelector('.button0');
+boutonReset.addEventListener('click', () => {
+    reset();
+})
 
 function reset() {
     let colorchange = document.body;
