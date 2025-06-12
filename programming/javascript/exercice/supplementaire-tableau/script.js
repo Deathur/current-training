@@ -13,3 +13,4 @@ const doubles = nombres.map((element) => {
     return element * 2;
 })
 console.log(doubles);
+
