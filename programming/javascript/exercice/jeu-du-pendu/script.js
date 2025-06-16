@@ -1,4 +1,4 @@
-var regmotADeviner = /^[a-z ]+$/i;
+var regmotADeviner = /^[a-z]+$/i;
 var regWhiteSpace = /^s+$/;
 
 let motADeviner;
@@ -19,9 +19,7 @@ let pourcentageVie = document.querySelector(".pourcentagevie");
 let boutonPopup = document.querySelector(".boutonpopup");
 let popup = document.querySelector(".popup");
 let textPopup = document.querySelector(".textpopup");
-boutonCommencer.addEventListener("click", commencerJeu);
 let inputLetter = document.querySelector(".inputLetter");
-
 let barreDeVie = document.querySelector(".border2");
 
 function commencerJeu() {
@@ -170,3 +168,4 @@ document.addEventListener("keypress", (event) => {
     verification();
   }
 });
+boutonCommencer.addEventListener("click", commencerJeu);
