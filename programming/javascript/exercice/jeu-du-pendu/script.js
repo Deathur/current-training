@@ -1,5 +1,6 @@
-var regmotADeviner = /^[a-z]+$/i;
-var regWhiteSpace = /^s+$/;
+let regmotADeviner = /^[a-z]+$/i;
+let regpropositionLettre = /^[^a-zA-Z]+$/;
+let regWhiteSpace = /^s+$/;
 
 let motADeviner;
 let tabADeviner;
@@ -21,6 +22,19 @@ let popup = document.querySelector(".popup");
 let textPopup = document.querySelector(".textpopup");
 let inputLetter = document.querySelector(".inputLetter");
 let barreDeVie = document.querySelector(".border2");
+let modeDifficile = document.querySelector(".modedifficile");
+let divPropose = document.querySelector(".div-propose");
+let infoMode = document.querySelector(".infoMode");
+
+modeDifficile.addEventListener("click", () => {
+  if (modeDifficile.innerText == "Passer en mode difficile") {
+    divPropose.style.display = "none";
+    modeDifficile.innerText = "Passer en mode facile";
+  } else {
+    divPropose.style.display = "block";
+    modeDifficile.innerText = "Passer en mode difficile";
+  }
+});
 
 function commencerJeu() {
   if (enJeu == false) {
@@ -31,6 +45,7 @@ function commencerJeu() {
       !regmotADeviner.test(motADeviner) ||
       regWhiteSpace.test(motADeviner)
     ) {
+      alert("Veuillez écrire un mot contenant les lettres de A à Z !");
       return;
     }
     barreDeVie.style.width = "100%";
@@ -52,6 +67,8 @@ function commencerJeu() {
     boutonCommencer.style.visibility = "hidden";
     inputLetter.disabled = false;
     inputLetter.focus();
+    modeDifficile.style.visibility = "hidden";
+    infoMode.style.visibility = "hidden";
   }
 }
 function verification() {
@@ -59,6 +76,11 @@ function verification() {
     propositionLettre = document
       .querySelector(".inputLetter")
       .value.toUpperCase();
+    if (regpropositionLettre.test(propositionLettre)) {
+      inputLetter.value = "";
+      alert("Veuillez entrer une lettre entre A et Z !");
+      return;
+    }
     for (i = 0; i < tabADeviner.length; i++) {
       if (tabADeviner[i] == propositionLettre) {
         tabComplet[i] = propositionLettre;
@@ -89,10 +111,12 @@ function fauxPerdu() {
   }
   maVie();
   if (errorCount >= 10) {
-    textPopup.innerText = "Vous avez perdu !";
+    textPopup.innerText = `Vous avez perdu ! Le mot à retrouver était ${motADeviner}`;
     popup.style.display = "block";
     boutonCommencer.innerText = "Recommencer à jouer";
     boutonCommencer.style.visibility = "visible";
+    modeDifficile.style.visibility = "visible";
+    infoMode.style.visibility = "visible";
     enJeu = false;
     inputLetter.disabled = true;
   }
@@ -105,6 +129,8 @@ function conditionVictoire() {
     inputLetter.disabled = true;
     boutonCommencer.innerText = "Recommencer à jouer";
     boutonCommencer.style.visibility = "visible";
+    modeDifficile.style.visibility = "visible";
+    infoMode.style.visibility = "visible";
   }
 }
 function maVie() {

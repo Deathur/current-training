@@ -63,3 +63,8 @@ button {
     margin-top: 40vh;
     padding: 10px;
 }
+.flex-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
