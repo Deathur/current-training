@@ -22,16 +22,6 @@ let textPopup = document.querySelector(".textpopup");
 boutonCommencer.addEventListener("click", commencerJeu);
 let inputLetter = document.querySelector(".inputLetter");
 
-boutonPopup.addEventListener("click", ()=>{
-  popup.style.display = "none";
-})
-document.addEventListener("keypress", (event)=>{
-  if (event.key == "Enter") {
-    popup.style.display = "none";
-    verification();
-  }
-})
-
 let barreDeVie = document.querySelector(".border2");
 
 function commencerJeu() {
@@ -62,15 +52,15 @@ function commencerJeu() {
     errorCount = 0;
     afficherError.innerText = errorCount;
     boutonCommencer.style.visibility = "hidden";
-    inputLetter.disabled = false; 
+    inputLetter.disabled = false;
     inputLetter.focus();
   }
 }
 function verification() {
   if (enJeu == true) {
     propositionLettre = document
-    .querySelector(".inputLetter")
-    .value.toUpperCase();
+      .querySelector(".inputLetter")
+      .value.toUpperCase();
     for (i = 0; i < tabADeviner.length; i++) {
       if (tabADeviner[i] == propositionLettre) {
         tabComplet[i] = propositionLettre;
@@ -170,3 +160,13 @@ function maVie() {
       break;
   }
 }
+
+boutonPopup.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+document.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    popup.style.display = "none";
+    verification();
+  }
+});
