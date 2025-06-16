@@ -16,17 +16,34 @@ let dejaPropose = false;
 let afficherError = document.querySelector(".error");
 let boutonCommencer = document.querySelector(".StartGame");
 let boutonDeviner = document.querySelector(".Thinking");
+pourcentageVie = document.querySelector(".pourcentagevie");
+let boutonPopup = document.querySelector(".boutonpopup");
+let popup = document.querySelector(".popup");
+let textPopup = document.querySelector(".textpopup");
 boutonCommencer.addEventListener("click", commencerJeu);
 boutonDeviner.addEventListener("click", verification);
+let inputLetter = document.querySelector(".inputLetter");
 
-let barreDeVie = document.querySelector('.border2')
+boutonPopup.addEventListener("click", ()=>{
+  popup.style.display = "none";
+})
+document.addEventListener("keypress", (event)=>{
+  if (event.key == "Enter") {
+    popup.style.display = "none";
+    verification();
+  }
+})
 
-
+let barreDeVie = document.querySelector(".border2");
 
 function commencerJeu() {
   if (enJeu == false) {
     motADeviner = prompt("Choississez un mot à deviner").toUpperCase();
-    if (motADeviner == null || !regmotADeviner.test(motADeviner) || regWhiteSpace.test(motADeviner)) {
+    if (
+      motADeviner == null ||
+      !regmotADeviner.test(motADeviner) ||
+      regWhiteSpace.test(motADeviner)
+    ) {
       return;
     }
     barreDeVie.style.width = "100%";
@@ -45,6 +62,8 @@ function commencerJeu() {
     afficherLettrePropose.textContent = " ";
     errorCount = 0;
     afficherError.innerText = errorCount;
+    boutonCommencer.style.visibility = "hidden";
+    inputLetter.focus();
   }
 }
 function verification() {
@@ -80,55 +99,70 @@ function fauxPerdu() {
   if (errorVerify == false || dejaPropose == true) {
     errorCount += 1;
   }
+  maVie();
   if (errorCount >= 10) {
-    alert("Vous avez perdu !");
+    textPopup.innerText = "Vous avez perdu !";
+    popup.style.display = "block";
     enJeu = false;
   }
-  maVie();
 }
 function conditionVictoire() {
   if (tabADeviner.toString() == tabComplet.toString()) {
-    alert("Vous avez gagné !");
+    textPopup.innerText = "Vous avez gagné !";
+    popup.style.display = "block";
     enJeu = false;
+    boutonCommencer.innerText = "Recommencer à jouer";
+    boutonCommencer.style.visibility = "visible";
   }
 }
 function maVie() {
-    console.log(errorCount);
-    switch (errorCount){
-        case 0:
-            barreDeVie.style.width = "100%";
-            break;
-        case 1:
-            barreDeVie.style.width = "90%";
-            break;
-        case 2:
-            barreDeVie.style.width = "80%";
-            break;
-        case 3:
-            barreDeVie.style.width = "70%";
-            break;
-        case 4:
-            barreDeVie.style.width = "60%";
-            break;
-        case 5:
-            barreDeVie.style.width = "50%";
-            barreDeVie.style.backgroundColor = "Yellow";
-            break;
-        case 6:
-            barreDeVie.style.width = "40%";
-            break;
-        case 7:
-            barreDeVie.style.width = "30%";
-            break;
-        case 8:
-            barreDeVie.style.width = "20%";
-            barreDeVie.style.backgroundColor = "Red";
-            break;
-        case 9:
-            barreDeVie.style.width = "10%";
-            break;
-        case 10:
-            barreDeVie.style.width = "0%";
-            break;
-    }
+  console.log(errorCount);
+  switch (errorCount) {
+    case 0:
+      barreDeVie.style.width = "100%";
+      pourcentageVie.innerText = "100%";
+      break;
+    case 1:
+      barreDeVie.style.width = "90%";
+      pourcentageVie.innerText = "90%";
+      break;
+    case 2:
+      barreDeVie.style.width = "80%";
+      pourcentageVie.innerText = "80%";
+      break;
+    case 3:
+      barreDeVie.style.width = "70%";
+      pourcentageVie.innerText = "70%";
+      break;
+    case 4:
+      barreDeVie.style.width = "60%";
+      pourcentageVie.innerText = "60%";
+      break;
+    case 5:
+      barreDeVie.style.width = "50%";
+      pourcentageVie.innerText = "50%";
+      barreDeVie.style.backgroundColor = "Yellow";
+      break;
+    case 6:
+      barreDeVie.style.width = "40%";
+      pourcentageVie.innerText = "40%";
+      break;
+    case 7:
+      barreDeVie.style.width = "30%";
+      pourcentageVie.innerText = "30%";
+      break;
+    case 8:
+      barreDeVie.style.width = "20%";
+      pourcentageVie.innerText = "20%";
+      barreDeVie.style.backgroundColor = "Red";
+      break;
+    case 9:
+      barreDeVie.style.width = "10%";
+      pourcentageVie.innerText = "10%";
+      break;
+    case 10:
+      barreDeVie.style.width = "0%";
+      pourcentageVie.innerText = "0%";
+      break;
+  }
 }
