@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le jeu du pendu sans pendu</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="popup">
+        <div class="fenetrepopup">
+            <p class="textpopup"></p>
+            <button type="button" class="boutonpopup">Valider (ou la touche Entrée)</button>
+        </div>
+    </div>
     <div class="flex-principal">
-        <div>
+        <div class="flex-menu">
             <h1>LE JEU DU PENDU (sans pendu car Youtube Friendly)</h1>
-            <button class="StartGame">Commencer/Recommencer à jouer</button>
+            <button class="StartGame">Commencer à jouer</button>
+            <button class="modedifficile">Passer en mode difficile</button>
+            <p class="infoMode">Changer la difficulté avant de commencer à jouer</p>
         </div>
         <p class="transition">---------------------------------------------</p>
         <div>
@@ -22,8 +31,8 @@
         </div>
         <p class="transition">---------------------------------------------</p>
         <div>
-            <input class="inputLetter" type="text" maxlength="1">
-            <button class="Thinking">Deviner la lettre (ou entrée)</button>
+            <input class="inputLetter" type="text" maxlength="1" disabled>
+            <p>Appuyez sur la touche entrée pour confirmer la saisie</p>
         </div>
         <p class="transition">---------------------------------------------</p>
         <div class="flex-text">
@@ -41,6 +50,7 @@
         <div class="border">
             <div class="border2"></div>
         </div>
+        <div class="pourcentagevie">100%</div>
     </div>
     <script src="script.js"></script>
 </body>

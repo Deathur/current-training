@@ -7,13 +7,13 @@
     display: flex;
     flex-direction: row;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10px;
 }
 .flex-text div {
     width: fit-content;
 }
-button, input {
+button {
     border-radius: 30px;
     padding: 10px;
 }
@@ -33,8 +33,9 @@ button, input {
     padding: 0;
 }
 .inputLetter {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 50px;
+    border-radius: 10px;
     text-align: center;
 }
 .border {
@@ -46,6 +47,24 @@ button, input {
 .border2 {
     background-color: green;
     width: 100%;
-    height: 50px;
-    transition: width 0.3s ease-in;
+    height: 48px;
+}
+.popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.fenetrepopup {
+    background-color: white;
+    width: 200px;
+    margin: auto;
+    margin-top: 40vh;
+    padding: 10px;
+}
+.flex-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
