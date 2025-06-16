@@ -15,13 +15,11 @@ let afficherLettrePropose = document.querySelector(".lettrePropose");
 let dejaPropose = false;
 let afficherError = document.querySelector(".error");
 let boutonCommencer = document.querySelector(".StartGame");
-let boutonDeviner = document.querySelector(".Thinking");
-pourcentageVie = document.querySelector(".pourcentagevie");
+let pourcentageVie = document.querySelector(".pourcentagevie");
 let boutonPopup = document.querySelector(".boutonpopup");
 let popup = document.querySelector(".popup");
 let textPopup = document.querySelector(".textpopup");
 boutonCommencer.addEventListener("click", commencerJeu);
-boutonDeviner.addEventListener("click", verification);
 let inputLetter = document.querySelector(".inputLetter");
 
 boutonPopup.addEventListener("click", ()=>{
@@ -38,6 +36,7 @@ let barreDeVie = document.querySelector(".border2");
 
 function commencerJeu() {
   if (enJeu == false) {
+    pourcentageVie.innerText = "100%";
     motADeviner = prompt("Choississez un mot à deviner").toUpperCase();
     if (
       motADeviner == null ||
@@ -63,14 +62,15 @@ function commencerJeu() {
     errorCount = 0;
     afficherError.innerText = errorCount;
     boutonCommencer.style.visibility = "hidden";
+    inputLetter.disabled = false; 
     inputLetter.focus();
   }
 }
 function verification() {
   if (enJeu == true) {
     propositionLettre = document
-      .querySelector(".inputLetter")
-      .value.toUpperCase();
+    .querySelector(".inputLetter")
+    .value.toUpperCase();
     for (i = 0; i < tabADeviner.length; i++) {
       if (tabADeviner[i] == propositionLettre) {
         tabComplet[i] = propositionLettre;
@@ -103,7 +103,10 @@ function fauxPerdu() {
   if (errorCount >= 10) {
     textPopup.innerText = "Vous avez perdu !";
     popup.style.display = "block";
+    boutonCommencer.innerText = "Recommencer à jouer";
+    boutonCommencer.style.visibility = "visible";
     enJeu = false;
+    inputLetter.disabled = true;
   }
 }
 function conditionVictoire() {
@@ -111,6 +114,7 @@ function conditionVictoire() {
     textPopup.innerText = "Vous avez gagné !";
     popup.style.display = "block";
     enJeu = false;
+    inputLetter.disabled = true;
     boutonCommencer.innerText = "Recommencer à jouer";
     boutonCommencer.style.visibility = "visible";
   }
