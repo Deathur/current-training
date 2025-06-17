@@ -39,7 +39,7 @@ modeDifficile.addEventListener("click", () => {
 function commencerJeu() {
   if (enJeu == false) {
     pourcentageVie.innerText = "100%";
-    motADeviner = prompt("Choississez un mot à deviner").toUpperCase();
+    motADeviner = prompt("Choisissez un mot à deviner").toUpperCase();
     if (
       motADeviner == null ||
       !regmotADeviner.test(motADeviner) ||
