@@ -1,3 +1,4 @@
+
 let regmotADeviner = /^[a-z]+$/i;
 let regpropositionLettre = /^[^a-zA-Z]+$/;
 let regWhiteSpace = /^s+$/;
@@ -35,7 +36,6 @@ modeDifficile.addEventListener("click", () => {
     modeDifficile.innerText = "Passer en mode difficile";
   }
 });
-
 function commencerJeu() {
   if (enJeu == false) {
     pourcentageVie.innerText = "100%";
@@ -69,8 +69,10 @@ function commencerJeu() {
     inputLetter.focus();
     modeDifficile.style.visibility = "hidden";
     infoMode.style.visibility = "hidden";
+    return;
   }
 }
+
 function verification() {
   if (enJeu == true) {
     propositionLettre = document
@@ -103,6 +105,7 @@ function verification() {
     document.querySelector(".inputLetter").value = "";
     afficherLettrePropose.textContent = lettreDejaPropose.join(" ");
     afficherError.innerText = errorCount;
+    return;
   }
 }
 function fauxPerdu() {
@@ -188,6 +191,7 @@ function maVie() {
 boutonPopup.addEventListener("click", () => {
   popup.style.display = "none";
 });
+
 document.addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     popup.style.display = "none";
