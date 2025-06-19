@@ -1,21 +1,17 @@
-let donnees;
 let valeur;
 
 const grille = document.querySelector('.main-grid');
 fetch (`https://rickandmortyapi.com/api/character`)
             .then ((response)=>response.json())
             .then((value)=>{
-                console.log(value);
-                
                 for (let p = 1; p <= value.info.pages; p++) {
                 fetch (`https://rickandmortyapi.com/api/character?page=${p}`)
                     .then ((response)=>response.json())
-                    .then((value)=>{test(value)})
-}
-            })
+                    .then((value)=>{affichageDonnees(value);});
+                }
+            });
 
-
-function test(valeur) {
+function affichageDonnees(valeur) {
     for (i = 0; i < valeur.results.length ; i++) {
         const div = document.createElement('div');
         let img = document.createElement('img');

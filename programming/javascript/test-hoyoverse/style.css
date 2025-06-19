@@ -1,0 +1,15 @@
+.main-grid {
+    display:grid;
+    grid-template-columns: repeat(6, minmax(30px, auto));
+    grid-auto-rows: auto;
+    gap: 10px;
+    border: 1px;
+}
+.main-grid div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.titre {
+    text-align: center;
+}
