@@ -1,4 +1,4 @@
-const grille = document.querySelector(".main-grid");
+let grille = document.querySelector('.main-grid')
 fetch("https://vizualabstract.github.io/StarRailStaticAPI/db/fr/characters.json")
   .then((response) => response.json())
   .then((data) => {
