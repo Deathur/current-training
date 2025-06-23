@@ -36,27 +36,35 @@ const data = fetch(
           switch(pathData){
             case "Warrior":
             pathData = "DestructionSmall";
+            pathName = "Voie de la Destruction"
             break;
             case "Rogue":
             pathData = "HuntSmall";
+            pathName = "Voie de la Chasse"
             break;
             case "Mage":
             pathData = "EruditionSmall";
+            pathName = "Voie de l'Erudition"
             break;
             case "Shaman":
             pathData = "HarmonySmall";
+            pathName = "Voie de l'Harmonie"
             break;
             case "Warlock":
             pathData = "NihilitySmall";
+            pathName = "Voie de la Nihilité"
             break;
             case "Knight":
             pathData = "PreservationSmall";
+            pathName = "Voie de la Préservation"
             break;
             case "Priest":
             pathData = "AbundanceSmall";
+            pathName = "Voie de l'Abondance"
             break;
             case "Memory":
             pathData = "RemembranceSmall";
+            pathName = "Voie du Souvenir"
             break;
             default:
               break;
@@ -66,6 +74,7 @@ const data = fetch(
           div.appendChild(div2)
           div2.appendChild(element);
           div2.appendChild(path)
+          div.appendChild(document.createTextNode(pathName));
           div.appendChild(img);
           grille.appendChild(div);
         }

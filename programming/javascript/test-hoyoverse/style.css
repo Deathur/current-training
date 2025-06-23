@@ -5,7 +5,7 @@
     width: auto;
     height: auto;
     display:grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(8, auto);
     grid-auto-rows: auto;
     gap: 10px;
     border: 1px;
