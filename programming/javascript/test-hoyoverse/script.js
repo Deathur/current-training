@@ -1,5 +1,6 @@
 let grille = document.querySelector('.main-grid');
 let elementData = {};
+let pathData;
 let pathName;
 const data = fetch(
     `https://api.mihomo.me/sr_info_parsed/700731421?lang=fr&is_force_update=true`,
@@ -34,33 +35,33 @@ const data = fetch(
           let pathData = data[i].path;
           switch(pathData){
             case "Warrior":
-            pathName = "DestructionSmall";
+            pathData = "DestructionSmall";
             break;
             case "Rogue":
-            pathName = "HuntSmall";
+            pathData = "HuntSmall";
             break;
             case "Mage":
-            pathName = "EruditionSmall";
+            pathData = "EruditionSmall";
             break;
             case "Shaman":
-            pathName = "HarmonySmall";
+            pathData = "HarmonySmall";
             break;
             case "Warlock":
-            pathName = "NihilitySmall";
+            pathData = "NihilitySmall";
             break;
             case "Knight":
-            pathName = "PreservationSmall";
+            pathData = "PreservationSmall";
             break;
             case "Priest":
-            pathName = "AbundanceSmall";
+            pathData = "AbundanceSmall";
             break;
             case "Memory":
-            pathName = "RemembranceSmall";
+            pathData = "RemembranceSmall";
             break;
             default:
               break;
           }
-          path.src = `https://raw.githubusercontent.com/Mar-7th/StarRailRes/refs/heads/master/icon/path/${pathName}.png`;
+          path.src = `https://raw.githubusercontent.com/Mar-7th/StarRailRes/refs/heads/master/icon/path/${pathData}.png`;
           div.appendChild(document.createTextNode(name));
           div.appendChild(div2)
           div2.appendChild(element);
