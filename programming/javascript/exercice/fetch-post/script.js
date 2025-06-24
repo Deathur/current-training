@@ -23,7 +23,7 @@ form.addEventListener("submit", (e) => {
     .then((reponse) => reponse.json())
     .then((data) => {
       alert(
-        `Vous avez mis dans la BDD le nom ${firstValue} ${lastValue} qui à ${ageValue} ans`
+        `Vous avez mis dans la BDD ${JSON.stringify(data)}`
       );
     });
 });
