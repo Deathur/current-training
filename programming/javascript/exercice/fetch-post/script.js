@@ -1,15 +1,21 @@
 const form = document.querySelector("form");
 const btn = document.querySelector(".buttonSubmit");
+let lastValue;
+let firstValue;
+let ageValue;
+
+const url = "https://685a754b9f6ef96111567b88.mockapi.io/nameList";
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const lastName = document.querySelector(".lastName");
   const firstName = document.querySelector(".firstName");
   const age = document.querySelector(".age");
-  let lastValue = lastName.value;
-  let firstValue = firstName.value;
-  let ageValue = age.value;
-  fetch("https://685a754b9f6ef96111567b88.mockapi.io/nameList", {
+  lastValue = lastName.value;
+  firstValue = firstName.value;
+  ageValue = age.value;
+  
+  fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,10 +26,11 @@ form.addEventListener("submit", (e) => {
       age: ageValue,
     }),
   })
-    .then((reponse) => reponse.json())
+    .then((reponse) => 
+      {return reponse.json()})
     .then((data) => {
       alert(
         `Bienvenue ${data.lastName} ${data.firstName} !`
       );
-    });
+    });  
 });
