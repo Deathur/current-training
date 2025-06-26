@@ -51,7 +51,7 @@ generate.addEventListener('click', ()=>{
         passwordOutput.value = randomPassword;
     }
     else {
-        alert('Veuillez choisir les options pour le mot de passe !')
+        alert('Veuillez choisir le ou les options pour le mot de passe !')
     }
     setupPassword = [];
     arrayPassword = [];
