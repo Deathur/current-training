@@ -42,17 +42,16 @@ generate.addEventListener('click', ()=>{
     if (symbols.checked) {
         setupPassword = [...setupPassword, ...arraySymbols];
     }
-    console.log(setupPassword);
-    
     for (i = 0; i < numberPassword; i++) {
         index = Math.floor(Math.random() * (setupPassword.length))
         arrayPassword.push(setupPassword[index])
     }
-    console.log(arrayPassword);
     randomPassword = arrayPassword.join('');
-    console.log(randomPassword);
     if (randomPassword !== ''){
         passwordOutput.value = randomPassword;
+    }
+    else {
+        alert('Veuillez choisir les options pour le mot de passe !')
     }
     setupPassword = [];
     arrayPassword = [];
