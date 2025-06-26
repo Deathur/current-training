@@ -1,4 +1,4 @@
-const passwordOutput = document.querySelector('#password-output')
+const passwordOutput = document.querySelector('#password-output');
 const lengthPassword = document.querySelector('#password-length');
 const password = document.querySelector('#display-password-length');
 const lowercase = document.querySelector('#lowercase');
@@ -9,8 +9,8 @@ const generate = document.querySelector('#generateButton');
 
 let numberPassword = lengthPassword.value;
 let randomPassword;
-const listLowercase = "abcdefghijklmnopqrstuvwxyz"
-const listUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const listLowercase = "abcdefghijklmnopqrstuvwxyz";
+const listUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const listNumbers = "0123456789";
 const listSymbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
@@ -26,7 +26,7 @@ let index;
 lengthPassword.addEventListener('input', () => {
     numberPassword = lengthPassword.value;
     password.value = numberPassword;
-})
+});
 
 generate.addEventListener('click', ()=>{
     console.clear();
@@ -43,16 +43,16 @@ generate.addEventListener('click', ()=>{
         setupPassword = [...setupPassword, ...arraySymbols];
     }
     for (i = 0; i < numberPassword; i++) {
-        index = Math.floor(Math.random() * (setupPassword.length))
-        arrayPassword.push(setupPassword[index])
+        index = Math.floor(Math.random() * (setupPassword.length));
+        arrayPassword.push(setupPassword[index]);
     }
     randomPassword = arrayPassword.join('');
     if (randomPassword !== ''){
         passwordOutput.value = randomPassword;
     }
     else {
-        alert('Veuillez choisir le ou les options pour le mot de passe !')
+        alert('Veuillez choisir le ou les options pour le mot de passe !');
     }
     setupPassword = [];
     arrayPassword = [];
-})
+});
