@@ -83,12 +83,15 @@ generate.addEventListener('click', ()=>{
         else {
             alert('Veuillez choisir le ou les options pour le mot de passe !');
         }
+        navigator.clipboard.writeText(randomPassword);
+
         setupPassword = [];
         arrayPassword = [];
         countRegex = 0;
         regexPassword = 0;
         iteration++;
     }
+
     console.log(`Nombre d'itération de mot de passe avant le bon : ${iteration}`);
     iteration=0;
     verifyRegex = false;
