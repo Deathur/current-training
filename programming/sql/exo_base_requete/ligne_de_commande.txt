@@ -21,10 +21,20 @@ SELECT SUBSTRING(nom, 1, 6) FROM personnage;
 SELECT CONCAT_WS("-", LEFT(nom, 5), LEFT(description, 20)) AS "Classe" FROM classe;
 
 4°) Filtrer les données avec le mot clef WHERE 
-
+SELECT * FROM arme WHERE levelMin>5;
+SELECT * FROM arme WHERE degat<25;
+SELECT nom, surnom FROM personnage WHERE level=10;
+SELECT * FROM typearme WHERE estDistance=1;
 
 5°) Les opérateurs AND / OR / BETWEEN 
-
+SELECT * FROM arme WHERE levelMin BETWEEN 4 AND 8;
+SELECT * FROM personnage WHERE idPersonnage<=3 AND Level=10;
+SELECT * FROM arme WHERE LevelMin<4 OR LevelMin>=8;
+SELECT * FROM arme WHERE idArme IN(1, 2) OR degat>30;
+SELECT * FROM arme WHERE idArme IN(1, 2) OR degat BETWEEN 25 AND 40;
+SELECT * FROM personnage WHERE level!=8 AND (level>7 or level<6);
+SELECT COUNT(nom) AS "NB Perso <10" FROM personnage WHERE level<10;
+SELECT AVG(degat) AS "Moyenne dégat" FROM arme WHERE levelMin BETWEEN 3 AND 7;
 
 6°) LIKE / IN LIMIT / OFFSET / IS NULL 
 SELECT * FROM personnage WHERE nom LIKE 'l%';
