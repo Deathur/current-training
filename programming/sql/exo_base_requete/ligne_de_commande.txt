@@ -1,0 +1,39 @@
+1°) SELECT / FROM / AS 
+SELECT * from personnage;
+SELECT * from arme;
+SELECT nom, levelMin from arme;
+SELECT nom, surnom, level from personnage;
+SELECT nom AS 'Pseudo', level AS 'Niveau' FROM personnage;
+SELECT nom AS 'Types armes en jeu' FROM arme;
+
+2°) Les calculs, fonction COUNT / SUM/ AVG / MIN / MAX
+SELECT COUNT(idArme) AS "nombre d'armes" FROM arme;
+SELECT COUNT(nom) AS "Nombre de personnage" FROM personnage;
+SELECT AVG(level) AS "Moyenne de niveau" FROM personnage;
+SELECT SUM(baseForce) AS "Points de force", SUM(baseAgi) AS "Points d'agilité", SUM(baseIntel) AS "Points d'intel du jeu" FROM classe;
+SELECT MIN(levelMin) AS "MIN(levelMin)", MAX(levelMIN) AS "MAX(levelMIN)" FROM arme;
+SELECT nom, baseForce+baseAgi+baseIntel AS "NB points de caractéristique" FROM classe;
+
+3°) Les fonctions sur les chaines de caractères : CONCAT / SUBSTRING / LEFT
+SELECT CONCAT(nom, surnom) AS "Personnage" FROM personnage;
+SELECT CONCAT(nom, " - F:", baseForce, " - A:", baseAgi, " - I:", baseIntel) AS "Classe" FROM classe;
+SELECT SUBSTRING(nom, 1, 6) FROM personnage;
+SELECT CONCAT_WS("-", LEFT(nom, 5), LEFT(description, 20)) AS "Classe" FROM classe;
+
+4°) Filtrer les données avec le mot clef WHERE 
+
+
+5°) Les opérateurs AND / OR / BETWEEN 
+
+
+6°) LIKE / IN LIMIT / OFFSET / IS NULL 
+SELECT * FROM personnage WHERE nom LIKE 'l%';
+SELECT * FROM personnage WHERE nom LIKE 'l%' AND nom LIKE '%er';
+SELECT * FROM arme WHERE nom LIKE '%bois%';
+SELECT * FROM arme WHERE nom LIKE 'a%' AND nom LIKE '__b%';
+SELECT * FROM arme WHERE idArme IN (1, 2, 4, 5, 7);
+SELECT * FROM personnage WHERE level=10 AND idPersonnage IN (3, 4);
+SELECT * FROM personnage WHERE surnom IS NOT NULL;
+SELECT * FROM personnage WHERE surnom IS NULL;
+SELECT * FROM personnage WHERE idPersonnage LIMIT 3;
+SELECT * FROM personnage WHERE idPersonnage LIMIT 2 OFFSET 3;
