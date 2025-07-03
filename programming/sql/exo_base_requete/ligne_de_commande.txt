@@ -38,9 +38,9 @@ SELECT AVG(degat) AS "Moyenne dégat" FROM arme WHERE levelMin BETWEEN 3 AND 7;
 
 6°) LIKE / IN LIMIT / OFFSET / IS NULL 
 SELECT * FROM personnage WHERE nom LIKE 'l%';
-SELECT * FROM personnage WHERE nom LIKE 'l%' AND nom LIKE '%er';
+SELECT * FROM personnage WHERE nom LIKE 'l%er';
 SELECT * FROM arme WHERE nom LIKE '%bois%';
-SELECT * FROM arme WHERE nom LIKE 'a%' AND nom LIKE '__b%';
+SELECT * FROM arme WHERE nom LIKE 'a_b%';
 SELECT * FROM arme WHERE idArme IN (1, 2, 4, 5, 7);
 SELECT * FROM personnage WHERE level=10 AND idPersonnage IN (3, 4);
 SELECT * FROM personnage WHERE surnom IS NOT NULL;
