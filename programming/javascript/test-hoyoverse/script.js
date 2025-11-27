@@ -2,15 +2,7 @@ let grille = document.querySelector('.main-grid');
 let elementData = {};
 let pathData;
 let pathName;
-const data = fetch(
-    `https://api.mihomo.me/sr_info_parsed/700731421?lang=fr&is_force_update=true`,
-    {
-      headers: {
-        "User-Agent": "https://review-hsr.vercel.app",
-        Host: "api.mihomo.me",
-      }
-    }
-  )
+const data = fetch("https://corsproxy.io/?" + encodeURIComponent("https://api.mihomo.me/sr_info_parsed/700731421?lang=fr&is_force_update=true"))
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
